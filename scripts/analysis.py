@@ -2,22 +2,26 @@
 
 Reads the clean tables in data/clean/ and writes:
   - dashboard/*.png           static charts for the README and memo
-  - dashboard/dashboard.html  one interactive page (Plotly), open in any browser
+  - dashboard/dashboard.html  interactive dashboard (filters, toggles, searchable table)
+
+The dashboard page is built from scripts/dashboard_template.html. The data is embedded as JSON
+and the charts are drawn in the browser with Plotly.js, so the page works offline once loaded.
 
 Run from the project root, after scripts/build_clean_data.py:
   python scripts/analysis.py
 """
 
+import json
 from pathlib import Path
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+from plotly.offline import get_plotlyjs_version
 
 ROOT = Path(__file__).resolve().parents[1]
 CLEAN = ROOT / "data" / "clean"
 OUT = ROOT / "dashboard"
+TEMPLATE = Path(__file__).resolve().parent / "dashboard_template.html"
 OUT.mkdir(parents=True, exist_ok=True)
 
 NAVY = "#1F3B57"
@@ -47,8 +51,8 @@ def headline_numbers(density: pd.DataFrame) -> dict:
         "national_branches_per_100k": round(national_rate, 2),
         "districts_below_half_avg": int(matched["below_half_avg"].sum()),
         "pop_share_in_low_density_districts": round(share_pop_low * 100, 1),
-        "lowest_district": matched.iloc[0][["unit", "province", "branches_per_100k"]].to_dict(),
-        "highest_district": matched.iloc[-1][["unit", "province", "branches_per_100k"]].to_dict(),
+        "lowest_district": matched.sort_values("branches_per_100k").iloc[0][["unit", "province", "branches_per_100k"]].to_dict(),
+        "highest_district": matched.sort_values("branches_per_100k").iloc[-1][["unit", "province", "branches_per_100k"]].to_dict(),
     }
 
 
@@ -141,64 +145,61 @@ def chart_scatter(density, path):
     plt.close(fig)
 
 
-def interactive_dashboard(findex, density, province, headline, path):
+def _records(df: pd.DataFrame, columns: list[str]) -> list[dict]:
+    """Rows as plain dicts, with NaN turned into None so the JSON is valid."""
+    out = []
+    for row in df[columns].itertuples(index=False):
+        out.append({c: (None if pd.isna(v) else (v.item() if hasattr(v, "item") else v))
+                    for c, v in zip(columns, row)})
+    return out
+
+
+def build_dashboard_page(findex, density, province, headline, path):
+    """Fill the HTML template with the data and write the dashboard page."""
     wide = findex_series(findex, "total")
-    p = findex[findex["country"] == "Pakistan"].pivot(index="year", columns="measure", values="pct_age_15_plus")
-    matched = density.dropna(subset=["branches_per_100k"]).sort_values("branches_per_100k")
+    years = [int(y) for y in wide.index]
+    series = {c: [None if pd.isna(v) else round(float(v), 2) for v in wide[c]] for c in wide.columns}
 
-    fig = make_subplots(
-        rows=3, cols=2,
-        specs=[[{"type": "xy"}, {"type": "xy"}],
-               [{"type": "xy"}, {"type": "xy"}],
-               [{"type": "xy", "colspan": 2}, None]],
-        subplot_titles=(
-            "Account ownership, adults 15+ (%)",
-            "Pakistan: men vs women (%)",
-            "Branches per 100,000 by province",
-            "Branches per 100,000 by district (all matched)",
-            "Districts sorted by branches per 100,000 (lowest first)",
-        ),
-        vertical_spacing=0.12, horizontal_spacing=0.08,
-    )
-    for country, color in [("India", GREY), ("Bangladesh", "#B8C0CC"), ("Sri Lanka", "#5C677D"),
-                           ("Pakistan", ORANGE)]:
-        fig.add_trace(go.Scatter(x=wide.index, y=wide[country], mode="lines+markers", name=country,
-                                 line=dict(color=color, width=3 if country == "Pakistan" else 2)),
-                      row=1, col=1)
-    fig.add_trace(go.Scatter(x=p.index, y=p["male"], mode="lines+markers", name="Men",
-                             line=dict(color=NAVY, width=2)), row=1, col=2)
-    fig.add_trace(go.Scatter(x=p.index, y=p["female"], mode="lines+markers", name="Women",
-                             line=dict(color=ORANGE, width=2)), row=1, col=2)
+    gender = findex[findex["country"] == "Pakistan"].pivot(index="year", columns="measure", values="pct_age_15_plus")
+    latest = findex["year"].max()
+    pak_2024 = wide.loc[latest, "Pakistan"]
+    men_2024 = gender.loc[latest, "male"]
+    women_2024 = gender.loc[latest, "female"]
 
-    prov = province.sort_values("branches_per_100k")
-    fig.add_trace(go.Bar(x=prov["branches_per_100k"], y=prov["province"].str.title(), orientation="h",
-                         marker_color=TEAL, name="Province", showlegend=False), row=2, col=1)
+    kpis = {
+        "pak_2024": round(float(pak_2024), 1),
+        "india_2024": round(float(wide.loc[latest, "India"]), 1),
+        "men_2024": round(float(men_2024), 1),
+        "women_2024": round(float(women_2024), 1),
+        "gender_gap_2024": round(float(men_2024 - women_2024), 1),
+        "national_density": headline["national_branches_per_100k"],
+        "below_half_count": headline["districts_below_half_avg"],
+        "matched_count": headline["matched_districts"],
+        "pop_share_low": headline["pop_share_in_low_density_districts"],
+    }
 
-    fig.add_trace(go.Scatter(x=matched["population_2023"] / 1e6, y=matched["branches_per_100k"],
-                             mode="markers", text=matched["unit"].str.title(), name="Districts",
-                             marker=dict(color=NAVY, size=7, opacity=0.6), showlegend=False,
-                             hovertemplate="%{text}<br>%{y:.1f} per 100k<br>%{x:.2f}M people<extra></extra>"),
-                  row=2, col=2)
+    data = {
+        "kpis": kpis,
+        "findex": {
+            "years": years,
+            "series": series,
+            "male": [round(float(v), 2) for v in gender["male"]],
+            "female": [round(float(v), 2) for v in gender["female"]],
+        },
+        "provinces": _records(province, ["province", "population_2023", "branches_total", "branches_per_100k"]),
+        "districts": _records(density, ["unit", "province", "population_2023", "branches_total",
+                                        "branches_per_100k"]),
+    }
+    # Blank rows (districts created after 2020) carry no branch figures.
+    for row in data["districts"]:
+        if row["branches_per_100k"] is not None and row["branches_total"] is not None:
+            row["branches_total"] = int(row["branches_total"])
+        row["population_2023"] = int(row["population_2023"])
 
-    fig.add_trace(go.Bar(x=matched["unit"].str.title(), y=matched["branches_per_100k"],
-                         marker_color=[ORANGE if v < headline["national_branches_per_100k"] / 2 else TEAL
-                                       for v in matched["branches_per_100k"]],
-                         name="Districts", showlegend=False,
-                         hovertemplate="%{x}<br>%{y:.1f} per 100k<extra></extra>"),
-                  row=3, col=1)
-
-    fig.update_layout(
-        height=1100, width=1100, template="plotly_white",
-        title=dict(text="Financial Inclusion Gap in Pakistan", x=0.02, font=dict(size=22)),
-        legend=dict(orientation="h", y=1.04, x=0),
-        margin=dict(t=110),
-    )
-    fig.update_xaxes(showgrid=False, tickangle=0)
-    fig.update_xaxes(tickangle=-60, tickfont=dict(size=7), row=3, col=1)
-    fig.update_yaxes(gridcolor="#eee")
-    fig.update_xaxes(title_text="Population 2023 (millions)", row=2, col=2)
-    fig.update_yaxes(title_text="Branches per 100k", row=2, col=2)
-    fig.write_html(path, include_plotlyjs="cdn")
+    html = TEMPLATE.read_text(encoding="utf-8")
+    html = html.replace("__PLOTLY_URL__", f"https://cdn.plot.ly/plotly-{get_plotlyjs_version()}.min.js")
+    html = html.replace("__DATA__", json.dumps(data, ensure_ascii=False))
+    path.write_text(html, encoding="utf-8")
 
 
 def main():
@@ -210,7 +211,7 @@ def main():
     chart_province(province, OUT / "03_province_branch_density.png")
     chart_districts(density, OUT / "04_district_extremes.png")
     chart_scatter(density, OUT / "05_population_vs_branches.png")
-    interactive_dashboard(findex, density, province, headline, OUT / "dashboard.html")
+    build_dashboard_page(findex, density, province, headline, OUT / "dashboard.html")
 
     print("Headline numbers:")
     for k, v in headline.items():

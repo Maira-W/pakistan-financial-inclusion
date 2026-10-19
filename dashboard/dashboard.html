@@ -1,7 +1,335 @@
-<html>
-<head><meta charset="utf-8" /></head>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Inclusion Gap in Pakistan</title>
+<script src="https://cdn.plot.ly/plotly-3.5.0.min.js" charset="utf-8"></script>
+<style>
+  :root { --navy:#1F3B57; --teal:#2A9D8F; --orange:#E76F51; --grey:#8D99AE; --ink:#1d2733; --muted:#5b6777; --line:#e3e7ee; --bg:#f5f7fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+  header { background:var(--navy); color:#fff; padding:28px 16px 22px; }
+  header .wrap { max-width:1200px; margin:0 auto; }
+  header h1 { margin:0 0 6px; font-size:26px; font-weight:650; }
+  header p { margin:0; color:#cdd8e5; font-size:14px; line-height:1.5; max-width:820px; }
+  main { max-width:1200px; margin:0 auto; padding:18px 16px 40px; }
+  h2 { font-size:18px; margin:28px 0 4px; color:var(--navy); }
+  .hint { color:var(--muted); font-size:13px; margin:0 0 12px; line-height:1.5; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:18px; }
+  .kpi { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .kpi .label { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+  .kpi .value { font-size:26px; font-weight:700; margin:4px 0 2px; color:var(--navy); }
+  .kpi .note { font-size:12px; color:var(--muted); line-height:1.4; }
+  .kpi.alert .value { color:var(--orange); }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 14px 8px; min-width:0; }
+  .card h3 { font-size:14px; margin:4px 6px 8px; color:var(--ink); }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 10px; }
+  .controls label { font-size:13px; color:var(--muted); }
+  select, input[type="search"] { font:inherit; font-size:13px; padding:7px 10px; border:1px solid #c9d1dc; border-radius:6px; background:#fff; color:var(--ink); }
+  input[type="search"] { min-width:240px; }
+  button.toggle { font:inherit; font-size:13px; padding:7px 12px; border:1px solid #c9d1dc; border-radius:6px; background:#fff; cursor:pointer; }
+  button.toggle[aria-pressed="true"] { background:var(--navy); color:#fff; border-color:var(--navy); }
+  .count { font-size:13px; color:var(--muted); margin-left:auto; }
+  .chart { width:100%; }
+  .scroll { max-height:560px; overflow:auto; border:1px solid var(--line); border-radius:8px; }
+  table { border-collapse:collapse; width:100%; font-size:13px; background:#fff; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { position:sticky; top:0; background:#f0f3f8; cursor:pointer; user-select:none; font-weight:600; }
+  td.num, th.num { text-align:right; }
+  tr.flag td { color:var(--muted); font-style:italic; }
+  a.button { display:inline-block; font-size:13px; padding:7px 12px; border-radius:6px; background:var(--teal); color:#fff; text-decoration:none; }
+  footer { max-width:1200px; margin:0 auto; padding:0 16px 40px; color:var(--muted); font-size:12px; line-height:1.6; }
+  footer a { color:var(--navy); }
+  @media (max-width: 860px) {
+    .grid2 { grid-template-columns:1fr; }
+    header h1 { font-size:22px; }
+    input[type="search"] { min-width:0; width:100%; }
+    .count { margin-left:0; width:100%; }
+  }
+</style>
+</head>
 <body>
-    <div>                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.5.0.min.js" integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs=" crossorigin="anonymous"></script>                <div id="d08c5a28-4f0f-43fa-a5dc-67f8e3b99379" class="plotly-graph-div" style="height:1100px; width:1100px;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("d08c5a28-4f0f-43fa-a5dc-67f8e3b99379")) {                    Plotly.newPlot(                        "d08c5a28-4f0f-43fa-a5dc-67f8e3b99379",                        [{"line":{"color":"#8D99AE","width":2},"mode":"lines+markers","name":"India","x":{"dtype":"i2","bdata":"2wfeB+EH5QfoBw=="},"y":{"dtype":"f8","bdata":"PQrXo3CdQUBSuB6F65FKQLgehetR+FNAUrgehethU0DhehSuR0FWQA=="},"type":"scatter","xaxis":"x","yaxis":"y"},{"line":{"color":"#B8C0CC","width":2},"mode":"lines+markers","name":"Bangladesh","x":{"dtype":"i2","bdata":"2wfeB+EH5QfoBw=="},"y":{"dtype":"f8","bdata":"PQrXo3C9P0A9CtejcP0+QGZmZmZmBklASOF6FK5nSkCkcD0K16NFQA=="},"type":"scatter","xaxis":"x","yaxis":"y"},{"line":{"color":"#5C677D","width":2},"mode":"lines+markers","name":"Sri Lanka","x":{"dtype":"i2","bdata":"2wfeB+EH5QfoBw=="},"y":{"dtype":"f8","bdata":"UrgeheshUUBcj8L1KKxUQJqZmZmZaVJA4XoUrkdRVkBcj8L1KGxUQA=="},"type":"scatter","xaxis":"x","yaxis":"y"},{"line":{"color":"#E76F51","width":3},"mode":"lines+markers","name":"Pakistan","x":{"dtype":"i2","bdata":"2wfeB+EH5QfoBw=="},"y":{"dtype":"f8","bdata":"H4XrUbieJEAUrkfhehQqQArXo3A9SjVAexSuR+H6NEDNzMzMzEw7QA=="},"type":"scatter","xaxis":"x","yaxis":"y"},{"line":{"color":"#1F3B57","width":2},"mode":"lines+markers","name":"Men","x":{"dtype":"i2","bdata":"2wfeB+EH5QfoBw=="},"y":{"dtype":"f8","bdata":"SOF6FK5HMUC4HoXrUfg0QK5H4XoUTkFArkfhehQuPECF61G4HiVFQA=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"line":{"color":"#E76F51","width":2},"mode":"lines+markers","name":"Women","x":{"dtype":"i2","bdata":"2wfeB+EH5QfoBw=="},"y":{"dtype":"f8","bdata":"mpmZmZmZB0Bcj8L1KFwTQB+F61G4HhxA9ihcj8L1KkBSuB6F69EnQA=="},"type":"scatter","xaxis":"x2","yaxis":"y2"},{"marker":{"color":"#2A9D8F"},"name":"Province","orientation":"h","showlegend":false,"x":{"dtype":"f8","bdata":"XI\u002fC9ShcEECamZmZmZkRQJqZmZmZmRhA16NwPQrXGUBcj8L1KJw3QA=="},"y":["Khyber Pakhtunkhwa","Balochistan","Punjab","Sindh","Islamabad"],"type":"bar","xaxis":"x3","yaxis":"y3"},{"hovertemplate":"%{text}\u003cbr\u003e%{y:.1f} per 100k\u003cbr\u003e%{x:.2f}M people\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":"#1F3B57","opacity":0.6,"size":7},"mode":"markers","name":"Districts","showlegend":false,"text":["Musakhel","South Waziristan","Washuk","Orakzai","Torghar","Tharparkar","Bajaur","Kohlu","Kohistan (Combined)","Lakki Marwat","Kachhi","Dera Bugti","Khyber","Nasirabad","Mohmand","North Waziristan","Barkhan","Kharan","Mirpur Khas","Upper Dir","Mastung","Awaran","Khuzdar","Panjgur","Pishin","Kambar Shahdad Kot","Shangla","Kohat","Charsadda","Rajanpur","Shikarpur","Chagai","Tando Muhammad Khan","Jacobabad","Muzaffargarh","Bhakkar","Umer Kot","Dadu","Lodhran","Kurram","Batagram","Khairpur","Layyah","Harnai","Kasur","Ghotki","Lower Dir","Tando Ahyar","Kech","Buner","Dera Ghazi Khan","Kashmore","Pakpattan","Karak","Kalat","Ziarat","Larkana","Thatta","Sanghar","Mardan","Toba Tek Singh","Matiari","Jamshoro","Jaffarabad","Naushahro Feroze","Vehari","Rahim Yar Khan","Sheikhupura","Bahawalnagar","Khanewal","Chiniot","Hafizabad","Swabi","Okara","Shaheed Benazirabad","Dera Ismail Khan","Swat","Lasbela","Nankana Sahib","Bahawalpur","Nowshera","Narowal","Khushab","Mianwali","Mandi Bahauddin","Badin","Nushki","Zhob","Sibi","Jhang","Mansehra","Killa Saifullah","Sahiwal","Sargodha","Gujranwala","Faisalabad","Sukkur","Killa Abdullah","Hangu","Bannu","Haripur","Multan","Peshawar","Tando Muhammad Khan","Abbottabad","Chitral (Combined)","Quetta","Chakwal","Sialkot","Attock","Loralai","Hyderabad","Gujrat","Karachi (Combined)","Rawalpindi","Jhelum","Lahore","Gwadar","Islamabad"],"x":{"dtype":"f8","bdata":"aW\u002fwhclUxz\u002fHuriNBnDsPzYdAdwsXtM\u002fox8Np8zN2D+5x9KHLqjJP7qj\u002f+VadPw\u002fCObo8Xub9D+693DJcafQP3y3eeOksPA\u002fqYb9nlin8D88hzJUxVTcP2afxyjPvNY\u002fmL7XEBxX8j9mFMstrQbiP\u002fqa5bLRueE\u002fEaYol8Yv5j9bI4JxcOnKPy2vXG+bqdA\u002fcTyfAfXm+j+r61BNSVbxP\u002ftA8s6hDNQ\u002fysStghjoxj+EoKNVLenvP97oYz4gUOA\u002fibFMv0S86j9slstG5zz4P7PTD+oihew\u002ftFiK5CvB8z+\u002f1TpxOV79P1ZjCWtjDANAPGu3XWgu9j+6ERYVcTrRP5oiwOldPOc\u002fsU6V7xnJ8j+rPldbsQ8UQP1qDhDMUf8\u002fDjFe86qO8j\u002fjqrLviuD7P1SNXg1Q2v4\u002frFPle0Yi6T++TBQhdbvhPw+5GW7AxwRAyotMwK\u002fRAECMgXUcP1TAP+kKthFPVhBANIY5QZtc\u002fD+HpBZKJmf6PyygUE8fge0\u002fUADFyJL58D9BD7VtGEXwP2csms5OJgtAb7n6sUm+8z8QkgVM4BYBQBPU8C2sG+o\u002fcLa5MT1h0T8YQznRrkLIP0T8w5Yejfw\u002fAyUFFsBU8T9kr3d\u002fvHcCQLLYJhWN9QVA+FEN+z0xBEBk6NhBJS7rP1ryeFp+4PE\u002fx2eyf54G4z\u002fg9gSJ7W78P8oXtJCAcQtA9s\u002fTgEFCFkC9VdehmjIQQP\u002fr3LQZZwxAbM7BM6HpCkBGzy10JQL5PxQjS+ZYHvU\u002fjgbwFkhQ\u002fj8AUps4uR8MQA2MvKyJhf0\u002f48Yt5udG\u002fT9tWb4uw38FQI2ACkeQyuU\u002fbtxifm4o+j8+JlKazSMRQCe9b3zt2fs\u002fkwGgihs3\u002fz9eKjbmdQT4P98Xl6q0xfw\u002fc9anHJNF\u002fT+NmxpoPif\u002fPz2Zf\u002fRNmso\u002fqrncYKjD1j8PXru04bDMP7a8cr1thghAavmBqzzB\u002fD\u002faG3xhMlXYP0IG8uzyDQdAttlYiXlWEUAQWDm0yNYXQLLUer\u002fRJiJAqu\u002f8ogQ9+j83bcZpiCrXP2w\u002fGePD7OA\u002fCwxZ3eq59T8pWU5C6cvyP4m1+BQAcxVAS8rd5\u002fgIE0B4COOncW\u002fRP4C1ateEtPY\u002fipP7HYqC4D+wPEhPkcMEQEZblUT2wfs\u002fRUYHJGH\u002fEUDB49u7Bl0BQFyRmKCGb9E\u002f2bERiNd1A0DhehSuR8EJQIFCPX0EYjRA44kgzsN5GECY\u002fE\u002f+7h32P7WJk\u002fsdAipA8gcDz72H0z+ryykBMekCQA=="},"y":{"dtype":"f8","bdata":"mpmZmZmZ4T\u002fsUbgehevhPx+F61G4HuU\u002fpHA9Ctej6D8AAAAAAADwPylcj8L1KPA\u002fcT0K16Nw8T9mZmZmZmbyPwAAAAAAAPQ\u002fAAAAAAAA9D\u002fD9Shcj8L1P4\u002fC9Shcj\u002fY\u002fH4XrUbge+T+amZmZmZn5P+xRuB6F6\u002fk\u002fFK5H4XoU\u002fj9mZmZmZmb+P7gehetRuP4\u002fmpmZmZmZAUCuR+F6FK4BQNejcD0K1wFA7FG4HoXrAUB7FK5H4XoCQM3MzMzMzAJAH4XrUbgeA0CF61G4HoUDQMP1KFyPwgNAFK5H4XoUBEAUrkfhehQEQClcj8L1KARAzczMzMzMBEDNzMzMzMwEQPYoXI\u002fC9QRAH4XrUbgeBUBcj8L1KFwFQHsUrkfhegZAcT0K16NwB0BxPQrXo3AHQK5H4XoUrgdAexSuR+F6CECPwvUoXI8IQKRwPQrXowhAuB6F61G4CEAfhetRuB4JQK5H4XoUrglAw\u002fUoXI\u002fCCUApXI\u002fC9SgKQOF6FK5H4QpAH4XrUbgeC0CF61G4HoULQJqZmZmZmQtA16NwPQrXC0AUrkfhehQMQGZmZmZmZgxAcT0K16NwDUCF61G4HoUNQAAAAAAAAA5AUrgehetRDkDhehSuR+EOQOF6FK5H4Q5AXI\u002fC9ShcD0AAAAAAAAAQQB+F61G4HhBAKVyPwvUoEEAzMzMzMzMQQI\u002fC9ShcjxBAmpmZmZmZEECamZmZmZkQQOF6FK5H4RBAH4XrUbgeEUApXI\u002fC9SgRQEjhehSuRxFAUrgehetREUBmZmZmZmYRQI\u002fC9ShcjxFAuB6F61G4EUApXI\u002fC9SgSQDMzMzMzMxJAXI\u002fC9ShcEkBmZmZmZmYSQGZmZmZmZhJAcT0K16NwEkAzMzMzMzMTQHsUrkfhehRAw\u002fUoXI\u002fCFED2KFyPwvUUQClcj8L1KBVAXI\u002fC9ShcFUBmZmZmZmYVQM3MzMzMzBVACtejcD0KFkAUrkfhehQWQArXo3A9ChdAFK5H4XoUF0DD9Shcj8IXQK5H4XoUrhhAXI\u002fC9ShcGUBmZmZmZmYZQLgehetRuBlAhetRuB6FGkDhehSuR+EaQD0K16NwPRtA16NwPQrXG0DhehSuR+EbQFK4HoXrUR1AexSuR+F6HUCF61G4HgUgQMP1KFyPQiBAUrgehetRIEBmZmZmZmYgQOF6FK5H4SBArkfhehSuIUCPwvUoXI8kQEjhehSuxyVAUrgehetRJkC4HoXrUbgmQDMzMzMzsyhAj8L1KFwPMEBcj8L1KJw3QA=="},"type":"scatter","xaxis":"x4","yaxis":"y4"},{"hovertemplate":"%{x}\u003cbr\u003e%{y:.1f} per 100k\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#E76F51","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F","#2A9D8F"]},"name":"Districts","showlegend":false,"x":["Musakhel","South Waziristan","Washuk","Orakzai","Torghar","Tharparkar","Bajaur","Kohlu","Kohistan (Combined)","Lakki Marwat","Kachhi","Dera Bugti","Khyber","Nasirabad","Mohmand","North Waziristan","Barkhan","Kharan","Mirpur Khas","Upper Dir","Mastung","Awaran","Khuzdar","Panjgur","Pishin","Kambar Shahdad Kot","Shangla","Kohat","Charsadda","Rajanpur","Shikarpur","Chagai","Tando Muhammad Khan","Jacobabad","Muzaffargarh","Bhakkar","Umer Kot","Dadu","Lodhran","Kurram","Batagram","Khairpur","Layyah","Harnai","Kasur","Ghotki","Lower Dir","Tando Ahyar","Kech","Buner","Dera Ghazi Khan","Kashmore","Pakpattan","Karak","Kalat","Ziarat","Larkana","Thatta","Sanghar","Mardan","Toba Tek Singh","Matiari","Jamshoro","Jaffarabad","Naushahro Feroze","Vehari","Rahim Yar Khan","Sheikhupura","Bahawalnagar","Khanewal","Chiniot","Hafizabad","Swabi","Okara","Shaheed Benazirabad","Dera Ismail Khan","Swat","Lasbela","Nankana Sahib","Bahawalpur","Nowshera","Narowal","Khushab","Mianwali","Mandi Bahauddin","Badin","Nushki","Zhob","Sibi","Jhang","Mansehra","Killa Saifullah","Sahiwal","Sargodha","Gujranwala","Faisalabad","Sukkur","Killa Abdullah","Hangu","Bannu","Haripur","Multan","Peshawar","Tando Muhammad Khan","Abbottabad","Chitral (Combined)","Quetta","Chakwal","Sialkot","Attock","Loralai","Hyderabad","Gujrat","Karachi (Combined)","Rawalpindi","Jhelum","Lahore","Gwadar","Islamabad"],"y":{"dtype":"f8","bdata":"mpmZmZmZ4T\u002fsUbgehevhPx+F61G4HuU\u002fpHA9Ctej6D8AAAAAAADwPylcj8L1KPA\u002fcT0K16Nw8T9mZmZmZmbyPwAAAAAAAPQ\u002fAAAAAAAA9D\u002fD9Shcj8L1P4\u002fC9Shcj\u002fY\u002fH4XrUbge+T+amZmZmZn5P+xRuB6F6\u002fk\u002fFK5H4XoU\u002fj9mZmZmZmb+P7gehetRuP4\u002fmpmZmZmZAUCuR+F6FK4BQNejcD0K1wFA7FG4HoXrAUB7FK5H4XoCQM3MzMzMzAJAH4XrUbgeA0CF61G4HoUDQMP1KFyPwgNAFK5H4XoUBEAUrkfhehQEQClcj8L1KARAzczMzMzMBEDNzMzMzMwEQPYoXI\u002fC9QRAH4XrUbgeBUBcj8L1KFwFQHsUrkfhegZAcT0K16NwB0BxPQrXo3AHQK5H4XoUrgdAexSuR+F6CECPwvUoXI8IQKRwPQrXowhAuB6F61G4CEAfhetRuB4JQK5H4XoUrglAw\u002fUoXI\u002fCCUApXI\u002fC9SgKQOF6FK5H4QpAH4XrUbgeC0CF61G4HoULQJqZmZmZmQtA16NwPQrXC0AUrkfhehQMQGZmZmZmZgxAcT0K16NwDUCF61G4HoUNQAAAAAAAAA5AUrgehetRDkDhehSuR+EOQOF6FK5H4Q5AXI\u002fC9ShcD0AAAAAAAAAQQB+F61G4HhBAKVyPwvUoEEAzMzMzMzMQQI\u002fC9ShcjxBAmpmZmZmZEECamZmZmZkQQOF6FK5H4RBAH4XrUbgeEUApXI\u002fC9SgRQEjhehSuRxFAUrgehetREUBmZmZmZmYRQI\u002fC9ShcjxFAuB6F61G4EUApXI\u002fC9SgSQDMzMzMzMxJAXI\u002fC9ShcEkBmZmZmZmYSQGZmZmZmZhJAcT0K16NwEkAzMzMzMzMTQHsUrkfhehRAw\u002fUoXI\u002fCFED2KFyPwvUUQClcj8L1KBVAXI\u002fC9ShcFUBmZmZmZmYVQM3MzMzMzBVACtejcD0KFkAUrkfhehQWQArXo3A9ChdAFK5H4XoUF0DD9Shcj8IXQK5H4XoUrhhAXI\u002fC9ShcGUBmZmZmZmYZQLgehetRuBlAhetRuB6FGkDhehSuR+EaQD0K16NwPRtA16NwPQrXG0DhehSuR+EbQFK4HoXrUR1AexSuR+F6HUCF61G4HgUgQMP1KFyPQiBAUrgehetRIEBmZmZmZmYgQOF6FK5H4SBArkfhehSuIUCPwvUoXI8kQEjhehSuxyVAUrgehetRJkC4HoXrUbgmQDMzMzMzsyhAj8L1KFwPMEBcj8L1KJw3QA=="},"type":"bar","xaxis":"x5","yaxis":"y5"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"#C8D4E3"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"bgcolor":"white","radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","gridwidth":2,"linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"bgcolor":"white","caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","zerolinewidth":2}}},"xaxis":{"anchor":"y","domain":[0.0,0.46],"showgrid":false,"tickangle":0},"yaxis":{"anchor":"x","domain":[0.7466666666666667,1.0],"gridcolor":"#eee"},"xaxis2":{"anchor":"y2","domain":[0.54,1.0],"showgrid":false,"tickangle":0},"yaxis2":{"anchor":"x2","domain":[0.7466666666666667,1.0],"gridcolor":"#eee"},"xaxis3":{"anchor":"y3","domain":[0.0,0.46],"showgrid":false,"tickangle":0},"yaxis3":{"anchor":"x3","domain":[0.37333333333333335,0.6266666666666667],"gridcolor":"#eee"},"xaxis4":{"anchor":"y4","domain":[0.54,1.0],"showgrid":false,"tickangle":0,"title":{"text":"Population 2023 (millions)"}},"yaxis4":{"anchor":"x4","domain":[0.37333333333333335,0.6266666666666667],"gridcolor":"#eee","title":{"text":"Branches per 100k"}},"xaxis5":{"anchor":"y5","domain":[0.0,1.0],"showgrid":false,"tickangle":-60,"tickfont":{"size":7}},"yaxis5":{"anchor":"x5","domain":[0.0,0.25333333333333335],"gridcolor":"#eee"},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Account ownership, adults 15+ (%)","x":0.23,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Pakistan: men vs women (%)","x":0.77,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Branches per 100,000 by province","x":0.23,"xanchor":"center","xref":"paper","y":0.6266666666666667,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Branches per 100,000 by district (all matched)","x":0.77,"xanchor":"center","xref":"paper","y":0.6266666666666667,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Districts sorted by branches per 100,000 (lowest first)","x":0.5,"xanchor":"center","xref":"paper","y":0.25333333333333335,"yanchor":"bottom","yref":"paper"}],"title":{"font":{"size":22},"text":"Financial Inclusion Gap in Pakistan","x":0.02},"legend":{"orientation":"h","y":1.04,"x":0},"margin":{"t":110},"height":1100,"width":1100},                        {"responsive": true}                    )                };            </script>        </div>
+<header>
+  <div class="wrap">
+    <h1>Financial Inclusion Gap in Pakistan</h1>
+    <p>Where are people excluded from formal finance, and how much do gender and geography shape that gap? Account ownership is compared with India, Bangladesh and Sri Lanka. Bank branch density is compared across provinces and 119 districts.</p>
+  </div>
+</header>
+
+<main>
+  <section class="kpis" id="kpis" aria-label="Key numbers"></section>
+
+  <h2>1. Pakistan is behind its regional peers, and women are furthest behind</h2>
+  <p class="hint">Click a country in the legend to show or hide it. Double-click a legend entry to isolate it.</p>
+  <div class="grid2">
+    <div class="card"><h3>Account ownership, adults 15+ (%)</h3><div id="peer" class="chart"></div></div>
+    <div class="card"><h3>Pakistan: men vs women (%), shaded area is the gap</h3><div id="gender" class="chart"></div></div>
+  </div>
+
+  <h2>2. Bank branches are concentrated in the big cities</h2>
+  <p class="hint">Branches per 100,000 people. The dotted line is the national average. Orange bars are below half the national average.</p>
+  <div class="grid2">
+    <div class="card"><h3>By province</h3><div id="province" class="chart"></div></div>
+    <div class="card">
+      <h3>Branches vs population, by district</h3>
+      <div class="controls">
+        <button class="toggle" id="logBtn" aria-pressed="false">Log scale</button>
+        <span class="count">Click a province in the legend to hide it.</span>
+      </div>
+      <div id="scatter" class="chart"></div>
+    </div>
+  </div>
+
+  <h2>3. District explorer</h2>
+  <p class="hint">Filter by province and by how far a district sits below the national average. Hover a bar for the population and branch count.</p>
+  <div class="card">
+    <div class="controls">
+      <label for="dProv">Province</label>
+      <select id="dProv"></select>
+      <label for="dView">Show</label>
+      <select id="dView">
+        <option value="all">All districts</option>
+        <option value="below">Below half the national average</option>
+        <option value="low15">15 lowest</option>
+        <option value="high15">15 highest</option>
+      </select>
+      <span class="count" id="dCount"></span>
+    </div>
+    <div id="districts" class="chart"></div>
+  </div>
+
+  <h2>4. All districts</h2>
+  <p class="hint">Search by district or province. Click a column heading to sort. Districts marked "no 2020 branch row" were created after the December 2020 branch data and are left blank.</p>
+  <div class="card">
+    <div class="controls">
+      <input type="search" id="search" placeholder="Search district or province">
+      <a class="button" href="../data/clean/branch_density_district.csv">Download CSV</a>
+      <span class="count" id="tCount"></span>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr>
+          <th data-key="unit">District</th>
+          <th data-key="province">Province</th>
+          <th data-key="population_2023" class="num">Population 2023</th>
+          <th data-key="branches_total" class="num">Branches (Dec 2020)</th>
+          <th data-key="branches_per_100k" class="num">Per 100k</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p><strong>Sources:</strong> World Bank Global Findex (account ownership, 2011–2024, via the World Bank API); State Bank of Pakistan, Statistics on Scheduled Banks, district-wise branches at 31 Dec 2020; Pakistan Bureau of Statistics, Population Census 2023 (district population, from a third-party table conversion).</p>
+  <p><strong>Read with care:</strong> Branch counts show where formal banks are, not where people bank, and they don't include mobile wallets or agents. Branch data is from 2020 and population from 2023. Azad Jammu &amp; Kashmir and Gilgit-Baltistan are excluded. Low branch density doesn't by itself prove unmet demand.</p>
+  <p>Method, data issues and the recommendation memo are in the <a href="https://github.com/Maira-W/pakistan-financial-inclusion">project repository</a>.</p>
+</footer>
+
+<script>
+const D = {"kpis": {"pak_2024": 27.3, "india_2024": 89.0, "men_2024": 42.3, "women_2024": 11.9, "gender_gap_2024": 30.4, "national_density": 5.95, "below_half_count": 39, "matched_count": 119, "pop_share_low": 17.0}, "findex": {"years": [2011, 2014, 2017, 2021, 2024], "series": {"Bangladesh": [31.74, 30.99, 50.05, 52.81, 43.28], "India": [35.23, 53.14, 79.88, 77.53, 89.02], "Pakistan": [10.31, 13.04, 21.29, 20.98, 27.3], "Sri Lanka": [68.53, 82.69, 73.65, 89.27, 81.69]}, "male": [17.28, 20.97, 34.61, 28.18, 42.29], "female": [2.95, 4.84, 7.03, 13.48, 11.91]}, "provinces": [{"province": "BALOCHISTAN", "population_2023": 13308941, "branches_total": 586.0, "branches_per_100k": 4.4}, {"province": "ISLAMABAD", "population_2023": 2363863, "branches_total": 558.0, "branches_per_100k": 23.61}, {"province": "KHYBER PAKHTUNKHWA", "population_2023": 39559554, "branches_total": 1618.0, "branches_per_100k": 4.09}, {"province": "PUNJAB", "population_2023": 127688922, "branches_total": 7851.0, "branches_per_100k": 6.15}, {"province": "SINDH", "population_2023": 55129282, "branches_total": 3562.0, "branches_per_100k": 6.46}], "districts": [{"unit": "MUSAKHEL", "province": "BALOCHISTAN", "population_2023": 182275, "branches_total": 1, "branches_per_100k": 0.55}, {"unit": "SOUTH WAZIRISTAN", "province": "KHYBER PAKHTUNKHWA", "population_2023": 888675, "branches_total": 5, "branches_per_100k": 0.56}, {"unit": "WASHUK", "province": "BALOCHISTAN", "population_2023": 302623, "branches_total": 2, "branches_per_100k": 0.66}, {"unit": "ORAKZAI", "province": "KHYBER PAKHTUNKHWA", "population_2023": 387561, "branches_total": 3, "branches_per_100k": 0.77}, {"unit": "TORGHAR", "province": "KHYBER PAKHTUNKHWA", "population_2023": 200445, "branches_total": 2, "branches_per_100k": 1.0}, {"unit": "THARPARKAR", "province": "SINDH", "population_2023": 1778407, "branches_total": 18, "branches_per_100k": 1.01}, {"unit": "BAJAUR", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1287960, "branches_total": 14, "branches_per_100k": 1.09}, {"unit": "KOHLU", "province": "BALOCHISTAN", "population_2023": 260220, "branches_total": 3, "branches_per_100k": 1.15}, {"unit": "KOHISTAN (combined)", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1043126, "branches_total": 13, "branches_per_100k": 1.25}, {"unit": "LAKKI MARWAT", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1040856, "branches_total": 13, "branches_per_100k": 1.25}, {"unit": "KACHHI", "province": "BALOCHISTAN", "population_2023": 442674, "branches_total": 6, "branches_per_100k": 1.36}, {"unit": "DERA BUGTI", "province": "BALOCHISTAN", "population_2023": 355274, "branches_total": 5, "branches_per_100k": 1.41}, {"unit": "KHYBER", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1146267, "branches_total": 18, "branches_per_100k": 1.57}, {"unit": "NASIRABAD", "province": "BALOCHISTAN", "population_2023": 563315, "branches_total": 9, "branches_per_100k": 1.6}, {"unit": "MOHMAND", "province": "KHYBER PAKHTUNKHWA", "population_2023": 553933, "branches_total": 9, "branches_per_100k": 1.62}, {"unit": "NORTH WAZIRISTAN", "province": "KHYBER PAKHTUNKHWA", "population_2023": 693332, "branches_total": 13, "branches_per_100k": 1.88}, {"unit": "BARKHAN", "province": "BALOCHISTAN", "population_2023": 210249, "branches_total": 4, "branches_per_100k": 1.9}, {"unit": "KHARAN", "province": "BALOCHISTAN", "population_2023": 260352, "branches_total": 5, "branches_per_100k": 1.92}, {"unit": "MIRPUR KHAS", "province": "SINDH", "population_2023": 1681386, "branches_total": 37, "branches_per_100k": 2.2}, {"unit": "UPPER DIR", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1083566, "branches_total": 24, "branches_per_100k": 2.21}, {"unit": "MASTUNG", "province": "BALOCHISTAN", "population_2023": 313271, "branches_total": 7, "branches_per_100k": 2.23}, {"unit": "AWARAN", "province": "BALOCHISTAN", "population_2023": 178958, "branches_total": 4, "branches_per_100k": 2.24}, {"unit": "KHUZDAR", "province": "BALOCHISTAN", "population_2023": 997214, "branches_total": 23, "branches_per_100k": 2.31}, {"unit": "PANJGUR", "province": "BALOCHISTAN", "population_2023": 509781, "branches_total": 12, "branches_per_100k": 2.35}, {"unit": "PISHIN", "province": "BALOCHISTAN", "population_2023": 835482, "branches_total": 20, "branches_per_100k": 2.39}, {"unit": "KAMBAR SHAHDAD KOT", "province": "SINDH", "population_2023": 1514869, "branches_total": 37, "branches_per_100k": 2.44}, {"unit": "SHANGLA", "province": "KHYBER PAKHTUNKHWA", "population_2023": 891252, "branches_total": 22, "branches_per_100k": 2.47}, {"unit": "KOHAT", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1234661, "branches_total": 31, "branches_per_100k": 2.51}, {"unit": "CHARSADDA", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1835504, "branches_total": 46, "branches_per_100k": 2.51}, {"unit": "RAJANPUR", "province": "PUNJAB", "population_2023": 2381049, "branches_total": 60, "branches_per_100k": 2.52}, {"unit": "SHIKARPUR", "province": "SINDH", "population_2023": 1386330, "branches_total": 36, "branches_per_100k": 2.6}, {"unit": "CHAGAI", "province": "BALOCHISTAN", "population_2023": 269192, "branches_total": 7, "branches_per_100k": 2.6}, {"unit": "TANDO MUHAMMAD KHAN", "province": "SINDH", "population_2023": 726119, "branches_total": 19, "branches_per_100k": 2.62}, {"unit": "JACOBABAD", "province": "SINDH", "population_2023": 1174097, "branches_total": 31, "branches_per_100k": 2.64}, {"unit": "MUZAFFARGARH", "province": "PUNJAB", "population_2023": 5015325, "branches_total": 134, "branches_per_100k": 2.67}, {"unit": "BHAKKAR", "province": "PUNJAB", "population_2023": 1957470, "branches_total": 55, "branches_per_100k": 2.81}, {"unit": "UMER KOT", "province": "SINDH", "population_2023": 1159831, "branches_total": 34, "branches_per_100k": 2.93}, {"unit": "DADU", "province": "SINDH", "population_2023": 1742320, "branches_total": 51, "branches_per_100k": 2.93}, {"unit": "LODHRAN", "province": "PUNJAB", "population_2023": 1928299, "branches_total": 57, "branches_per_100k": 2.96}, {"unit": "KURRAM", "province": "KHYBER PAKHTUNKHWA", "population_2023": 785434, "branches_total": 24, "branches_per_100k": 3.06}, {"unit": "BATAGRAM", "province": "KHYBER PAKHTUNKHWA", "population_2023": 554133, "branches_total": 17, "branches_per_100k": 3.07}, {"unit": "KHAIRPUR", "province": "SINDH", "population_2023": 2597535, "branches_total": 80, "branches_per_100k": 3.08}, {"unit": "LAYYAH", "province": "PUNJAB", "population_2023": 2102386, "branches_total": 65, "branches_per_100k": 3.09}, {"unit": "HARNAI", "province": "BALOCHISTAN", "population_2023": 127571, "branches_total": 4, "branches_per_100k": 3.14}, {"unit": "KASUR", "province": "PUNJAB", "population_2023": 4084286, "branches_total": 131, "branches_per_100k": 3.21}, {"unit": "GHOTKI", "province": "SINDH", "population_2023": 1772609, "branches_total": 57, "branches_per_100k": 3.22}, {"unit": "LOWER DIR", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1650183, "branches_total": 54, "branches_per_100k": 3.27}, {"unit": "TANDO AHYAR", "province": "SINDH", "population_2023": 922012, "branches_total": 31, "branches_per_100k": 3.36}, {"unit": "KECH", "province": "BALOCHISTAN", "population_2023": 1060931, "branches_total": 36, "branches_per_100k": 3.39}, {"unit": "BUNER", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1016869, "branches_total": 35, "branches_per_100k": 3.44}, {"unit": "DERA GHAZI KHAN", "province": "PUNJAB", "population_2023": 3393705, "branches_total": 117, "branches_per_100k": 3.45}, {"unit": "KASHMORE", "province": "SINDH", "population_2023": 1233957, "branches_total": 43, "branches_per_100k": 3.48}, {"unit": "PAKPATTAN", "province": "PUNJAB", "population_2023": 2136170, "branches_total": 75, "branches_per_100k": 3.51}, {"unit": "KARAK", "province": "KHYBER PAKHTUNKHWA", "population_2023": 815878, "branches_total": 29, "branches_per_100k": 3.55}, {"unit": "KALAT", "province": "BALOCHISTAN", "population_2023": 271560, "branches_total": 10, "branches_per_100k": 3.68}, {"unit": "ZIARAT", "province": "BALOCHISTAN", "population_2023": 189535, "branches_total": 7, "branches_per_100k": 3.69}, {"unit": "LARKANA", "province": "SINDH", "population_2023": 1784453, "branches_total": 67, "branches_per_100k": 3.75}, {"unit": "THATTA", "province": "SINDH", "population_2023": 1083191, "branches_total": 41, "branches_per_100k": 3.79}, {"unit": "SANGHAR", "province": "SINDH", "population_2023": 2308465, "branches_total": 89, "branches_per_100k": 3.86}, {"unit": "MARDAN", "province": "KHYBER PAKHTUNKHWA", "population_2023": 2744898, "branches_total": 106, "branches_per_100k": 3.86}, {"unit": "TOBA TEK SINGH", "province": "PUNJAB", "population_2023": 2524044, "branches_total": 99, "branches_per_100k": 3.92}, {"unit": "MATIARI", "province": "SINDH", "population_2023": 849383, "branches_total": 34, "branches_per_100k": 4.0}, {"unit": "JAMSHORO", "province": "SINDH", "population_2023": 1117308, "branches_total": 45, "branches_per_100k": 4.03}, {"unit": "JAFFARABAD", "province": "BALOCHISTAN", "population_2023": 594558, "branches_total": 24, "branches_per_100k": 4.04}, {"unit": "NAUSHAHRO FEROZE", "province": "SINDH", "population_2023": 1777082, "branches_total": 72, "branches_per_100k": 4.05}, {"unit": "VEHARI", "province": "PUNJAB", "population_2023": 3430421, "branches_total": 142, "branches_per_100k": 4.14}, {"unit": "RAHIM YAR KHAN", "province": "PUNJAB", "population_2023": 5564703, "branches_total": 231, "branches_per_100k": 4.15}, {"unit": "SHEIKHUPURA", "province": "PUNJAB", "population_2023": 4049418, "branches_total": 168, "branches_per_100k": 4.15}, {"unit": "BAHAWALNAGAR", "province": "PUNJAB", "population_2023": 3550342, "branches_total": 150, "branches_per_100k": 4.22}, {"unit": "KHANEWAL", "province": "PUNJAB", "population_2023": 3364077, "branches_total": 144, "branches_per_100k": 4.28}, {"unit": "CHINIOT", "province": "PUNJAB", "population_2023": 1563024, "branches_total": 67, "branches_per_100k": 4.29}, {"unit": "HAFIZABAD", "province": "PUNJAB", "population_2023": 1319909, "branches_total": 57, "branches_per_100k": 4.32}, {"unit": "SWABI", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1894600, "branches_total": 82, "branches_per_100k": 4.33}, {"unit": "OKARA", "province": "PUNJAB", "population_2023": 3515490, "branches_total": 153, "branches_per_100k": 4.35}, {"unit": "SHAHEED BENAZIRABAD", "province": "SINDH", "population_2023": 1845102, "branches_total": 81, "branches_per_100k": 4.39}, {"unit": "DERA ISMAIL KHAN", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1829811, "branches_total": 81, "branches_per_100k": 4.43}, {"unit": "SWAT", "province": "KHYBER PAKHTUNKHWA", "population_2023": 2687384, "branches_total": 122, "branches_per_100k": 4.54}, {"unit": "LASBELA", "province": "BALOCHISTAN", "population_2023": 680977, "branches_total": 31, "branches_per_100k": 4.55}, {"unit": "NANKANA SAHIB", "province": "PUNJAB", "population_2023": 1634871, "branches_total": 75, "branches_per_100k": 4.59}, {"unit": "BAHAWALPUR", "province": "PUNJAB", "population_2023": 4284964, "branches_total": 197, "branches_per_100k": 4.6}, {"unit": "NOWSHERA", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1740705, "branches_total": 80, "branches_per_100k": 4.6}, {"unit": "NAROWAL", "province": "PUNJAB", "population_2023": 1950954, "branches_total": 90, "branches_per_100k": 4.61}, {"unit": "KHUSHAB", "province": "PUNJAB", "population_2023": 1501089, "branches_total": 72, "branches_per_100k": 4.8}, {"unit": "MIANWALI", "province": "PUNJAB", "population_2023": 1798268, "branches_total": 92, "branches_per_100k": 5.12}, {"unit": "MANDI BAHAUDDIN", "province": "PUNJAB", "population_2023": 1829486, "branches_total": 95, "branches_per_100k": 5.19}, {"unit": "BADIN", "province": "SINDH", "population_2023": 1947081, "branches_total": 102, "branches_per_100k": 5.24}, {"unit": "NUSHKI", "province": "BALOCHISTAN", "population_2023": 207834, "branches_total": 11, "branches_per_100k": 5.29}, {"unit": "ZHOB", "province": "BALOCHISTAN", "population_2023": 355692, "branches_total": 19, "branches_per_100k": 5.34}, {"unit": "SIBI", "province": "BALOCHISTAN", "population_2023": 224148, "branches_total": 12, "branches_per_100k": 5.35}, {"unit": "JHANG", "province": "PUNJAB", "population_2023": 3065639, "branches_total": 167, "branches_per_100k": 5.45}, {"unit": "MANSEHRA", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1797177, "branches_total": 99, "branches_per_100k": 5.51}, {"unit": "KILLA SAIFULLAH", "province": "BALOCHISTAN", "population_2023": 380200, "branches_total": 21, "branches_per_100k": 5.52}, {"unit": "SAHIWAL", "province": "PUNJAB", "population_2023": 2881811, "branches_total": 166, "branches_per_100k": 5.76}, {"unit": "SARGODHA", "province": "PUNJAB", "population_2023": 4334448, "branches_total": 250, "branches_per_100k": 5.77}, {"unit": "GUJRANWALA", "province": "PUNJAB", "population_2023": 5959750, "branches_total": 354, "branches_per_100k": 5.94}, {"unit": "FAISALABAD", "province": "PUNJAB", "population_2023": 9075819, "branches_total": 560, "branches_per_100k": 6.17}, {"unit": "SUKKUR", "province": "SINDH", "population_2023": 1639897, "branches_total": 104, "branches_per_100k": 6.34}, {"unit": "KILLA ABDULLAH", "province": "BALOCHISTAN", "population_2023": 361971, "branches_total": 23, "branches_per_100k": 6.35}, {"unit": "HANGU", "province": "KHYBER PAKHTUNKHWA", "population_2023": 528902, "branches_total": 34, "branches_per_100k": 6.43}, {"unit": "BANNU", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1357890, "branches_total": 90, "branches_per_100k": 6.63}, {"unit": "HARIPUR", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1174783, "branches_total": 79, "branches_per_100k": 6.72}, {"unit": "MULTAN", "province": "PUNJAB", "population_2023": 5362305, "branches_total": 365, "branches_per_100k": 6.81}, {"unit": "PESHAWAR", "province": "KHYBER PAKHTUNKHWA", "population_2023": 4758762, "branches_total": 331, "branches_per_100k": 6.96}, {"unit": "TANDO MUHAMMAD KHAN", "province": "SINDH", "population_2023": 272427, "branches_total": 19, "branches_per_100k": 6.97}, {"unit": "ABBOTTABAD", "province": "KHYBER PAKHTUNKHWA", "population_2023": 1419072, "branches_total": 104, "branches_per_100k": 7.33}, {"unit": "CHITRAL (combined)", "province": "KHYBER PAKHTUNKHWA", "population_2023": 515935, "branches_total": 38, "branches_per_100k": 7.37}, {"unit": "QUETTA", "province": "BALOCHISTAN", "population_2023": 2595492, "branches_total": 208, "branches_per_100k": 8.01}, {"unit": "CHAKWAL", "province": "PUNJAB", "population_2023": 1734854, "branches_total": 141, "branches_per_100k": 8.13}, {"unit": "SIALKOT", "province": "PUNJAB", "population_2023": 4499394, "branches_total": 367, "branches_per_100k": 8.16}, {"unit": "ATTOCK", "province": "PUNJAB", "population_2023": 2170423, "branches_total": 178, "branches_per_100k": 8.2}, {"unit": "LORALAI", "province": "BALOCHISTAN", "population_2023": 272432, "branches_total": 23, "branches_per_100k": 8.44}, {"unit": "HYDERABAD", "province": "SINDH", "population_2023": 2432540, "branches_total": 215, "branches_per_100k": 8.84}, {"unit": "GUJRAT", "province": "PUNJAB", "population_2023": 3219375, "branches_total": 331, "branches_per_100k": 10.28}, {"unit": "KARACHI (combined)", "province": "SINDH", "population_2023": 20382881, "branches_total": 2219, "branches_per_100k": 10.89}, {"unit": "RAWALPINDI", "province": "PUNJAB", "population_2023": 6118911, "branches_total": 683, "branches_per_100k": 11.16}, {"unit": "JHELUM", "province": "PUNJAB", "population_2023": 1382308, "branches_total": 157, "branches_per_100k": 11.36}, {"unit": "LAHORE", "province": "PUNJAB", "population_2023": 13004135, "branches_total": 1606, "branches_per_100k": 12.35}, {"unit": "GWADAR", "province": "BALOCHISTAN", "population_2023": 305160, "branches_total": 49, "branches_per_100k": 16.06}, {"unit": "ISLAMABAD", "province": "ISLAMABAD", "population_2023": 2363863, "branches_total": 558, "branches_per_100k": 23.61}, {"unit": "CHAMAN", "province": "BALOCHISTAN", "population_2023": 466218, "branches_total": null, "branches_per_100k": null}, {"unit": "DUKI", "province": "BALOCHISTAN", "population_2023": 205044, "branches_total": null, "branches_per_100k": null}, {"unit": "JHAL MAGSI", "province": "BALOCHISTAN", "population_2023": 203368, "branches_total": null, "branches_per_100k": null}, {"unit": "SHERANI", "province": "BALOCHISTAN", "population_2023": 191687, "branches_total": null, "branches_per_100k": null}, {"unit": "SOHBATPUR", "province": "BALOCHISTAN", "population_2023": 240106, "branches_total": null, "branches_per_100k": null}, {"unit": "SURAB", "province": "BALOCHISTAN", "population_2023": 279038, "branches_total": null, "branches_per_100k": null}, {"unit": "MALAKAND", "province": "KHYBER PAKHTUNKHWA", "population_2023": 826250, "branches_total": null, "branches_per_100k": null}, {"unit": "TANK", "province": "KHYBER PAKHTUNKHWA", "population_2023": 470293, "branches_total": null, "branches_per_100k": null}, {"unit": "SUJAWAL", "province": "SINDH", "population_2023": 839292, "branches_total": null, "branches_per_100k": null}]};
+
+const NAVY = "#1F3B57", TEAL = "#2A9D8F", ORANGE = "#E76F51", GREY = "#8D99AE";
+const CFG = { responsive: true, displaylogo: false };
+const BASE = {
+  template: "plotly_white",
+  font: { family: "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif", size: 12, color: "#1d2733" },
+  margin: { t: 16, r: 16, b: 48, l: 56 },
+  paper_bgcolor: "#fff", plot_bgcolor: "#fff",
+  hoverlabel: { font: { size: 12 } },
+};
+const NATIONAL = D.kpis.national_density;
+const HALF = NATIONAL / 2;
+
+const fmt = (n, d = 1) => Number(n).toLocaleString("en-US", { maximumFractionDigits: d, minimumFractionDigits: d });
+const fmtInt = (n) => Number(n).toLocaleString("en-US");
+const title = (s) => s.toLowerCase().replace(/(^|[\s(\/-])([a-z])/g, (m, p, c) => p + c.toUpperCase());
+
+/* ---------- Key numbers ---------- */
+function renderKpis() {
+  const k = D.kpis;
+  const tiles = [
+    { label: "Pakistan account ownership, 2024", value: fmt(k.pak_2024) + "%", note: "Adults 15+ with a formal account" },
+    { label: "India, same measure", value: fmt(k.india_2024) + "%", note: "Peer benchmark, 2024" },
+    { label: "Gender gap, Pakistan 2024", value: fmt(k.gender_gap_2024) + " pts", note: "Men " + fmt(k.men_2024) + "% vs women " + fmt(k.women_2024) + "%", alert: true },
+    { label: "National branch density", value: fmt(k.national_density, 2), note: "Branches per 100k, 119 matched districts" },
+    { label: "Districts below half the average", value: k.below_half_count + " of " + k.matched_count, note: fmt(k.pop_share_low, 1) + "% of population lives there", alert: true },
+  ];
+  document.getElementById("kpis").innerHTML = tiles.map(t =>
+    `<div class="kpi${t.alert ? " alert" : ""}"><div class="label">${t.label}</div><div class="value">${t.value}</div><div class="note">${t.note}</div></div>`
+  ).join("");
+}
+
+/* ---------- Chart 1: peer benchmark ---------- */
+function renderPeer() {
+  const colors = { Pakistan: ORANGE, India: NAVY, Bangladesh: TEAL, "Sri Lanka": GREY };
+  const traces = ["India", "Bangladesh", "Sri Lanka", "Pakistan"].map(c => ({
+    x: D.findex.years, y: D.findex.series[c], name: c, mode: "lines+markers",
+    line: { color: colors[c], width: c === "Pakistan" ? 4 : 2 },
+    marker: { size: c === "Pakistan" ? 9 : 7 },
+    hovertemplate: c + ": %{y:.1f}%<extra>%{x}</extra>",
+  }));
+  Plotly.newPlot("peer", traces, {
+    ...BASE, height: 380,
+    xaxis: { tickvals: D.findex.years, showgrid: false },
+    yaxis: { title: "% of adults 15+", ticksuffix: "%", gridcolor: "#eef1f5", rangemode: "tozero" },
+    legend: { orientation: "h", y: -0.18 },
+  }, CFG);
+}
+
+/* ---------- Chart 2: gender gap ---------- */
+function renderGender() {
+  const g = D.findex;
+  const gap = g.years.map((y, i) => (g.male[i] - g.female[i]).toFixed(1));
+  Plotly.newPlot("gender", [
+    { x: g.years, y: g.male, name: "Men", mode: "lines+markers", line: { color: NAVY, width: 3 }, marker: { size: 8 },
+      hovertemplate: "Men: %{y:.1f}%<extra>%{x}</extra>" },
+    { x: g.years, y: g.female, name: "Women", mode: "lines+markers", line: { color: ORANGE, width: 3 }, marker: { size: 8 },
+      fill: "tonexty", fillcolor: "rgba(231,111,81,0.14)", customdata: gap,
+      hovertemplate: "Women: %{y:.1f}%<br>Gap: %{customdata} pts<extra>%{x}</extra>" },
+  ], {
+    ...BASE, height: 380,
+    xaxis: { tickvals: g.years, showgrid: false },
+    yaxis: { title: "% of adults 15+", ticksuffix: "%", gridcolor: "#eef1f5", rangemode: "tozero" },
+    legend: { orientation: "h", y: -0.18 },
+  }, CFG);
+}
+
+/* ---------- Chart 3: province bars ---------- */
+function renderProvince() {
+  const p = [...D.provinces].sort((a, b) => a.branches_per_100k - b.branches_per_100k);
+  Plotly.newPlot("province", [{
+    type: "bar", orientation: "h",
+    y: p.map(r => title(r.province)), x: p.map(r => r.branches_per_100k),
+    marker: { color: p.map(r => r.branches_per_100k < HALF ? ORANGE : (r.branches_per_100k < NATIONAL ? "#F4A261" : TEAL)) },
+    text: p.map(r => fmt(r.branches_per_100k, 2)), textposition: "outside", cliponaxis: false,
+    customdata: p.map(r => [fmtInt(r.population_2023), fmtInt(r.branches_total)]),
+    hovertemplate: "%{y}: %{x:.2f} per 100k<br>Population %{customdata[0]}<br>Branches %{customdata[1]}<extra></extra>",
+  }], {
+    ...BASE, height: 340, margin: { t: 16, r: 48, b: 40, l: 130 },
+    xaxis: { title: "Branches per 100,000 people", gridcolor: "#eef1f5", rangemode: "tozero" },
+    yaxis: { automargin: true },
+    shapes: [{ type: "line", xref: "x", yref: "paper", x0: NATIONAL, x1: NATIONAL, y0: 0, y1: 1,
+               line: { color: "#333", width: 1.5, dash: "dot" } }],
+    annotations: [{ xref: "x", yref: "paper", x: NATIONAL, y: 1.04, text: "National " + fmt(NATIONAL, 2),
+                    showarrow: false, font: { size: 11, color: "#333" } }],
+  }, CFG);
+}
+
+/* ---------- Chart 4: scatter ---------- */
+let scatterLog = false;
+function renderScatter() {
+  const provinces = [...new Set(D.districts.filter(d => d.branches_per_100k != null).map(d => d.province))];
+  const palette = { PUNJAB: NAVY, SINDH: TEAL, "KHYBER PAKHTUNKHWA": ORANGE, BALOCHISTAN: "#E9C46A", ISLAMABAD: "#7B2CBF" };
+  const traces = provinces.map(prov => {
+    const rows = D.districts.filter(d => d.branches_per_100k != null && d.province === prov);
+    return {
+      type: "scatter", mode: "markers", name: title(prov),
+      x: rows.map(r => r.population_2023 / 1e6), y: rows.map(r => r.branches_total),
+      text: rows.map(r => title(r.unit)),
+      customdata: rows.map(r => [fmt(r.branches_per_100k, 2)]),
+      marker: { color: palette[prov] || GREY, size: 9, opacity: 0.75, line: { width: 0.5, color: "#fff" } },
+      hovertemplate: "%{text}<br>%{x:.2f}M people<br>%{y} branches<br>%{customdata[0]} per 100k<extra>" + title(prov) + "</extra>",
+    };
+  });
+  Plotly.newPlot("scatter", traces, {
+    ...BASE, height: 380,
+    xaxis: { title: "Population 2023 (millions)", gridcolor: "#eef1f5", type: scatterLog ? "log" : "linear" },
+    yaxis: { title: "Bank branches (Dec 2020)", gridcolor: "#eef1f5", type: scatterLog ? "log" : "linear" },
+    legend: { orientation: "h", y: -0.2 },
+  }, CFG);
+}
+function toggleLog() {
+  scatterLog = !scatterLog;
+  const btn = document.getElementById("logBtn");
+  btn.setAttribute("aria-pressed", String(scatterLog));
+  Plotly.relayout("scatter", { "xaxis.type": scatterLog ? "log" : "linear", "yaxis.type": scatterLog ? "log" : "linear" });
+}
+
+/* ---------- Section 3: district explorer ---------- */
+function setupDistrictControls() {
+  const sel = document.getElementById("dProv");
+  const provs = [...new Set(D.districts.filter(d => d.branches_per_100k != null).map(d => d.province))].sort();
+  sel.innerHTML = `<option value="ALL">All provinces</option>` + provs.map(p => `<option value="${p}">${title(p)}</option>`).join("");
+  sel.addEventListener("change", renderDistricts);
+  document.getElementById("dView").addEventListener("change", renderDistricts);
+}
+function renderDistricts() {
+  const prov = document.getElementById("dProv").value;
+  const view = document.getElementById("dView").value;
+  let rows = D.districts.filter(d => d.branches_per_100k != null && (prov === "ALL" || d.province === prov));
+  rows.sort((a, b) => a.branches_per_100k - b.branches_per_100k);
+  if (view === "below") rows = rows.filter(d => d.branches_per_100k < HALF);
+  if (view === "low15") rows = rows.slice(0, 15);
+  if (view === "high15") rows = rows.slice(-15);
+  document.getElementById("dCount").textContent = rows.length + " district" + (rows.length === 1 ? "" : "s") + " shown";
+  Plotly.react("districts", [{
+    type: "bar", orientation: "h",
+    y: rows.map(r => title(r.unit)), x: rows.map(r => r.branches_per_100k),
+    marker: { color: rows.map(r => r.branches_per_100k < HALF ? ORANGE : TEAL) },
+    text: rows.map(r => fmt(r.branches_per_100k, 2)), textposition: "outside", cliponaxis: false,
+    customdata: rows.map(r => [title(r.province), fmtInt(r.population_2023), fmtInt(r.branches_total)]),
+    hovertemplate: "%{y}, %{customdata[0]}<br>%{x:.2f} per 100k<br>Population %{customdata[1]}<br>Branches %{customdata[2]}<extra></extra>",
+  }], {
+    ...BASE, height: Math.max(320, rows.length * 22 + 60), margin: { t: 16, r: 56, b: 44, l: 170 },
+    xaxis: { title: "Branches per 100,000 people", gridcolor: "#eef1f5", rangemode: "tozero" },
+    yaxis: { automargin: true },
+    shapes: [{ type: "line", xref: "x", yref: "paper", x0: NATIONAL, x1: NATIONAL, y0: 0, y1: 1,
+               line: { color: "#333", width: 1.5, dash: "dot" } }],
+  }, CFG);
+}
+
+/* ---------- Section 4: searchable, sortable table ---------- */
+let sortKey = "branches_per_100k", sortDir = 1;
+function renderTable() {
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  let rows = D.districts.filter(d => !q || d.unit.toLowerCase().includes(q) || d.province.toLowerCase().includes(q));
+  rows.sort((a, b) => {
+    const x = a[sortKey], y = b[sortKey];
+    if (x == null && y == null) return 0;
+    if (x == null) return 1;
+    if (y == null) return -1;
+    return (typeof x === "string" ? x.localeCompare(y) : x - y) * sortDir;
+  });
+  document.getElementById("tCount").textContent = rows.length + " of " + D.districts.length + " districts";
+  document.getElementById("tbody").innerHTML = rows.map(r => {
+    const missing = r.branches_per_100k == null;
+    if (missing) {
+      return `<tr class="flag"><td>${title(r.unit)}</td><td>${title(r.province)}</td><td class="num">${fmtInt(r.population_2023)}</td><td class="num">n/a</td><td class="num">no 2020 branch row</td></tr>`;
+    }
+    return `<tr><td>${title(r.unit)}</td><td>${title(r.province)}</td><td class="num">${fmtInt(r.population_2023)}</td><td class="num">${fmtInt(r.branches_total)}</td><td class="num">${fmt(r.branches_per_100k, 2)}</td></tr>`;
+  }).join("");
+}
+function setupTable() {
+  document.getElementById("search").addEventListener("input", renderTable);
+  document.querySelectorAll("th[data-key]").forEach(th => th.addEventListener("click", () => {
+    const k = th.dataset.key;
+    sortDir = sortKey === k ? -sortDir : (k === "unit" || k === "province" ? 1 : -1);
+    sortKey = k;
+    renderTable();
+  }));
+}
+
+/* ---------- Boot ---------- */
+renderKpis();
+renderPeer();
+renderGender();
+renderProvince();
+renderScatter();
+document.getElementById("logBtn").addEventListener("click", toggleLog);
+setupDistrictControls();
+renderDistricts();
+setupTable();
+renderTable();
+window.addEventListener("resize", () => {
+  ["peer", "gender", "province", "scatter", "districts"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.data) Plotly.Plots.resize(el);
+  });
+});
+</script>
 </body>
 </html>
