@@ -1,0 +1,112 @@
+table _Measures
+
+	column Placeholder
+		dataType: string
+		sourceColumn: Placeholder
+		summarizeBy: none
+		isHidden
+
+	measure 'Latest Year' = MAX ( findex[year] )
+		formatString: 0
+
+	measure 'Selected Year' = SELECTEDVALUE ( findex[year], [Latest Year] )
+		formatString: 0
+
+	measure 'Pakistan Account Ownership %' =
+			CALCULATE (
+			SUM ( findex[pct_age_15_plus] ),
+			findex[country] = "Pakistan",
+			findex[measure] = "total",
+			findex[year] = [Selected Year]
+			)
+		formatString: 0.0"%"
+
+	measure 'Pakistan Men %' =
+			CALCULATE (
+			SUM ( findex[pct_age_15_plus] ),
+			findex[country] = "Pakistan",
+			findex[measure] = "male",
+			findex[year] = [Selected Year]
+			)
+		formatString: 0.0"%"
+
+	measure 'Pakistan Women %' =
+			CALCULATE (
+			SUM ( findex[pct_age_15_plus] ),
+			findex[country] = "Pakistan",
+			findex[measure] = "female",
+			findex[year] = [Selected Year]
+			)
+		formatString: 0.0"%"
+
+	measure 'Gender Gap (pts)' = [Pakistan Men %] - [Pakistan Women %]
+		formatString: 0.0" pts"
+
+	measure 'India Account Ownership %' =
+			CALCULATE (
+			SUM ( findex[pct_age_15_plus] ),
+			findex[country] = "India",
+			findex[measure] = "total",
+			findex[year] = [Selected Year]
+			)
+		formatString: 0.0"%"
+
+	measure 'Peer Account Ownership %' =
+			CALCULATE (
+			SUM ( findex[pct_age_15_plus] ),
+			findex[measure] = "total"
+			)
+		formatString: 0.0"%"
+
+	measure 'Total Branches' = SUM ( districts[branches_total] )
+		formatString: #,0
+
+	measure 'Matched Population' =
+			CALCULATE (
+			SUM ( districts[population_2023] ),
+			districts[has_branch_data] = TRUE ()
+			)
+		formatString: #,0
+
+	measure 'Branches per 100k' = DIVIDE ( [Total Branches], [Matched Population] ) * 100000
+		formatString: 0.00
+
+	measure 'National Branches per 100k' =
+			DIVIDE (
+			CALCULATE ( [Total Branches], ALL ( districts ) ),
+			CALCULATE ( [Matched Population], ALL ( districts ) )
+			) * 100000
+		formatString: 0.00
+
+	measure 'Density vs National (x)' = DIVIDE ( [Branches per 100k], [National Branches per 100k] )
+		formatString: 0.00"x"
+
+	measure 'Districts Matched' = CALCULATE ( COUNTROWS ( districts ), districts[has_branch_data] = TRUE () )
+		formatString: 0
+
+	measure 'Districts Below Half National Avg' = CALCULATE ( COUNTROWS ( districts ), districts[below_half_national_avg] = TRUE () )
+		formatString: 0
+
+	measure 'Population Share in Low-Density Districts %' =
+			DIVIDE (
+			CALCULATE ( SUM ( districts[population_2023] ), districts[below_half_national_avg] = TRUE () ),
+			CALCULATE ( [Matched Population], ALL ( districts ) )
+			)
+		formatString: 0.0%
+
+	measure 'Districts Created After 2020' = CALCULATE ( COUNTROWS ( districts ), districts[has_branch_data] = FALSE () )
+		formatString: 0
+
+	measure 'Bar Colour' = IF ( [Branches per 100k] < [National Branches per 100k] / 2, "#E76F51", "#2A9D8F" )
+
+	measure 'Data Note' =
+			"Branch data: SBP, 31 Dec 2020. Population: PBS Census 2023. AJK and Gilgit-Baltistan excluded. "
+			& "Branches show where banks are, not where people bank."
+
+	partition _Measures = m
+		mode: import
+		source =
+			let
+				Source = #table(type table [Placeholder = text], {{"measures"}})
+			in
+				Source

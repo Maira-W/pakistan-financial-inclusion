@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "a5fdc04becab4706910c",
+  "position": {
+    "x": 780,
+    "y": 150,
+    "z": 5,
+    "height": 550,
+    "width": 480,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "districts"
+                    }
+                  },
+                  "Property": "district"
+                }
+              },
+              "queryRef": "districts.district",
+              "nativeQueryRef": "district"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "districts"
+                    }
+                  },
+                  "Property": "province"
+                }
+              },
+              "queryRef": "districts.province",
+              "nativeQueryRef": "province"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "districts"
+                    }
+                  },
+                  "Property": "population_2023"
+                }
+              },
+              "queryRef": "districts.population_2023",
+              "nativeQueryRef": "population_2023"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "districts"
+                    }
+                  },
+                  "Property": "branches_total"
+                }
+              },
+              "queryRef": "districts.branches_total",
+              "nativeQueryRef": "branches_total"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "districts"
+                    }
+                  },
+                  "Property": "branches_per_100k"
+                }
+              },
+              "queryRef": "districts.branches_per_100k",
+              "nativeQueryRef": "branches_per_100k"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'All districts'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

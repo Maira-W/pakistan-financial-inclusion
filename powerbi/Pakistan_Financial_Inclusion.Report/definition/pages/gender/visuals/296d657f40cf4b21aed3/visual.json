@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "296d657f40cf4b21aed3",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 0,
+    "height": 110,
+    "width": 228,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Gender Gap (pts)"
+                }
+              },
+              "queryRef": "_Measures.Gender Gap (pts)",
+              "nativeQueryRef": "Gender Gap (pts)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Gender Gap (pts)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

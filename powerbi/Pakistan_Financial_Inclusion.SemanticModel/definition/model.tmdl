@@ -7,4 +7,4 @@ model Model
 ref table districts
 ref table provinces
 ref table findex
-ref table Measures
+ref table _Measures

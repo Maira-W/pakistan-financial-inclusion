@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "1a4677cb962b4e258cd2",
+  "position": {
+    "x": 800,
+    "y": 240,
+    "z": 6,
+    "height": 440,
+    "width": 460,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "provinces"
+                    }
+                  },
+                  "Property": "province"
+                }
+              },
+              "queryRef": "provinces.province",
+              "nativeQueryRef": "province"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Branches per 100k"
+                }
+              },
+              "queryRef": "_Measures.Branches per 100k",
+              "nativeQueryRef": "Branches per 100k"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Branches per 100k by province'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

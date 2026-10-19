@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "8986e34fa9704e069cec",
+  "position": {
+    "x": 506,
+    "y": 20,
+    "z": 2,
+    "height": 110,
+    "width": 228,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "National Branches per 100k"
+                }
+              },
+              "queryRef": "_Measures.National Branches per 100k",
+              "nativeQueryRef": "National Branches per 100k"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'National Branches per 100k'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -158,7 +158,7 @@ def tmdl_table(table: str, df: pd.DataFrame, extra_measures: list | None = None)
 
 def tmdl_measures_table(measures: list) -> str:
     lines = [
-        "table Measures",
+        "table _Measures",
         "",
         "\tcolumn Placeholder",
         "\t\tdataType: string",
@@ -170,7 +170,7 @@ def tmdl_measures_table(measures: list) -> str:
         lines += ["", tmdl_measure(name, body)]
     lines += [
         "",
-        "\tpartition Measures = m",
+        "\tpartition _Measures = m",
         "\t\tmode: import",
         "\t\tsource =",
         "\t\t\tlet",
@@ -191,7 +191,7 @@ def write_model(measures: list) -> None:
     (MODEL_DIR / "definition" / "model.tmdl").write_text(
         "model Model\n\tculture: en-US\n\tdefaultPowerBIDataSourceVersion: powerBI_V3\n"
         "\tsourceQueryCulture: en-US\n\tdiscourageImplicitMeasures\n\n"
-        "ref table districts\nref table provinces\nref table findex\nref table Measures\n",
+        "ref table districts\nref table provinces\nref table findex\nref table _Measures\n",
         encoding="utf-8")
     (MODEL_DIR / "definition" / "expressions.tmdl").write_text(
         f'expression DataFolder = "{DATA}"\n', encoding="utf-8")
@@ -207,7 +207,7 @@ def write_model(measures: list) -> None:
     (tdir / "districts.tmdl").write_text(tmdl_table("districts", districts), encoding="utf-8")
     (tdir / "provinces.tmdl").write_text(tmdl_table("provinces", provinces), encoding="utf-8")
     (tdir / "findex.tmdl").write_text(tmdl_table("findex", findex), encoding="utf-8")
-    (tdir / "Measures.tmdl").write_text(tmdl_measures_table(measures), encoding="utf-8")
+    (tdir / "_Measures.tmdl").write_text(tmdl_measures_table(measures), encoding="utf-8")
 
 
 # ---------- Report (PBIR) ----------
@@ -217,7 +217,7 @@ def col(entity: str, prop: str) -> dict:
 
 
 def meas(prop: str) -> dict:
-    return {"Measure": {"Expression": {"SourceRef": {"Entity": "Measures"}}, "Property": prop}}
+    return {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": prop}}
 
 
 def projection(field: dict, entity: str, prop: str) -> dict:
@@ -250,7 +250,7 @@ def card_row(y: int, measures_list: list[str]) -> list[dict]:
     out, width, gap = [], 228, 15
     for i, name in enumerate(measures_list):
         x = 20 + i * (width + gap)
-        out.append(visual(name, "card", {"Values": [(meas(name), "Measures", name)]},
+        out.append(visual(name, "card", {"Values": [(meas(name), "_Measures", name)]},
                           x, y, width, 110, i))
     return out
 
@@ -289,11 +289,11 @@ def write_report() -> None:
             visual("Account ownership by country", "lineChart",
                    {"Category": [(col("findex", "year"), "findex", "year")],
                     "Series": [(col("findex", "country"), "findex", "country")],
-                    "Y": [(meas("Peer Account Ownership %"), "Measures", "Peer Account Ownership %")]},
+                    "Y": [(meas("Peer Account Ownership %"), "_Measures", "Peer Account Ownership %")]},
                    20, 240, 760, 440, 5),
             visual("Branches per 100k by province", "clusteredBarChart",
                    {"Category": [(col("provinces", "province"), "provinces", "province")],
-                    "Y": [(meas("Branches per 100k"), "Measures", "Branches per 100k")]},
+                    "Y": [(meas("Branches per 100k"), "_Measures", "Branches per 100k")]},
                    800, 240, 460, 440, 6),
             year_slicer,
         ]
@@ -303,8 +303,8 @@ def write_report() -> None:
         + [
             visual("Men vs women, Pakistan (%)", "lineChart",
                    {"Category": [(col("findex", "year"), "findex", "year")],
-                    "Y": [(meas("Pakistan Men %"), "Measures", "Pakistan Men %"),
-                          (meas("Pakistan Women %"), "Measures", "Pakistan Women %")]},
+                    "Y": [(meas("Pakistan Men %"), "_Measures", "Pakistan Men %"),
+                          (meas("Pakistan Women %"), "_Measures", "Pakistan Women %")]},
                    20, 150, 1240, 520, 4),
         ]
     )
@@ -315,7 +315,7 @@ def write_report() -> None:
                    20, 150, 220, 120, 3),
             visual("Branches per 100k by district", "clusteredBarChart",
                    {"Category": [(col("districts", "district"), "districts", "district")],
-                    "Y": [(meas("Branches per 100k"), "Measures", "Branches per 100k")]},
+                    "Y": [(meas("Branches per 100k"), "_Measures", "Branches per 100k")]},
                    260, 150, 500, 550, 4),
             visual("All districts", "tableEx",
                    {"Values": [(col("districts", "district"), "districts", "district"),
@@ -350,7 +350,7 @@ def main() -> None:
     write_model(measures)
     write_report()
     write_project_file()
-    print(f"Measures: {len(measures)} | tables: districts, provinces, findex, Measures")
+    print(f"Measures: {len(measures)} | tables: districts, provinces, findex, _Measures")
     print(f"Project written to {PBI / (PROJECT + '.pbip')}")
 
 

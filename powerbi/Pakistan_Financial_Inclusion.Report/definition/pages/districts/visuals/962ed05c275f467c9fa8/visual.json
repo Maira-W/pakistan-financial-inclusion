@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "962ed05c275f467c9fa8",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 0,
+    "height": 110,
+    "width": 228,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Districts Matched"
+                }
+              },
+              "queryRef": "_Measures.Districts Matched",
+              "nativeQueryRef": "Districts Matched"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Districts Matched'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
