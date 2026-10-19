@@ -1,7 +1,9 @@
 // Measures for the Pakistan financial inclusion dashboard.
 // Tables: districts, provinces, findex. Relationship: districts[province_key] -> provinces[province_key] (many to one).
 // Paste each block into Power BI Desktop: select a table, New measure, then paste.
-// Put the measures in a separate table called "Measures" (Enter Data, then delete the column) to keep them tidy.
+// Put the measures in a separate table called "_Measures" (Enter Data, then delete the column) to keep them tidy.
+// Year-filtered measures store the year in a VAR first. Filtering a column by a measure inside CALCULATE
+// (for example findex[year] = [Selected Year]) makes the measure invalid in Power BI.
 
 // ---------- Selection helpers ----------
 
@@ -9,44 +11,52 @@ Latest Year =
 MAX ( findex[year] )
 
 Selected Year =
-SELECTEDVALUE ( findex[year], [Latest Year] )
+SELECTEDVALUE ( findex[year], MAX ( findex[year] ) )
 
 // ---------- Account ownership (World Bank Global Findex) ----------
 
 Pakistan Account Ownership % =
-CALCULATE (
-    SUM ( findex[pct_age_15_plus] ),
-    findex[country] = "Pakistan",
-    findex[measure] = "total",
-    findex[year] = [Selected Year]
-)
+VAR y = [Selected Year]
+RETURN
+    CALCULATE (
+        SUM ( findex[pct_age_15_plus] ),
+        findex[country] = "Pakistan",
+        findex[measure] = "total",
+        findex[year] = y
+    )
 
 Pakistan Men % =
-CALCULATE (
-    SUM ( findex[pct_age_15_plus] ),
-    findex[country] = "Pakistan",
-    findex[measure] = "male",
-    findex[year] = [Selected Year]
-)
+VAR y = [Selected Year]
+RETURN
+    CALCULATE (
+        SUM ( findex[pct_age_15_plus] ),
+        findex[country] = "Pakistan",
+        findex[measure] = "male",
+        findex[year] = y
+    )
 
 Pakistan Women % =
-CALCULATE (
-    SUM ( findex[pct_age_15_plus] ),
-    findex[country] = "Pakistan",
-    findex[measure] = "female",
-    findex[year] = [Selected Year]
-)
+VAR y = [Selected Year]
+RETURN
+    CALCULATE (
+        SUM ( findex[pct_age_15_plus] ),
+        findex[country] = "Pakistan",
+        findex[measure] = "female",
+        findex[year] = y
+    )
 
 Gender Gap (pts) =
 [Pakistan Men %] - [Pakistan Women %]
 
 India Account Ownership % =
-CALCULATE (
-    SUM ( findex[pct_age_15_plus] ),
-    findex[country] = "India",
-    findex[measure] = "total",
-    findex[year] = [Selected Year]
-)
+VAR y = [Selected Year]
+RETURN
+    CALCULATE (
+        SUM ( findex[pct_age_15_plus] ),
+        findex[country] = "India",
+        findex[measure] = "total",
+        findex[year] = y
+    )
 
 // Per-year account ownership for every country (used by the peer line chart: category = year, series = country).
 Peer Account Ownership % =

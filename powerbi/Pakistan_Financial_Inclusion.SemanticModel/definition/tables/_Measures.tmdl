@@ -9,33 +9,39 @@ table _Measures
 	measure 'Latest Year' = MAX ( findex[year] )
 		formatString: 0
 
-	measure 'Selected Year' = SELECTEDVALUE ( findex[year], [Latest Year] )
+	measure 'Selected Year' = SELECTEDVALUE ( findex[year], MAX ( findex[year] ) )
 		formatString: 0
 
 	measure 'Pakistan Account Ownership %' =
+			VAR y = [Selected Year]
+			RETURN
 			CALCULATE (
 			SUM ( findex[pct_age_15_plus] ),
 			findex[country] = "Pakistan",
 			findex[measure] = "total",
-			findex[year] = [Selected Year]
+			findex[year] = y
 			)
 		formatString: 0.0"%"
 
 	measure 'Pakistan Men %' =
+			VAR y = [Selected Year]
+			RETURN
 			CALCULATE (
 			SUM ( findex[pct_age_15_plus] ),
 			findex[country] = "Pakistan",
 			findex[measure] = "male",
-			findex[year] = [Selected Year]
+			findex[year] = y
 			)
 		formatString: 0.0"%"
 
 	measure 'Pakistan Women %' =
+			VAR y = [Selected Year]
+			RETURN
 			CALCULATE (
 			SUM ( findex[pct_age_15_plus] ),
 			findex[country] = "Pakistan",
 			findex[measure] = "female",
-			findex[year] = [Selected Year]
+			findex[year] = y
 			)
 		formatString: 0.0"%"
 
@@ -43,11 +49,13 @@ table _Measures
 		formatString: 0.0" pts"
 
 	measure 'India Account Ownership %' =
+			VAR y = [Selected Year]
+			RETURN
 			CALCULATE (
 			SUM ( findex[pct_age_15_plus] ),
 			findex[country] = "India",
 			findex[measure] = "total",
-			findex[year] = [Selected Year]
+			findex[year] = y
 			)
 		formatString: 0.0"%"
 
