@@ -1,0 +1,205 @@
+{
+  "config": "{\"version\": \"5.56\", \"themeCollection\": {}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useNewFilterPaneExperience\": true, \"allowChangeFilterTypes\": true, \"useStylableVisualContainerHeader\": true, \"exportDataMode\": 1}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "overview",
+      "ordinal": 0,
+      "visualContainers": [
+        {
+          "config": "{\"name\": \"visual00\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 20, \"z\": 0, \"width\": 228, \"height\": 110, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Pakistan Account Ownership %\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Pakistan Account Ownership %\"}, \"Name\": \"_Measures.Pakistan Account Ownership %\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Pakistan Account Ownership %'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 20.0,
+          "y": 20.0,
+          "z": 0.0
+        },
+        {
+          "config": "{\"name\": \"visual01\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 263, \"y\": 20, \"z\": 1, \"width\": 228, \"height\": 110, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Gender Gap (pts)\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Gender Gap (pts)\"}, \"Name\": \"_Measures.Gender Gap (pts)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Gender Gap (pts)'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 263.0,
+          "y": 20.0,
+          "z": 1.0
+        },
+        {
+          "config": "{\"name\": \"visual02\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 506, \"y\": 20, \"z\": 2, \"width\": 228, \"height\": 110, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.National Branches per 100k\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"National Branches per 100k\"}, \"Name\": \"_Measures.National Branches per 100k\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'National Branches per 100k'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 506.0,
+          "y": 20.0,
+          "z": 2.0
+        },
+        {
+          "config": "{\"name\": \"visual03\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 749, \"y\": 20, \"z\": 3, \"width\": 228, \"height\": 110, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Districts Below Half National Avg\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Districts Below Half National Avg\"}, \"Name\": \"_Measures.Districts Below Half National Avg\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Districts Below Half National Avg'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 749.0,
+          "y": 20.0,
+          "z": 3.0
+        },
+        {
+          "config": "{\"name\": \"visual04\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 992, \"y\": 20, \"z\": 4, \"width\": 228, \"height\": 110, \"tabOrder\": 4}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Population Share in Low-Density Districts %\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Population Share in Low-Density Districts %\"}, \"Name\": \"_Measures.Population Share in Low-Density Districts %\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Population Share in Low-Density Districts %'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 992.0,
+          "y": 20.0,
+          "z": 4.0
+        },
+        {
+          "config": "{\"name\": \"visual05\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 240, \"z\": 5, \"width\": 760, \"height\": 440, \"tabOrder\": 5}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"findex.year\", \"active\": true}], \"Series\": [{\"queryRef\": \"findex.country\", \"active\": true}], \"Y\": [{\"queryRef\": \"_Measures.Peer Account Ownership %\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"f\", \"Entity\": \"findex\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"f\"}}, \"Property\": \"year\"}, \"Name\": \"findex.year\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"f\"}}, \"Property\": \"country\"}, \"Name\": \"findex.country\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Peer Account Ownership %\"}, \"Name\": \"_Measures.Peer Account Ownership %\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Account ownership by country'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 440.0,
+          "width": 760.0,
+          "x": 20.0,
+          "y": 240.0,
+          "z": 5.0
+        },
+        {
+          "config": "{\"name\": \"visual06\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 800, \"y\": 240, \"z\": 6, \"width\": 460, \"height\": 440, \"tabOrder\": 6}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"provinces.province\", \"active\": true}], \"Y\": [{\"queryRef\": \"_Measures.Branches per 100k\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"provinces\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"province\"}, \"Name\": \"provinces.province\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Branches per 100k\"}, \"Name\": \"_Measures.Branches per 100k\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Branches per 100k by province'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 440.0,
+          "width": 460.0,
+          "x": 800.0,
+          "y": 240.0,
+          "z": 6.0
+        },
+        {
+          "config": "{\"name\": \"visual07\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1000, \"y\": 130, \"z\": 7, \"width\": 260, \"height\": 90, \"tabOrder\": 7}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"findex.year\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"f\", \"Entity\": \"findex\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"f\"}}, \"Property\": \"year\"}, \"Name\": \"findex.year\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Year'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 90.0,
+          "width": 260.0,
+          "x": 1000.0,
+          "y": 130.0,
+          "z": 7.0
+        }
+      ],
+      "width": 1280.0
+    },
+    {
+      "config": "{}",
+      "displayName": "Gender",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "gender",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\": \"visual00\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 20, \"z\": 0, \"width\": 228, \"height\": 110, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Gender Gap (pts)\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Gender Gap (pts)\"}, \"Name\": \"_Measures.Gender Gap (pts)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Gender Gap (pts)'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 20.0,
+          "y": 20.0,
+          "z": 0.0
+        },
+        {
+          "config": "{\"name\": \"visual01\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 263, \"y\": 20, \"z\": 1, \"width\": 228, \"height\": 110, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Pakistan Men %\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Pakistan Men %\"}, \"Name\": \"_Measures.Pakistan Men %\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Pakistan Men %'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 263.0,
+          "y": 20.0,
+          "z": 1.0
+        },
+        {
+          "config": "{\"name\": \"visual02\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 506, \"y\": 20, \"z\": 2, \"width\": 228, \"height\": 110, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Pakistan Women %\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Pakistan Women %\"}, \"Name\": \"_Measures.Pakistan Women %\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Pakistan Women %'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 506.0,
+          "y": 20.0,
+          "z": 2.0
+        },
+        {
+          "config": "{\"name\": \"visual03\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 150, \"z\": 3, \"width\": 1240, \"height\": 520, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"findex.year\", \"active\": true}], \"Y\": [{\"queryRef\": \"_Measures.Pakistan Men %\", \"active\": true}, {\"queryRef\": \"_Measures.Pakistan Women %\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"f\", \"Entity\": \"findex\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"f\"}}, \"Property\": \"year\"}, \"Name\": \"findex.year\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Pakistan Men %\"}, \"Name\": \"_Measures.Pakistan Men %\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Pakistan Women %\"}, \"Name\": \"_Measures.Pakistan Women %\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Men vs women, Pakistan (%)'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 520.0,
+          "width": 1240.0,
+          "x": 20.0,
+          "y": 150.0,
+          "z": 3.0
+        }
+      ],
+      "width": 1280.0
+    },
+    {
+      "config": "{}",
+      "displayName": "Districts",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "districts",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\": \"visual00\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 20, \"z\": 0, \"width\": 228, \"height\": 110, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Districts Matched\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Districts Matched\"}, \"Name\": \"_Measures.Districts Matched\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Districts Matched'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 20.0,
+          "y": 20.0,
+          "z": 0.0
+        },
+        {
+          "config": "{\"name\": \"visual01\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 263, \"y\": 20, \"z\": 1, \"width\": 228, \"height\": 110, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Districts Below Half National Avg\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Districts Below Half National Avg\"}, \"Name\": \"_Measures.Districts Below Half National Avg\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Districts Below Half National Avg'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 263.0,
+          "y": 20.0,
+          "z": 1.0
+        },
+        {
+          "config": "{\"name\": \"visual02\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 506, \"y\": 20, \"z\": 2, \"width\": 228, \"height\": 110, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.National Branches per 100k\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"National Branches per 100k\"}, \"Name\": \"_Measures.National Branches per 100k\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'National Branches per 100k'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 110.0,
+          "width": 228.0,
+          "x": 506.0,
+          "y": 20.0,
+          "z": 2.0
+        },
+        {
+          "config": "{\"name\": \"visual03\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 150, \"z\": 3, \"width\": 220, \"height\": 120, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"districts.province\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"districts\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"province\"}, \"Name\": \"districts.province\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Province'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 120.0,
+          "width": 220.0,
+          "x": 20.0,
+          "y": 150.0,
+          "z": 3.0
+        },
+        {
+          "config": "{\"name\": \"visual04\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 260, \"y\": 150, \"z\": 4, \"width\": 500, \"height\": 550, \"tabOrder\": 4}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"districts.district\", \"active\": true}], \"Y\": [{\"queryRef\": \"_Measures.Branches per 100k\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"districts\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"district\"}, \"Name\": \"districts.district\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Branches per 100k\"}, \"Name\": \"_Measures.Branches per 100k\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Branches per 100k by district'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 550.0,
+          "width": 500.0,
+          "x": 260.0,
+          "y": 150.0,
+          "z": 4.0
+        },
+        {
+          "config": "{\"name\": \"visual05\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 780, \"y\": 150, \"z\": 5, \"width\": 480, \"height\": 550, \"tabOrder\": 5}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"districts.district\", \"active\": true}, {\"queryRef\": \"districts.province\", \"active\": true}, {\"queryRef\": \"districts.population_2023\", \"active\": true}, {\"queryRef\": \"districts.branches_total\", \"active\": true}, {\"queryRef\": \"districts.branches_per_100k\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"districts\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"district\"}, \"Name\": \"districts.district\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"province\"}, \"Name\": \"districts.province\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"population_2023\"}, \"Name\": \"districts.population_2023\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"branches_total\"}, \"Name\": \"districts.branches_total\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"branches_per_100k\"}, \"Name\": \"districts.branches_per_100k\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'All districts'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 550.0,
+          "width": 480.0,
+          "x": 780.0,
+          "y": 150.0,
+          "z": 5.0
+        }
+      ],
+      "width": 1280.0
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 Writes, under powerbi/:
   Pakistan_Financial_Inclusion.pbip                       project file (open this in Power BI Desktop)
   Pakistan_Financial_Inclusion.SemanticModel/             data model: tables, relationships, measures (TMDL)
-  Pakistan_Financial_Inclusion.Report/                    report: three pages with visuals (PBIR JSON)
+  Pakistan_Financial_Inclusion.Report/report.json         report: three pages with visuals (single-file format)
 
 The data model reads the CSV tables in powerbi/data/ (written by scripts/build_powerbi_model.py).
 Measures come from powerbi/measures.dax, so the DAX is kept in one place.
@@ -18,7 +18,7 @@ Transform data > Data source settings, or rerun this script.
 
 import json
 import re
-import uuid
+import shutil
 from pathlib import Path
 
 import pandas as pd
@@ -31,13 +31,6 @@ MEASURES_FILE = PBI / "measures.dax"
 PROJECT = "Pakistan_Financial_Inclusion"
 MODEL_DIR = PBI / f"{PROJECT}.SemanticModel"
 REPORT_DIR = PBI / f"{PROJECT}.Report"
-
-SCHEMA = "https://developer.microsoft.com/json-schema/fabric/item/report/definition"
-VERSION_SCHEMA = f"{SCHEMA}/versionMetadata/1.0.0/schema.json"
-REPORT_SCHEMA = f"{SCHEMA}/report/1.0.0/schema.json"
-PAGES_SCHEMA = f"{SCHEMA}/pagesMetadata/1.0.0/schema.json"
-PAGE_SCHEMA = f"{SCHEMA}/page/2.0.0/schema.json"
-VISUAL_SCHEMA = f"{SCHEMA}/visualContainer/2.5.0/schema.json"
 
 # How each measure is displayed in Power BI. Values are shown as stored in the CSVs (percent points or fractions).
 FORMATS = {
@@ -124,7 +117,7 @@ def column_definitions(df: pd.DataFrame) -> dict[str, str]:
     return types
 
 
-def tmdl_table(table: str, df: pd.DataFrame, extra_measures: list | None = None) -> str:
+def tmdl_table(table: str, df: pd.DataFrame) -> str:
     types = column_definitions(df)
     lines = [f"table {table}"]
     for col, key in types.items():
@@ -136,9 +129,6 @@ def tmdl_table(table: str, df: pd.DataFrame, extra_measures: list | None = None)
             f"\t\tsourceColumn: {col}",
             "\t\tsummarizeBy: none",
         ]
-    if extra_measures:
-        for name, body in extra_measures:
-            lines += ["", tmdl_measure(name, body)]
     typed_cols = [f'{{"{c}", {M_TYPES[k][0]}}}' for c, k in types.items()]
     lines += [
         "",
@@ -210,131 +200,131 @@ def write_model(measures: list) -> None:
     (tdir / "_Measures.tmdl").write_text(tmdl_measures_table(measures), encoding="utf-8")
 
 
-# ---------- Report (PBIR) ----------
+# ---------- Report (single-file report.json) ----------
 
-def col(entity: str, prop: str) -> dict:
-    return {"Column": {"Expression": {"SourceRef": {"Entity": entity}}, "Property": prop}}
-
-
-def meas(prop: str) -> dict:
-    return {"Measure": {"Expression": {"SourceRef": {"Entity": "_Measures"}}, "Property": prop}}
-
-
-def projection(field: dict, entity: str, prop: str) -> dict:
-    return {"field": field, "queryRef": f"{entity}.{prop}", "nativeQueryRef": prop}
+# Each visual is a plain spec: the title, the Power BI visual type, the fields for each role, and its position.
+# A field is (entity, property). Measures live in the _Measures table; everything else is a column.
+def card(title: str, measure: str, x: int, y: int) -> dict:
+    return {"title": title, "type": "card", "roles": {"Values": [("_Measures", measure)]},
+            "x": x, "y": y, "w": 228, "h": 110}
 
 
-def visual(title: str, vtype: str, roles: dict, x: int, y: int, w: int, h: int, z: int) -> dict:
-    query_state = {}
-    for role, items in roles.items():
-        query_state[role] = {"projections": [projection(f, e, p) for f, e, p in items]}
-    return {
-        "$schema": VISUAL_SCHEMA,
-        "name": uuid.uuid4().hex[:20],
-        "position": {"x": x, "y": y, "z": z, "height": h, "width": w, "tabOrder": z},
-        "visual": {
-            "visualType": vtype,
-            "query": {"queryState": query_state},
-            "objects": {
-                "title": [{"properties": {
-                    "show": {"expr": {"Literal": {"Value": "true"}}},
-                    "text": {"expr": {"Literal": {"Value": f"'{title}'"}}},
-                }}]
-            },
+def spec(title: str, vtype: str, roles: dict, x: int, y: int, w: int, h: int) -> dict:
+    return {"title": title, "type": vtype, "roles": roles, "x": x, "y": y, "w": w, "h": h}
+
+
+def cards_row(names: list[str], y: int = 20) -> list[dict]:
+    return [card(name, name, 20 + i * 243, y) for i, name in enumerate(names)]
+
+
+ALIASES = {"districts": "d", "provinces": "p", "findex": "f", "_Measures": "m"}
+
+
+def visual_container(index: int, v: dict) -> dict:
+    """One visual in the legacy layout format. The config is stored as a JSON string, as Power BI expects."""
+    projections: dict[str, list] = {}
+    selects, from_aliases = [], {}
+    for role, fields in v["roles"].items():
+        projections[role] = []
+        for entity, prop in fields:
+            alias = ALIASES[entity]
+            from_aliases[entity] = alias
+            kind = "Measure" if entity == "_Measures" else "Column"
+            ref = f"{entity}.{prop}"
+            projections[role].append({"queryRef": ref, "active": True})
+            select = {kind: {"Expression": {"SourceRef": {"Source": alias}}, "Property": prop}, "Name": ref}
+            if select not in selects:
+                selects.append(select)
+    from_list = [{"Name": alias, "Entity": entity, "Type": 0} for entity, alias in from_aliases.items()]
+    config = {
+        "name": f"visual{index:02d}",
+        "layouts": [{"id": 0, "position": {"x": v["x"], "y": v["y"], "z": index,
+                                           "width": v["w"], "height": v["h"], "tabOrder": index}}],
+        "singleVisual": {
+            "visualType": v["type"],
+            "projections": projections,
+            "prototypeQuery": {"Version": 2, "From": from_list, "Select": selects},
+            "drillFilterOtherVisuals": True,
+            "objects": {"title": [{"properties": {
+                "show": {"expr": {"Literal": {"Value": "true"}}},
+                "text": {"expr": {"Literal": {"Value": f"'{v['title']}'"}}},
+            }}]},
         },
     }
+    return {"config": json.dumps(config), "filters": "[]",
+            "height": float(v["h"]), "width": float(v["w"]),
+            "x": float(v["x"]), "y": float(v["y"]), "z": float(index)}
 
 
-def card_row(y: int, measures_list: list[str]) -> list[dict]:
-    """A row of cards, spread across the 1280-pixel canvas."""
-    out, width, gap = [], 228, 15
-    for i, name in enumerate(measures_list):
-        x = 20 + i * (width + gap)
-        out.append(visual(name, "card", {"Values": [(meas(name), "_Measures", name)]},
-                          x, y, width, 110, i))
-    return out
-
-
-def write_page(page_dir: Path, name: str, display: str, visuals: list[dict]) -> None:
-    page_dir.mkdir(parents=True, exist_ok=True)
-    (page_dir / "page.json").write_text(json.dumps({
-        "$schema": PAGE_SCHEMA, "name": name, "displayName": display,
-        "displayOption": "FitToPage", "height": 720, "width": 1280,
-    }, indent=2), encoding="utf-8")
-    vdir = page_dir / "visuals"
-    for v in visuals:
-        (vdir / v["name"]).mkdir(parents=True, exist_ok=True)
-        (vdir / v["name"] / "visual.json").write_text(json.dumps(v, indent=2), encoding="utf-8")
+def build_sections() -> list[dict]:
+    year_slicer = spec("Year", "slicer", {"Values": [("findex", "year")]}, 1000, 130, 260, 90)
+    overview = cards_row(["Pakistan Account Ownership %", "Gender Gap (pts)", "National Branches per 100k",
+                          "Districts Below Half National Avg", "Population Share in Low-Density Districts %"]) + [
+        spec("Account ownership by country", "lineChart",
+             {"Category": [("findex", "year")], "Series": [("findex", "country")],
+              "Y": [("_Measures", "Peer Account Ownership %")]}, 20, 240, 760, 440),
+        spec("Branches per 100k by province", "clusteredBarChart",
+             {"Category": [("provinces", "province")], "Y": [("_Measures", "Branches per 100k")]},
+             800, 240, 460, 440),
+        year_slicer,
+    ]
+    gender = cards_row(["Gender Gap (pts)", "Pakistan Men %", "Pakistan Women %"]) + [
+        spec("Men vs women, Pakistan (%)", "lineChart",
+             {"Category": [("findex", "year")],
+              "Y": [("_Measures", "Pakistan Men %"), ("_Measures", "Pakistan Women %")]},
+             20, 150, 1240, 520),
+    ]
+    districts = cards_row(["Districts Matched", "Districts Below Half National Avg",
+                           "National Branches per 100k"]) + [
+        spec("Province", "slicer", {"Values": [("districts", "province")]}, 20, 150, 220, 120),
+        spec("Branches per 100k by district", "clusteredBarChart",
+             {"Category": [("districts", "district")], "Y": [("_Measures", "Branches per 100k")]},
+             260, 150, 500, 550),
+        spec("All districts", "tableEx",
+             {"Values": [("districts", "district"), ("districts", "province"),
+                         ("districts", "population_2023"), ("districts", "branches_total"),
+                         ("districts", "branches_per_100k")]}, 780, 150, 480, 550),
+    ]
+    pages = [("Overview", overview), ("Gender", gender), ("Districts", districts)]
+    sections = []
+    for i, (display, visuals) in enumerate(pages):
+        sections.append({
+            "config": json.dumps({}),
+            "displayName": display,
+            "displayOption": 1,
+            "filters": "[]",
+            "height": 720.0,
+            "name": display.lower(),
+            "ordinal": i,
+            "visualContainers": [visual_container(j, v) for j, v in enumerate(visuals)],
+            "width": 1280.0,
+        })
+    return sections
 
 
 def write_report() -> None:
-    definition = REPORT_DIR / "definition"
-    pages_dir = definition / "pages"
-    pages_dir.mkdir(parents=True, exist_ok=True)
+    # The PBIR folder layout is not read by this version of Power BI Desktop, so remove it and write
+    # the single report.json that the app does read.
+    shutil.rmtree(REPORT_DIR / "definition", ignore_errors=True)
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
     (REPORT_DIR / "definition.pbir").write_text(json.dumps({
-        "version": "4.0",
+        "version": "1.0",
         "datasetReference": {"byPath": {"path": f"../{PROJECT}.SemanticModel"}},
     }, indent=2), encoding="utf-8")
-    (definition / "version.json").write_text(json.dumps(
-        {"$schema": VERSION_SCHEMA, "version": "2.0.0"}, indent=2), encoding="utf-8")
-    (definition / "report.json").write_text(json.dumps(
-        {"$schema": REPORT_SCHEMA, "layoutOptimization": "None"}, indent=2), encoding="utf-8")
-
-    year_slicer = visual("Year", "slicer", {"Values": [(col("findex", "year"), "findex", "year")]},
-                         1000, 130, 260, 90, 9)
-    overview = (
-        card_row(20, ["Pakistan Account Ownership %", "Gender Gap (pts)", "National Branches per 100k",
-                      "Districts Below Half National Avg", "Population Share in Low-Density Districts %"])
-        + [
-            visual("Account ownership by country", "lineChart",
-                   {"Category": [(col("findex", "year"), "findex", "year")],
-                    "Series": [(col("findex", "country"), "findex", "country")],
-                    "Y": [(meas("Peer Account Ownership %"), "_Measures", "Peer Account Ownership %")]},
-                   20, 240, 760, 440, 5),
-            visual("Branches per 100k by province", "clusteredBarChart",
-                   {"Category": [(col("provinces", "province"), "provinces", "province")],
-                    "Y": [(meas("Branches per 100k"), "_Measures", "Branches per 100k")]},
-                   800, 240, 460, 440, 6),
-            year_slicer,
-        ]
-    )
-    gender = (
-        card_row(20, ["Gender Gap (pts)", "Pakistan Men %", "Pakistan Women %"])[:3]
-        + [
-            visual("Men vs women, Pakistan (%)", "lineChart",
-                   {"Category": [(col("findex", "year"), "findex", "year")],
-                    "Y": [(meas("Pakistan Men %"), "_Measures", "Pakistan Men %"),
-                          (meas("Pakistan Women %"), "_Measures", "Pakistan Women %")]},
-                   20, 150, 1240, 520, 4),
-        ]
-    )
-    districts = (
-        card_row(20, ["Districts Matched", "Districts Below Half National Avg", "National Branches per 100k"])
-        + [
-            visual("Province", "slicer", {"Values": [(col("districts", "province"), "districts", "province")]},
-                   20, 150, 220, 120, 3),
-            visual("Branches per 100k by district", "clusteredBarChart",
-                   {"Category": [(col("districts", "district"), "districts", "district")],
-                    "Y": [(meas("Branches per 100k"), "_Measures", "Branches per 100k")]},
-                   260, 150, 500, 550, 4),
-            visual("All districts", "tableEx",
-                   {"Values": [(col("districts", "district"), "districts", "district"),
-                               (col("districts", "province"), "districts", "province"),
-                               (col("districts", "population_2023"), "districts", "population_2023"),
-                               (col("districts", "branches_total"), "districts", "branches_total"),
-                               (col("districts", "branches_per_100k"), "districts", "branches_per_100k")]},
-                   780, 150, 480, 550, 5),
-        ]
-    )
-
-    pages = [("overview", "Overview", overview), ("gender", "Gender", gender), ("districts", "Districts", districts)]
-    for name, display, visuals in pages:
-        write_page(pages_dir / name, name, display, visuals)
-    (pages_dir / "pages.json").write_text(json.dumps({
-        "$schema": PAGES_SCHEMA,
-        "pageOrder": [p[0] for p in pages],
-        "activePageName": pages[0][0],
-    }, indent=2), encoding="utf-8")
+    report = {
+        "config": json.dumps({
+            "version": "5.56",
+            "themeCollection": {},
+            "activeSectionIndex": 0,
+            "defaultDrillFilterOtherVisuals": True,
+            "settings": {"useNewFilterPaneExperience": True, "allowChangeFilterTypes": True,
+                         "useStylableVisualContainerHeader": True, "exportDataMode": 1},
+        }),
+        "layoutOptimization": 0,
+        "resourcePackages": [],
+        "sections": build_sections(),
+    }
+    (REPORT_DIR / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
 
 
 def write_project_file() -> None:
