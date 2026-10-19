@@ -15,7 +15,8 @@ Pakistan has the lowest account ownership of the four countries compared, and th
 
 ## Dashboard
 
-- Interactive: [dashboard/dashboard.html](dashboard/dashboard.html). Open it in a browser (it loads Plotly from a CDN, so it needs an internet connection).
+- Interactive web dashboard: [dashboard/dashboard.html](dashboard/dashboard.html). Open it in a browser (it loads Plotly from a CDN, so it needs an internet connection). Live at https://maira-w.github.io/pakistan-financial-inclusion/dashboard/dashboard.html once GitHub Pages has built.
+- Power BI report: `powerbi/Pakistan_Financial_Inclusion.pbix`. Build it with [powerbi/BUILD_GUIDE.md](powerbi/BUILD_GUIDE.md), using the tables in `powerbi/data/` and the measures in `powerbi/measures.dax`.
 - Static charts: [dashboard/](dashboard/)
 
 ![Account ownership by country](dashboard/01_peer_benchmark.png)
@@ -28,8 +29,10 @@ Pakistan has the lowest account ownership of the four countries compared, and th
 ```
 data/raw/        Source files, untouched (World Bank API JSON, PBS census CSVs, SBP appendix PDF)
 data/clean/      Analysis tables produced by scripts/build_clean_data.py
-scripts/         build_clean_data.py (extract and clean), analysis.py (charts and dashboard)
-dashboard/       Charts (PNG) and the interactive dashboard (HTML)
+scripts/         build_clean_data.py (extract and clean), analysis.py (charts and web dashboard),
+                 build_powerbi_model.py (tables for Power BI)
+dashboard/       Charts (PNG) and the interactive web dashboard (HTML)
+powerbi/         Power BI report: BUILD_GUIDE.md, measures.dax, theme.json, data/ (tables to import)
 docs/            data_sources.md (sources and data issues), recommendation_memo.md
 ```
 
@@ -60,9 +63,10 @@ Full details are in [docs/data_sources.md](docs/data_sources.md).
 pip install -r requirements.txt
 python scripts/build_clean_data.py
 python scripts/analysis.py
+python scripts/build_powerbi_model.py
 ```
 
-The first script reads the raw files in `data/raw/` and writes `data/clean/`. The second writes the charts and `dashboard/dashboard.html`.
+The first script reads the raw files in `data/raw/` and writes `data/clean/`. The second writes the charts and `dashboard/dashboard.html`. The third writes the tables that Power BI imports into `powerbi/data/`.
 
 ## Sources
 

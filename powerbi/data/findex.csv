@@ -1,0 +1,61 @@
+country,iso3,year,measure,indicator,pct_age_15_plus,country_year,measure_label
+Bangladesh,BGD,2011,female,FX.OWN.TOTL.FE.ZS,26.01,Bangladesh 2011,Women
+Bangladesh,BGD,2011,male,FX.OWN.TOTL.MA.ZS,37.29,Bangladesh 2011,Men
+Bangladesh,BGD,2011,total,FX.OWN.TOTL.ZS,31.74,Bangladesh 2011,All adults
+Bangladesh,BGD,2014,female,FX.OWN.TOTL.FE.ZS,26.45,Bangladesh 2014,Women
+Bangladesh,BGD,2014,male,FX.OWN.TOTL.MA.ZS,35.37,Bangladesh 2014,Men
+Bangladesh,BGD,2014,total,FX.OWN.TOTL.ZS,30.99,Bangladesh 2014,All adults
+Bangladesh,BGD,2017,female,FX.OWN.TOTL.FE.ZS,35.84,Bangladesh 2017,Women
+Bangladesh,BGD,2017,male,FX.OWN.TOTL.MA.ZS,64.59,Bangladesh 2017,Men
+Bangladesh,BGD,2017,total,FX.OWN.TOTL.ZS,50.05,Bangladesh 2017,All adults
+Bangladesh,BGD,2021,female,FX.OWN.TOTL.FE.ZS,43.46,Bangladesh 2021,Women
+Bangladesh,BGD,2021,male,FX.OWN.TOTL.MA.ZS,62.86,Bangladesh 2021,Men
+Bangladesh,BGD,2021,total,FX.OWN.TOTL.ZS,52.81,Bangladesh 2021,All adults
+Bangladesh,BGD,2024,female,FX.OWN.TOTL.FE.ZS,33.35,Bangladesh 2024,Women
+Bangladesh,BGD,2024,male,FX.OWN.TOTL.MA.ZS,53.51,Bangladesh 2024,Men
+Bangladesh,BGD,2024,total,FX.OWN.TOTL.ZS,43.28,Bangladesh 2024,All adults
+India,IND,2011,female,FX.OWN.TOTL.FE.ZS,26.49,India 2011,Women
+India,IND,2011,male,FX.OWN.TOTL.MA.ZS,43.74,India 2011,Men
+India,IND,2011,total,FX.OWN.TOTL.ZS,35.23,India 2011,All adults
+India,IND,2014,female,FX.OWN.TOTL.FE.ZS,43.13,India 2014,Women
+India,IND,2014,male,FX.OWN.TOTL.MA.ZS,62.76,India 2014,Men
+India,IND,2014,total,FX.OWN.TOTL.ZS,53.14,India 2014,All adults
+India,IND,2017,female,FX.OWN.TOTL.FE.ZS,76.64,India 2017,Women
+India,IND,2017,male,FX.OWN.TOTL.MA.ZS,83.01,India 2017,Men
+India,IND,2017,total,FX.OWN.TOTL.ZS,79.88,India 2017,All adults
+India,IND,2021,female,FX.OWN.TOTL.FE.ZS,77.55,India 2021,Women
+India,IND,2021,male,FX.OWN.TOTL.MA.ZS,77.51,India 2021,Men
+India,IND,2021,total,FX.OWN.TOTL.ZS,77.53,India 2021,All adults
+India,IND,2024,female,FX.OWN.TOTL.FE.ZS,89.25,India 2024,Women
+India,IND,2024,male,FX.OWN.TOTL.MA.ZS,88.81,India 2024,Men
+India,IND,2024,total,FX.OWN.TOTL.ZS,89.02,India 2024,All adults
+Pakistan,PAK,2011,female,FX.OWN.TOTL.FE.ZS,2.95,Pakistan 2011,Women
+Pakistan,PAK,2011,male,FX.OWN.TOTL.MA.ZS,17.28,Pakistan 2011,Men
+Pakistan,PAK,2011,total,FX.OWN.TOTL.ZS,10.31,Pakistan 2011,All adults
+Pakistan,PAK,2014,female,FX.OWN.TOTL.FE.ZS,4.84,Pakistan 2014,Women
+Pakistan,PAK,2014,male,FX.OWN.TOTL.MA.ZS,20.97,Pakistan 2014,Men
+Pakistan,PAK,2014,total,FX.OWN.TOTL.ZS,13.04,Pakistan 2014,All adults
+Pakistan,PAK,2017,female,FX.OWN.TOTL.FE.ZS,7.03,Pakistan 2017,Women
+Pakistan,PAK,2017,male,FX.OWN.TOTL.MA.ZS,34.61,Pakistan 2017,Men
+Pakistan,PAK,2017,total,FX.OWN.TOTL.ZS,21.29,Pakistan 2017,All adults
+Pakistan,PAK,2021,female,FX.OWN.TOTL.FE.ZS,13.48,Pakistan 2021,Women
+Pakistan,PAK,2021,male,FX.OWN.TOTL.MA.ZS,28.18,Pakistan 2021,Men
+Pakistan,PAK,2021,total,FX.OWN.TOTL.ZS,20.98,Pakistan 2021,All adults
+Pakistan,PAK,2024,female,FX.OWN.TOTL.FE.ZS,11.91,Pakistan 2024,Women
+Pakistan,PAK,2024,male,FX.OWN.TOTL.MA.ZS,42.29,Pakistan 2024,Men
+Pakistan,PAK,2024,total,FX.OWN.TOTL.ZS,27.3,Pakistan 2024,All adults
+Sri Lanka,LKA,2011,female,FX.OWN.TOTL.FE.ZS,67.24,Sri Lanka 2011,Women
+Sri Lanka,LKA,2011,male,FX.OWN.TOTL.MA.ZS,69.99,Sri Lanka 2011,Men
+Sri Lanka,LKA,2011,total,FX.OWN.TOTL.ZS,68.53,Sri Lanka 2011,All adults
+Sri Lanka,LKA,2014,female,FX.OWN.TOTL.FE.ZS,83.11,Sri Lanka 2014,Women
+Sri Lanka,LKA,2014,male,FX.OWN.TOTL.MA.ZS,82.23,Sri Lanka 2014,Men
+Sri Lanka,LKA,2014,total,FX.OWN.TOTL.ZS,82.69,Sri Lanka 2014,All adults
+Sri Lanka,LKA,2017,female,FX.OWN.TOTL.FE.ZS,73.44,Sri Lanka 2017,Women
+Sri Lanka,LKA,2017,male,FX.OWN.TOTL.MA.ZS,73.89,Sri Lanka 2017,Men
+Sri Lanka,LKA,2017,total,FX.OWN.TOTL.ZS,73.65,Sri Lanka 2017,All adults
+Sri Lanka,LKA,2021,female,FX.OWN.TOTL.FE.ZS,89.28,Sri Lanka 2021,Women
+Sri Lanka,LKA,2021,male,FX.OWN.TOTL.MA.ZS,89.26,Sri Lanka 2021,Men
+Sri Lanka,LKA,2021,total,FX.OWN.TOTL.ZS,89.27,Sri Lanka 2021,All adults
+Sri Lanka,LKA,2024,female,FX.OWN.TOTL.FE.ZS,80.2,Sri Lanka 2024,Women
+Sri Lanka,LKA,2024,male,FX.OWN.TOTL.MA.ZS,83.38,Sri Lanka 2024,Men
+Sri Lanka,LKA,2024,total,FX.OWN.TOTL.ZS,81.69,Sri Lanka 2024,All adults

@@ -1,0 +1,97 @@
+// Measures for the Pakistan financial inclusion dashboard.
+// Tables: districts, provinces, findex. Relationship: districts[province_key] -> provinces[province_key] (many to one).
+// Paste each block into Power BI Desktop: select a table, New measure, then paste.
+// Put the measures in a separate table called "Measures" (Enter Data, then delete the column) to keep them tidy.
+
+// ---------- Selection helpers ----------
+
+Latest Year =
+MAX ( findex[year] )
+
+Selected Year =
+SELECTEDVALUE ( findex[year], [Latest Year] )
+
+// ---------- Account ownership (World Bank Global Findex) ----------
+
+Pakistan Account Ownership % =
+CALCULATE (
+    SUM ( findex[pct_age_15_plus] ),
+    findex[country] = "Pakistan",
+    findex[measure] = "total",
+    findex[year] = [Selected Year]
+)
+
+Pakistan Men % =
+CALCULATE (
+    SUM ( findex[pct_age_15_plus] ),
+    findex[country] = "Pakistan",
+    findex[measure] = "male",
+    findex[year] = [Selected Year]
+)
+
+Pakistan Women % =
+CALCULATE (
+    SUM ( findex[pct_age_15_plus] ),
+    findex[country] = "Pakistan",
+    findex[measure] = "female",
+    findex[year] = [Selected Year]
+)
+
+Gender Gap (pts) =
+[Pakistan Men %] - [Pakistan Women %]
+
+India Account Ownership % =
+CALCULATE (
+    SUM ( findex[pct_age_15_plus] ),
+    findex[country] = "India",
+    findex[measure] = "total",
+    findex[year] = [Selected Year]
+)
+
+// ---------- Branch density (SBP Dec 2020 / PBS Census 2023) ----------
+
+Total Branches =
+SUM ( districts[branches_total] )
+
+Matched Population =
+CALCULATE (
+    SUM ( districts[population_2023] ),
+    districts[has_branch_data] = TRUE ()
+)
+
+Branches per 100k =
+DIVIDE ( [Total Branches], [Matched Population] ) * 100000
+
+National Branches per 100k =
+DIVIDE (
+    CALCULATE ( [Total Branches], ALL ( districts ) ),
+    CALCULATE ( [Matched Population], ALL ( districts ) )
+) * 100000
+
+Density vs National (x) =
+DIVIDE ( [Branches per 100k], [National Branches per 100k] )
+
+Districts Matched =
+CALCULATE ( COUNTROWS ( districts ), districts[has_branch_data] = TRUE () )
+
+Districts Below Half National Avg =
+CALCULATE ( COUNTROWS ( districts ), districts[below_half_national_avg] = TRUE () )
+
+Population Share in Low-Density Districts % =
+DIVIDE (
+    CALCULATE ( SUM ( districts[population_2023] ), districts[below_half_national_avg] = TRUE () ),
+    CALCULATE ( [Matched Population], ALL ( districts ) )
+)
+
+Districts Created After 2020 =
+CALCULATE ( COUNTROWS ( districts ), districts[has_branch_data] = FALSE () )
+
+// Colour for bars: orange when below half the national average, teal otherwise.
+Bar Colour =
+IF ( [Branches per 100k] < [National Branches per 100k] / 2, "#E76F51", "#2A9D8F" )
+
+// ---------- Subtitles and notes ----------
+
+Data Note =
+"Branch data: SBP, 31 Dec 2020. Population: PBS Census 2023. AJK and Gilgit-Baltistan excluded. "
+    & "Branches show where banks are, not where people bank."
