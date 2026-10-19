@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "5aa60d1d677d44cf9e8f",
+  "position": {
+    "x": 260,
+    "y": 150,
+    "z": 4,
+    "height": 550,
+    "width": 500,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "districts"
+                    }
+                  },
+                  "Property": "district"
+                }
+              },
+              "queryRef": "districts.district",
+              "nativeQueryRef": "district"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Branches per 100k"
+                }
+              },
+              "queryRef": "Measures.Branches per 100k",
+              "nativeQueryRef": "Branches per 100k"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Branches per 100k by district'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

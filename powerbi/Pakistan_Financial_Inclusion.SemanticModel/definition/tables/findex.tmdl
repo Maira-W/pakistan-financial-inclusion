@@ -1,0 +1,51 @@
+table findex
+
+	column country
+		dataType: string
+		sourceColumn: country
+		summarizeBy: none
+
+	column iso3
+		dataType: string
+		sourceColumn: iso3
+		summarizeBy: none
+
+	column year
+		dataType: int64
+		sourceColumn: year
+		summarizeBy: none
+
+	column measure
+		dataType: string
+		sourceColumn: measure
+		summarizeBy: none
+
+	column indicator
+		dataType: string
+		sourceColumn: indicator
+		summarizeBy: none
+
+	column pct_age_15_plus
+		dataType: double
+		sourceColumn: pct_age_15_plus
+		summarizeBy: none
+
+	column country_year
+		dataType: string
+		sourceColumn: country_year
+		summarizeBy: none
+
+	column measure_label
+		dataType: string
+		sourceColumn: measure_label
+		summarizeBy: none
+
+	partition findex = m
+		mode: import
+		source =
+			let
+				Source = Csv.Document(File.Contents(DataFolder & "\findex.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				Typed = Table.TransformColumnTypes(Promoted, {{"country", type text}, {"iso3", type text}, {"year", Int64.Type}, {"measure", type text}, {"indicator", type text}, {"pct_age_15_plus", type number}, {"country_year", type text}, {"measure_label", type text}})
+			in
+				Typed

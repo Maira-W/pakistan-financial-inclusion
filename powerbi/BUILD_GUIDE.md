@@ -1,5 +1,17 @@
 # Power BI build guide
 
+## Quick start: open the generated project
+
+`scripts/build_pbip.py` writes the full model and three report pages as files, so you can skip most of the steps below.
+
+1. Run `python scripts/build_pbip.py` from the project root (this has already been done for the committed files).
+2. In Power BI Desktop, choose **File > Open**, then pick `powerbi/Pakistan_Financial_Inclusion.pbip`.
+3. If Power BI asks about the data source, go to **Transform data > Data source settings** and check that `DataFolder` points to your `powerbi/data` folder.
+4. Apply the theme: **View > Themes > Browse for themes**, then pick `powerbi/theme.json`.
+5. Save your work with **File > Save**. If you want a single `.pbix` file as well, try **File > Save as** and pick the `.pbix` type. Check whether your Power BI Desktop version offers that option for a project.
+
+The project was generated and checked for valid JSON and TMDL, but it hasn't been opened in Power BI Desktop yet. If Power BI reports an error on open, note the message. The manual steps below are the fallback.
+
 This guide builds `Pakistan_Financial_Inclusion.pbix` from the three tables in `powerbi/data/`. It takes about 30–45 minutes the first time. The measures are in `measures.dax` and the colours are in `theme.json`, so you only need to copy and paste.
 
 ## 0. Prerequisites

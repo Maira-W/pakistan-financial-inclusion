@@ -1,0 +1,36 @@
+table provinces
+
+	column province
+		dataType: string
+		sourceColumn: province
+		summarizeBy: none
+
+	column province_key
+		dataType: string
+		sourceColumn: province_key
+		summarizeBy: none
+
+	column population_2023
+		dataType: int64
+		sourceColumn: population_2023
+		summarizeBy: none
+
+	column branches_total
+		dataType: double
+		sourceColumn: branches_total
+		summarizeBy: none
+
+	column branches_per_100k
+		dataType: double
+		sourceColumn: branches_per_100k
+		summarizeBy: none
+
+	partition provinces = m
+		mode: import
+		source =
+			let
+				Source = Csv.Document(File.Contents(DataFolder & "\provinces.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				Typed = Table.TransformColumnTypes(Promoted, {{"province", type text}, {"province_key", type text}, {"population_2023", Int64.Type}, {"branches_total", type number}, {"branches_per_100k", type number}})
+			in
+				Typed

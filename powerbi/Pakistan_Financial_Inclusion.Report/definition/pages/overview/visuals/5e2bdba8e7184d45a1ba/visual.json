@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "5e2bdba8e7184d45a1ba",
+  "position": {
+    "x": 992,
+    "y": 20,
+    "z": 4,
+    "height": 110,
+    "width": 228,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Population Share in Low-Density Districts %"
+                }
+              },
+              "queryRef": "Measures.Population Share in Low-Density Districts %",
+              "nativeQueryRef": "Population Share in Low-Density Districts %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Population Share in Low-Density Districts %'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

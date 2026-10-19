@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "9e6532957dce4839910d",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "z": 4,
+    "height": 520,
+    "width": 1240,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "findex"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "findex.year",
+              "nativeQueryRef": "year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Pakistan Men %"
+                }
+              },
+              "queryRef": "Measures.Pakistan Men %",
+              "nativeQueryRef": "Pakistan Men %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Pakistan Women %"
+                }
+              },
+              "queryRef": "Measures.Pakistan Women %",
+              "nativeQueryRef": "Pakistan Women %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Men vs women, Pakistan (%)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

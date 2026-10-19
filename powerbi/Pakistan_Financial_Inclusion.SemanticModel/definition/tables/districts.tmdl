@@ -1,0 +1,66 @@
+table districts
+
+	column district
+		dataType: string
+		sourceColumn: district
+		summarizeBy: none
+
+	column province
+		dataType: string
+		sourceColumn: province
+		summarizeBy: none
+
+	column province_key
+		dataType: string
+		sourceColumn: province_key
+		summarizeBy: none
+
+	column is_combined_unit
+		dataType: boolean
+		sourceColumn: is_combined_unit
+		summarizeBy: none
+
+	column population_2023
+		dataType: int64
+		sourceColumn: population_2023
+		summarizeBy: none
+
+	column branches_total
+		dataType: double
+		sourceColumn: branches_total
+		summarizeBy: none
+
+	column branches_per_100k
+		dataType: double
+		sourceColumn: branches_per_100k
+		summarizeBy: none
+
+	column has_branch_data
+		dataType: boolean
+		sourceColumn: has_branch_data
+		summarizeBy: none
+
+	column status
+		dataType: string
+		sourceColumn: status
+		summarizeBy: none
+
+	column below_half_national_avg
+		dataType: boolean
+		sourceColumn: below_half_national_avg
+		summarizeBy: none
+
+	column national_branches_per_100k
+		dataType: double
+		sourceColumn: national_branches_per_100k
+		summarizeBy: none
+
+	partition districts = m
+		mode: import
+		source =
+			let
+				Source = Csv.Document(File.Contents(DataFolder & "\districts.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				Typed = Table.TransformColumnTypes(Promoted, {{"district", type text}, {"province", type text}, {"province_key", type text}, {"is_combined_unit", type logical}, {"population_2023", Int64.Type}, {"branches_total", type number}, {"branches_per_100k", type number}, {"has_branch_data", type logical}, {"status", type text}, {"below_half_national_avg", type logical}, {"national_branches_per_100k", type number}})
+			in
+				Typed

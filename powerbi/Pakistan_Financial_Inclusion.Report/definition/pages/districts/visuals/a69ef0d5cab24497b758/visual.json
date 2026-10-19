@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schema/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "a69ef0d5cab24497b758",
+  "position": {
+    "x": 263,
+    "y": 20,
+    "z": 1,
+    "height": 110,
+    "width": 228,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Districts Below Half National Avg"
+                }
+              },
+              "queryRef": "Measures.Districts Below Half National Avg",
+              "nativeQueryRef": "Districts Below Half National Avg"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Districts Below Half National Avg'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

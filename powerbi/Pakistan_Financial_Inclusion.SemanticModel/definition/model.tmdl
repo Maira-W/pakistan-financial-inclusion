@@ -1,0 +1,10 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	discourageImplicitMeasures
+
+ref table districts
+ref table provinces
+ref table findex
+ref table Measures

@@ -48,6 +48,13 @@ CALCULATE (
     findex[year] = [Selected Year]
 )
 
+// Per-year account ownership for every country (used by the peer line chart: category = year, series = country).
+Peer Account Ownership % =
+CALCULATE (
+    SUM ( findex[pct_age_15_plus] ),
+    findex[measure] = "total"
+)
+
 // ---------- Branch density (SBP Dec 2020 / PBS Census 2023) ----------
 
 Total Branches =
