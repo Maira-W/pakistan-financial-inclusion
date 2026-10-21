@@ -1,0 +1,61 @@
+table wallet
+
+	column region
+		dataType: string
+		summarizeBy: none
+		sourceColumn: region
+
+	column quarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: quarter
+
+	column quarter_label
+		dataType: string
+		summarizeBy: none
+		sourceColumn: quarter_label
+
+	column accounts
+		dataType: double
+		summarizeBy: none
+		sourceColumn: accounts
+
+	column agents
+		dataType: double
+		summarizeBy: none
+		sourceColumn: agents
+
+	column adults_15plus
+		dataType: double
+		summarizeBy: none
+		sourceColumn: adults_15plus
+
+	column accounts_per_100_adults
+		dataType: double
+		summarizeBy: none
+		sourceColumn: accounts_per_100_adults
+
+	column agents_per_100k_adults
+		dataType: double
+		summarizeBy: none
+		sourceColumn: agents_per_100k_adults
+
+	column female_share
+		dataType: double
+		summarizeBy: none
+		sourceColumn: female_share
+
+	column figure_withheld
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: figure_withheld
+
+	partition wallet = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("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", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [region = _t, quarter = _t, quarter_label = _t, accounts = _t, agents = _t, adults_15plus = _t, accounts_per_100_adults = _t, agents_per_100k_adults = _t, female_share = _t, figure_withheld = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"region", type text}, {"quarter", type text}, {"quarter_label", type text}, {"accounts", type number}, {"agents", type number}, {"adults_15plus", type number}, {"accounts_per_100_adults", type number}, {"agents_per_100k_adults", type number}, {"female_share", type number}, {"figure_withheld", type logical}}, "en-US")
+				in
+					Typed
+

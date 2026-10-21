@@ -1,3 +1,8 @@
 relationship districts_to_provinces
-	fromColumn: districts.province_key
-	toColumn: provinces.province_key
+	fromColumn: districts.province
+	toColumn: provinces.province
+
+relationship districts_to_district_types
+	fromColumn: districts.district_type
+	toColumn: district_types.district_type
+

@@ -1,0 +1,16 @@
+table metric_choice
+
+	column metric
+		dataType: string
+		summarizeBy: none
+		sourceColumn: metric
+
+	partition metric_choice = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WcipKzEvOSC1WKEgtUjA0MNAxMDAAsvMLclKVYnWilQLATLBsElgpWDSotCgxByqAprcILIVkgmtFQWpySWoKXDlYNDgjv6gkLTEnRyExPTEzr7hEIRWmTgOmUFMpNhYA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [metric = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"metric", type text}}, "en-US")
+				in
+					Typed
+

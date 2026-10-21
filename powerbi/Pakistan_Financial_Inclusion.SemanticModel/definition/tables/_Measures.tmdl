@@ -1,120 +1,407 @@
 table _Measures
 
-	column Placeholder
-		dataType: string
-		sourceColumn: Placeholder
-		summarizeBy: none
-		isHidden
-
-	measure 'Latest Year' = MAX ( findex[year] )
-		formatString: 0
-
+	/// The year chosen in a slicer or on an axis; the latest survey year when nothing is chosen.
 	measure 'Selected Year' = SELECTEDVALUE ( findex[year], MAX ( findex[year] ) )
 		formatString: 0
+		displayFolder: Helpers
 
+	measure 'Account Ownership %' = CALCULATE ( AVERAGE ( findex[value] ), findex[indicator] = "account.t.d" )
+		formatString: 0.0"%"
+		displayFolder: Account ownership
+
+	/// Adults with an account at a bank, similar institution or mobile money provider (Global Findex).
 	measure 'Pakistan Account Ownership %' =
 			VAR y = [Selected Year]
 			RETURN
-			CALCULATE (
-			SUM ( findex[pct_age_15_plus] ),
-			findex[country] = "Pakistan",
-			findex[measure] = "total",
-			findex[year] = y
-			)
+			    CALCULATE (
+			        AVERAGE ( findex[value] ),
+			        findex[country] = "PAK",
+			        findex[indicator] = "account.t.d",
+			        findex[year] = y
+			    )
 		formatString: 0.0"%"
+		displayFolder: Account ownership
 
-	measure 'Pakistan Men %' =
-			VAR y = [Selected Year]
-			RETURN
-			CALCULATE (
-			SUM ( findex[pct_age_15_plus] ),
-			findex[country] = "Pakistan",
-			findex[measure] = "male",
-			findex[year] = y
-			)
-		formatString: 0.0"%"
-
+	/// Women with an account (Global Findex).
 	measure 'Pakistan Women %' =
 			VAR y = [Selected Year]
 			RETURN
-			CALCULATE (
-			SUM ( findex[pct_age_15_plus] ),
-			findex[country] = "Pakistan",
-			findex[measure] = "female",
-			findex[year] = y
-			)
+			    CALCULATE (
+			        AVERAGE ( findex[value] ),
+			        findex[country] = "PAK",
+			        findex[indicator] = "account.t.d.1",
+			        findex[year] = y
+			    )
 		formatString: 0.0"%"
+		displayFolder: Account ownership
 
-	measure 'Gender Gap (pts)' = [Pakistan Men %] - [Pakistan Women %]
-		formatString: 0.0" pts"
-
-	measure 'India Account Ownership %' =
+	/// Men with an account (Global Findex).
+	measure 'Pakistan Men %' =
 			VAR y = [Selected Year]
 			RETURN
-			CALCULATE (
-			SUM ( findex[pct_age_15_plus] ),
-			findex[country] = "India",
-			findex[measure] = "total",
-			findex[year] = y
-			)
+			    CALCULATE (
+			        AVERAGE ( findex[value] ),
+			        findex[country] = "PAK",
+			        findex[indicator] = "account.t.d.2",
+			        findex[year] = y
+			    )
 		formatString: 0.0"%"
+		displayFolder: Account ownership
 
-	measure 'Peer Account Ownership %' =
-			CALCULATE (
-			SUM ( findex[pct_age_15_plus] ),
-			findex[measure] = "total"
-			)
+	/// Men minus women with an account, in percentage points.
+	measure 'Account Gender Gap (pts)' = [Pakistan Men %] - [Pakistan Women %]
+		formatString: 0.0" pts"
+		displayFolder: Account ownership
+
+	measure 'Segment Account Ownership %' = AVERAGE ( segments[value] )
 		formatString: 0.0"%"
+		displayFolder: Account ownership
 
-	measure 'Total Branches' = SUM ( districts[branches_total] )
+	measure 'Bank Barrier Share %' = CALCULATE ( AVERAGE ( barriers[share] ), barriers[account_type] = "Bank or similar account" )
+		formatString: 0.0"%"
+		displayFolder: Account ownership
+
+	measure 'Mobile Money Barrier Share %' = CALCULATE ( AVERAGE ( barriers[share] ), barriers[account_type] = "Mobile money account" )
+		formatString: 0.0"%"
+		displayFolder: Account ownership
+
+	measure 'Pakistan Women Phone Ownership %' = CALCULATE ( AVERAGE ( countries[phone_women] ), countries[country] = "PAK" )
+		formatString: 0.0"%"
+		displayFolder: Account ownership
+
+	measure 'Pakistan Men Phone Ownership %' = CALCULATE ( AVERAGE ( countries[phone_men] ), countries[country] = "PAK" )
+		formatString: 0.0"%"
+		displayFolder: Account ownership
+
+	/// Men minus women who own a mobile phone, in percentage points (Global Findex 2024).
+	measure 'Phone Gender Gap (pts)' = [Pakistan Men Phone Ownership %] - [Pakistan Women Phone Ownership %]
+		formatString: 0.0" pts"
+		displayFolder: Account ownership
+
+	/// Bank and microfinance bank branches in the SBP register at 31 December 2024.
+	measure 'Total Branches' = SUM ( districts[branches_2024] )
 		formatString: #,0
+		displayFolder: Branches
 
-	measure 'Matched Population' =
-			CALCULATE (
-			SUM ( districts[population_2023] ),
-			districts[has_branch_data] = TRUE ()
-			)
+	measure 'Bank Branches' = SUM ( districts[banks_2024] )
 		formatString: #,0
+		displayFolder: Branches
 
-	measure 'Branches per 100k' = DIVIDE ( [Total Branches], [Matched Population] ) * 100000
+	measure 'Microfinance Branches' = SUM ( districts[microfinance_2024] )
+		formatString: #,0
+		displayFolder: Branches
+
+	measure 'Rural Branches' = SUM ( districts[rural_branches_2024] )
+		formatString: #,0
+		displayFolder: Branches
+
+	measure Population = SUM ( districts[population] )
+		formatString: #,0
+		displayFolder: Branches
+
+	measure 'District Count' = COUNTROWS ( districts )
+		formatString: 0
+		displayFolder: Branches
+
+	/// Branches per 100,000 people (2023 census population).
+	measure 'Branches per 100k' = DIVIDE ( [Total Branches], [Population] ) * 100000
 		formatString: 0.00
+		displayFolder: Branches
 
+	/// Branches per 100,000 people across all 120 districts, whatever is selected.
 	measure 'National Branches per 100k' =
 			DIVIDE (
-			CALCULATE ( [Total Branches], ALL ( districts ) ),
-			CALCULATE ( [Matched Population], ALL ( districts ) )
+			    CALCULATE ( [Total Branches], ALL ( districts ) ),
+			    CALCULATE ( [Population], ALL ( districts ) )
 			) * 100000
 		formatString: 0.00
+		displayFolder: Branches
 
 	measure 'Density vs National (x)' = DIVIDE ( [Branches per 100k], [National Branches per 100k] )
 		formatString: 0.00"x"
+		displayFolder: Branches
 
-	measure 'Districts Matched' = CALCULATE ( COUNTROWS ( districts ), districts[has_branch_data] = TRUE () )
-		formatString: 0
+	measure 'People per Branch' = DIVIDE ( [Population], [Total Branches] )
+		formatString: #,0
+		displayFolder: Branches
 
-	measure 'Districts Below Half National Avg' = CALCULATE ( COUNTROWS ( districts ), districts[below_half_national_avg] = TRUE () )
-		formatString: 0
+	measure 'Rural Branch Share %' = DIVIDE ( [Rural Branches], [Total Branches] ) * 100
+		formatString: 0.0"%"
+		displayFolder: Branches
 
-	measure 'Population Share in Low-Density Districts %' =
+	measure 'Rural Population Share %' = DIVIDE ( SUM ( districts[rural_population] ), [Population] ) * 100
+		formatString: 0.0"%"
+		displayFolder: Branches
+
+	measure 'Rural Branches per 100k Rural People' = DIVIDE ( [Rural Branches], SUM ( districts[rural_population] ) ) * 100000
+		formatString: 0.00
+		displayFolder: Branches
+
+	measure 'Urban Branches per 100k Urban People' = DIVIDE ( SUM ( districts[urban_branches_2024] ), SUM ( districts[urban_population] ) ) * 100000
+		formatString: 0.00
+		displayFolder: Branches
+
+	measure 'Bank Branches per 100k 2020' = DIVIDE ( SUM ( districts[banks_2020] ), SUM ( districts[population_2017] ) ) * 100000
+		formatString: 0.00
+		displayFolder: Branches
+
+	measure 'Bank Branches per 100k 2024' = DIVIDE ( [Bank Branches], [Population] ) * 100000
+		formatString: 0.00
+		displayFolder: Branches
+
+	measure 'Bank Branch Growth 2020-24 %' =
 			DIVIDE (
-			CALCULATE ( SUM ( districts[population_2023] ), districts[below_half_national_avg] = TRUE () ),
-			CALCULATE ( [Matched Population], ALL ( districts ) )
-			)
-		formatString: 0.0%
+			    SUM ( districts[banks_2024] ) - SUM ( districts[banks_2020] ),
+			    SUM ( districts[banks_2020] )
+			) * 100
+		formatString: 0.0"%"
+		displayFolder: Branches
 
-	measure 'Districts Created After 2020' = CALCULATE ( COUNTROWS ( districts ), districts[has_branch_data] = FALSE () )
+	/// Districts with fewer than half the national average of branches per person.
+	measure 'Districts Below Half National Avg' =
+			VAR cutoff = [National Branches per 100k] / 2
+			RETURN
+			    COUNTROWS (
+			        FILTER ( districts, DIVIDE ( districts[branches_2024], districts[population] ) * 100000 < cutoff )
+			    )
 		formatString: 0
+		displayFolder: Branches
 
-	measure 'Bar Colour' = IF ( [Branches per 100k] < [National Branches per 100k] / 2, "#E76F51", "#2A9D8F" )
+	/// Share of the national population living in those districts.
+	measure 'Population Share in Low-Density Districts %' =
+			VAR cutoff = [National Branches per 100k] / 2
+			RETURN
+			    DIVIDE (
+			        SUMX (
+			            FILTER ( districts, DIVIDE ( districts[branches_2024], districts[population] ) * 100000 < cutoff ),
+			            districts[population]
+			        ),
+			        CALCULATE ( [Population], ALL ( districts ) )
+			    )
+		formatString: 0.0%
+		displayFolder: Branches
 
-	measure 'Data Note' =
-			"Branch data: SBP, 31 Dec 2020. Population: PBS Census 2023. AJK and Gilgit-Baltistan excluded. "
-			& "Branches show where banks are, not where people bank."
+	/// The measure chosen in the Measure slicer on the District explorer page.
+	measure 'Selected District Metric' =
+			SWITCH (
+			    SELECTEDVALUE ( metric_choice[metric], "Branches per 100,000 people" ),
+			    "Branches per 100,000 people", [Branches per 100k],
+			    "People per branch", [People per Branch],
+			    "Rural branches per 100,000 rural people", [Rural Branches per 100k Rural People],
+			    "Expected branches", [Expected Branches],
+			    "Shortfall against expected (branches)", [Total Shortfall],
+			    BLANK ()
+			)
+		formatString: 0.00
+		displayFolder: Branches
+
+	/// Branches a district would be expected to have given its size, urban share and development (leave-one-out model).
+	measure 'Expected Branches' = SUM ( districts[expected_branches] )
+		formatString: #,0
+		displayFolder: Access gap model
+
+	measure 'Expected Branches per 100k' = DIVIDE ( [Expected Branches], [Population] ) * 100000
+		formatString: 0.00
+		displayFolder: Access gap model
+
+	/// Expected minus actual branches, counting only districts below expectation.
+	measure 'Total Shortfall' = SUMX ( districts, MAX ( districts[shortfall], 0 ) )
+		formatString: #,0
+		displayFolder: Access gap model
+
+	measure 'Top Gap Shortfall' = SUM ( top_gaps[shortfall] )
+		formatString: #,0
+		displayFolder: Access gap model
+
+	measure 'Districts Below Expected' = CALCULATE ( COUNTROWS ( districts ), districts[below_expected] = TRUE () )
+		formatString: 0
+		displayFolder: Access gap model
+
+	/// Districts where the chance of so few branches is under 10% and the count is also below the bootstrap range. A perfect model would still flag about one district in ten, so use the list for review.
+	measure 'Districts Flagged Below Expected' = CALCULATE ( COUNTROWS ( districts ), districts[flagged_short] = TRUE () )
+		formatString: 0
+		displayFolder: Access gap model
+
+	measure 'Model Shortfall (branches)' = MAX ( headline[total_shortfall] )
+		formatString: #,0
+		displayFolder: Access gap model
+
+	measure 'Shortfall 5th Percentile' = MAX ( headline[shortfall_p05] )
+		formatString: #,0
+		displayFolder: Access gap model
+
+	measure 'Shortfall 95th Percentile' = MAX ( headline[shortfall_p95] )
+		formatString: #,0
+		displayFolder: Access gap model
+
+	/// Fall in the average miss of the leave-one-out model against a rule that gives every district the same branches per person.
+	measure 'Model Error Reduction %' = MAX ( headline[model_error_reduction_pct] )
+		formatString: 0.0"%"
+		displayFolder: Access gap model
+
+	measure 'Gini of Bank Branches 2020' = MAX ( headline[gini_banks_2020] )
+		formatString: 0.000
+		displayFolder: Access gap model
+
+	/// Inequality of bank branches against population across districts: 0 is even, 1 is one district.
+	measure 'Gini of Bank Branches 2024' = MAX ( headline[gini_banks_2024] )
+		formatString: 0.000
+		displayFolder: Access gap model
+
+	/// Share of net new bank branches since 2020 that went to the half of districts that started with fewer branches per person.
+	measure 'New Branches Reaching Low-Density Half %' = MAX ( headline[low_density_share_of_new_pct] )
+		formatString: 0.0"%"
+		displayFolder: Access gap model
+
+	measure 'Population in Low-Density Half %' = MAX ( headline[low_density_share_of_population_pct] )
+		formatString: 0.0"%"
+		displayFolder: Access gap model
+
+	/// Gini of branches after the planner places new points under the rule and size shown.
+	measure 'Scenario Gini' = AVERAGE ( scenario[gini] )
+		formatString: 0.000
+		displayFolder: Planner
+
+	measure 'Scenario Population Below Half %' = AVERAGE ( scenario[population_below_half_pct] )
+		formatString: 0.0"%"
+		displayFolder: Planner
+
+	measure 'Scenario Districts Below Half' = AVERAGE ( scenario[districts_below_half] )
+		formatString: 0
+		displayFolder: Planner
+
+	measure 'Scenario Worst People per Branch' = AVERAGE ( scenario[worst_people_per_branch] )
+		formatString: #,0
+		displayFolder: Planner
+
+	measure 'Scenario Share to Low Female Literacy %' = AVERAGE ( scenario[share_to_low_female_literacy_pct] )
+		formatString: 0.0"%"
+		displayFolder: Planner
+
+	measure 'Gini Today' = CALCULATE ( AVERAGE ( scenario[gini] ), scenario[points_added] = 0, scenario[rule_key] = "equity" )
+		formatString: 0.000
+		displayFolder: Planner
+
+	measure 'Gini After 1000 Points (Even People per Branch)' = CALCULATE ( AVERAGE ( scenario[gini] ), scenario[points_added] = 1000, scenario[rule_key] = "equity" )
+		formatString: 0.000
+		displayFolder: Planner
+
+	measure 'Gini After 1000 Points (Model Gap First)' = CALCULATE ( AVERAGE ( scenario[gini] ), scenario[points_added] = 1000, scenario[rule_key] = "gap" )
+		formatString: 0.000
+		displayFolder: Planner
+
+	measure 'Districts Below Half Today' = CALCULATE ( AVERAGE ( scenario[districts_below_half] ), scenario[points_added] = 0, scenario[rule_key] = "equity" )
+		formatString: 0
+		displayFolder: Planner
+
+	measure 'Districts Below Half After 1000 Points (Even People per Branch)' = CALCULATE ( AVERAGE ( scenario[districts_below_half] ), scenario[points_added] = 1000, scenario[rule_key] = "equity" )
+		formatString: 0
+		displayFolder: Planner
+
+	measure 'Wallet Agents per 100k Adults' = AVERAGE ( wallet[agents_per_100k_adults] )
+		formatString: 0
+		displayFolder: Digital layer
+
+	measure 'Wallet Accounts per 100 Adults' = AVERAGE ( wallet[accounts_per_100_adults] )
+		formatString: 0
+		displayFolder: Digital layer
+
+	measure 'Wallet Women Share %' = AVERAGE ( wallet[female_share] )
+		formatString: 0.0"%"
+		displayFolder: Digital layer
+
+	measure 'Active Agent Share %' = AVERAGE ( wallet_national[active_agent_share] )
+		formatString: 0.0"%"
+		displayFolder: Digital layer
+
+	measure 'Active Account Share %' = AVERAGE ( wallet_national[active_account_share] )
+		formatString: 0.0"%"
+		displayFolder: Digital layer
+
+	measure 'Latest Wallet Accounts (million)' =
+			VAR q = MAX ( wallet_national[quarter_index] )
+			RETURN
+			    DIVIDE ( CALCULATE ( SUM ( wallet_national[accounts] ), wallet_national[quarter_index] = q ), 1000000 )
+		formatString: #,0.0
+		displayFolder: Digital layer
+
+	measure 'Latest Wallet Agents (thousand)' =
+			VAR q = MAX ( wallet_national[quarter_index] )
+			RETURN
+			    DIVIDE ( CALCULATE ( SUM ( wallet_national[agents] ), wallet_national[quarter_index] = q ), 1000 )
+		formatString: #,0
+		displayFolder: Digital layer
+
+	/// Registered branchless banking agents that were active in the latest quarter.
+	measure 'Latest Active Agent Share %' =
+			VAR q = MAX ( wallet_national[quarter_index] )
+			RETURN
+			    CALCULATE ( AVERAGE ( wallet_national[active_agent_share] ), wallet_national[quarter_index] = q )
+		formatString: 0.0"%"
+		displayFolder: Digital layer
+
+	measure 'First Active Agent Share %' =
+			VAR q = MIN ( wallet_national[quarter_index] )
+			RETURN
+			    CALCULATE ( AVERAGE ( wallet_national[active_agent_share] ), wallet_national[quarter_index] = q )
+		formatString: 0.0"%"
+		displayFolder: Digital layer
+
+	measure 'Latest Wallet Deposits (PKR billion)' =
+			VAR q = MAX ( wallet_national[quarter_index] )
+			RETURN
+			    DIVIDE ( CALCULATE ( SUM ( wallet_national[deposits_pkr_mn] ), wallet_national[quarter_index] = q ), 1000 )
+		formatString: #,0
+		displayFolder: Digital layer
+
+	measure 'Country GDP per Person' = AVERAGE ( countries[gdp_pc_ppp] )
+		formatString: #,0
+		displayFolder: Income benchmark
+
+	measure 'Country Account Ownership %' = AVERAGE ( countries[account] )
+		formatString: 0.0"%"
+		displayFolder: Income benchmark
+
+	measure 'Expected Account Ownership %' = AVERAGE ( countries[expected_account] )
+		formatString: 0.0"%"
+		displayFolder: Income benchmark
+
+	measure 'Pakistan Expected Account Ownership %' = CALCULATE ( AVERAGE ( countries[expected_account] ), countries[country] = "PAK" )
+		formatString: 0.0"%"
+		displayFolder: Income benchmark
+
+	/// Account ownership expected at Pakistan's income minus the actual figure, in points.
+	measure 'Pakistan Account Shortfall vs Income (pts)' =
+			CALCULATE (
+			    AVERAGE ( countries[expected_account] ) - AVERAGE ( countries[account] ),
+			    countries[country] = "PAK"
+			)
+		formatString: 0.0" pts"
+		displayFolder: Income benchmark
+
+	measure 'Economies Compared' = COUNTROWS ( ALL ( countries ) )
+		formatString: 0
+		displayFolder: Income benchmark
+
+	/// Pakistan's position when economies are ordered from lowest account ownership.
+	measure 'Pakistan Rank From Lowest' =
+			VAR pak = CALCULATE ( AVERAGE ( countries[account] ), countries[country] = "PAK" )
+			RETURN
+			    COUNTROWS ( FILTER ( ALL ( countries ), countries[account] <= pak ) )
+		formatString: 0
+		displayFolder: Income benchmark
+
+	column Placeholder
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: Placeholder
 
 	partition _Measures = m
 		mode: import
 		source =
-			let
-				Source = #table(type table [Placeholder = text], {{"measures"}})
-			in
-				Source
+				let
+					Source = #table(type table [Placeholder = text], {{"measures"}})
+				in
+					Source
+

@@ -1,0 +1,62 @@
+table district_types
+
+	column district_type
+		dataType: string
+		summarizeBy: none
+		sourceColumn: district_type
+		sortByColumn: type_rank
+
+	column type_rank
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: type_rank
+
+	column districts
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: districts
+
+	column population
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: population
+
+	column average_urban_share
+		dataType: double
+		summarizeBy: none
+		sourceColumn: average_urban_share
+
+	column average_development_index
+		dataType: double
+		summarizeBy: none
+		sourceColumn: average_development_index
+
+	column average_female_literacy
+		dataType: double
+		summarizeBy: none
+		sourceColumn: average_female_literacy
+
+	column median_branches_per_100k
+		dataType: double
+		summarizeBy: none
+		sourceColumn: median_branches_per_100k
+
+	column average_rural_branch_share
+		dataType: double
+		summarizeBy: none
+		sourceColumn: average_rural_branch_share
+
+	column largest_districts
+		dataType: string
+		summarizeBy: none
+		sourceColumn: largest_districts
+
+	partition district_types = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("LZHNTsMwEIRfxco5WLHj3ysCJFSQEHBBVQ/bxtSGNKk2KQienl2Lg+1Jdu35NLvdNnc4T2tJKGAaBKbTvKambTpaOtCmbDQ+hJ5klM55Q+JKSRVd5BYlrYlcVNJZwxe8k0prLr5mwDPgJ2ArruEDLnRu8s8+8TnnsqwwNbt229ykrzTO5zIdBV4QRn6OVu9pM8rZ0AfHZkb2rnpcddI4zeVeS+us5UapvWISG6SL7L/JUPDMrs/kPlX1AtMxM9BNQhD3ywnKSFD/ILeEtB/LktMgBuLDclgXdub32USpvvehi4ynreQPDkvSP+6xSkYfmMuSsAxhvIyqxvcMuZzEG2D1a8Xj5Rfe3wGPgLkVT2nJ8M1kLwXGz3mtQI9pxfk8j4WiEvmyZ5iaNs/Hd1bZzjOLMzJoVcdgrWZSF0m5OkEtu67iKaLqDd/fAMIhl1Y8QJ4xteIOygIj7GHgtL5hpGkMpdnt/gA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [district_type = _t, type_rank = _t, districts = _t, population = _t, average_urban_share = _t, average_development_index = _t, average_female_literacy = _t, median_branches_per_100k = _t, average_rural_branch_share = _t, largest_districts = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"district_type", type text}, {"type_rank", Int64.Type}, {"districts", Int64.Type}, {"population", Int64.Type}, {"average_urban_share", type number}, {"average_development_index", type number}, {"average_female_literacy", type number}, {"median_branches_per_100k", type number}, {"average_rural_branch_share", type number}, {"largest_districts", type text}}, "en-US")
+				in
+					Typed
+
