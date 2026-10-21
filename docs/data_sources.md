@@ -1,6 +1,6 @@
 # Data sources
 
-Everything in this project comes from public sources. The raw files are stored in [`data/raw`](../data/raw) with a manifest ([`MANIFEST.json`](../data/raw/MANIFEST.json)) that records each file's source URL, licence, size and SHA-256 checksum; `python -m fininc verify` checks that nothing has changed. The 60 files are listed by folder at the end of this page.
+Everything in this project comes from public sources. The raw files are stored in [`data/raw`](../data/raw) with a manifest ([`MANIFEST.json`](../data/raw/MANIFEST.json)) that records each file's source URL, licence, size and SHA-256 checksum; `python -m fininc verify` checks that nothing has changed. The 59 files are listed by folder at the end of this page.
 
 ## Sources
 
@@ -31,7 +31,6 @@ The code in this repository is the author's own work. This project is independen
 | Folder | Files | Bytes | Terms |
 | --- | ---: | ---: | --- |
 | `data/raw/geo` | 1 | 1,521,807 | CC BY 3.0 IGO (WFP via HDX, redistributed by geoBoundaries) |
-| `data/raw/pbs` | 1 | 781 | Public statistics of the Pakistan Bureau of Statistics |
 | `data/raw/pbs/census2023_district_tables` | 41 | 602,071 | Licence of the CSV conversion repository |
 | `data/raw/sbp` | 2 | 2,829,504 | Public statistics of the State Bank of Pakistan |
 | `data/raw/sbp/branchless_banking` | 9 | 5,621,495 | Public statistics of the State Bank of Pakistan |

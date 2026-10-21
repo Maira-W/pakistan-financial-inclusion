@@ -294,13 +294,6 @@
    "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
    "retrieved_utc": "2026-10-21T09:55Z"
   },
-  "pbs/official_province_totals_2023.json": {
-   "sha256": "cdf6f15d8f092459e66ec903bec97db6754b26d1be8c820bd1f0c2893ce41dc2",
-   "bytes": 781,
-   "source": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/National-Census-Report-2023-2.pdf",
-   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source",
-   "retrieved_utc": "2026-10-21T09:55Z"
-  },
   "sbp/branchless_banking/bb_2024Q2.pdf": {
    "sha256": "89e09a21d31ab70e0b7b21f91cec5719ff9a2f28ad09b108ad33b7e8e93f3ed8",
    "bytes": 849058,

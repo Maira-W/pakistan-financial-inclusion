@@ -215,12 +215,6 @@ def fetch_pbs(manifest: dict, refresh: bool = False) -> None:
               "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/LICENSE",
               "Licence of the CSV conversion repository", refresh=refresh)
 
-    def official() -> dict:
-        return {"source": config.OFFICIAL_CENSUS_SOURCE, "population": config.OFFICIAL_CENSUS_TOTALS}
-
-    _get_built(manifest, "pbs/official_province_totals_2023.json", config.OFFICIAL_CENSUS_SOURCE["url"],
-               LICENCE_PBS, official, refresh=refresh)
-
 
 # ---------------------------------------------------------------------------
 # Boundaries
