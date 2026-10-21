@@ -1,0 +1,41 @@
+table barriers
+
+	column account_type
+		dataType: string
+		summarizeBy: none
+		sourceColumn: account_type
+
+	column reason
+		dataType: string
+		summarizeBy: none
+		sourceColumn: reason
+
+	column reason_full
+		dataType: string
+		summarizeBy: none
+		sourceColumn: reason_full
+
+	column share
+		dataType: double
+		summarizeBy: none
+		sourceColumn: share
+
+	column base
+		dataType: string
+		summarizeBy: none
+		sourceColumn: base
+
+	column derived
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: derived
+
+	partition barriers = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("rVNNT8MwDP0r1iROoIj0Y2uPcEBCAi5wQxxM6m7RunjKB7B/jwuDUalCm7ab47z4Pb/Yz8+Ta3RLYA/BrmyHHtAYTi5OLiYPDCt2tJHw1oXUttZYchHa5JogyWmuyiwvJToDbgGb1MUA7zYuOEVA96dUi12gycvFf3RPzGA4xK4nvLEOnbHYQSD/Zg0FQE8QBUMfa3LBvpHAikrll1l+Sgkt+gG/dSHamKJlt9PQ9s/esVeaa1WVeXEqCWL6Gtfke4Pv0Cz7mo6k/4B+Aw2btJI/wF6OILKp0vV0r/6jT3twCyrEP9RfZ/EA2lFDBKkrVemyPlX/NyiZDSwwgMyeJB55RRL1GuKCxPnf+0Ftnau6mlaHybjnV9vR95SPD/4DRyDHab7YoiJDCgQox9G3xUxldb2zo+t+tOCcGtDl+T4KBrswwKw9N8nE8XXIS6XLUh9JftgIyv/r4rI4kvNqLiXDdvmGmO+bkc3TMzXLsv2YXz4B", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [account_type = _t, reason = _t, reason_full = _t, share = _t, base = _t, derived = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"account_type", type text}, {"reason", type text}, {"reason_full", type text}, {"share", type number}, {"base", type text}, {"derived", type logical}}, "en-US")
+				in
+					Typed
+

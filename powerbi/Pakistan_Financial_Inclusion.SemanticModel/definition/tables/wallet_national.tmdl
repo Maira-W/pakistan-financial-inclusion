@@ -1,0 +1,61 @@
+table wallet_national
+
+	column quarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: quarter
+
+	column label
+		dataType: string
+		summarizeBy: none
+		sourceColumn: label
+
+	column quarter_index
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: quarter_index
+
+	column agents
+		dataType: double
+		summarizeBy: none
+		sourceColumn: agents
+
+	column active_agents
+		dataType: double
+		summarizeBy: none
+		sourceColumn: active_agents
+
+	column accounts
+		dataType: double
+		summarizeBy: none
+		sourceColumn: accounts
+
+	column active_accounts
+		dataType: double
+		summarizeBy: none
+		sourceColumn: active_accounts
+
+	column deposits_pkr_mn
+		dataType: double
+		summarizeBy: none
+		sourceColumn: deposits_pkr_mn
+
+	column active_account_share
+		dataType: double
+		summarizeBy: none
+		sourceColumn: active_account_share
+
+	column active_agent_share
+		dataType: double
+		summarizeBy: none
+		sourceColumn: active_agent_share
+
+	partition wallet_national = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("XZLLahxBDEV/JczaU+j9WAayGgjGeGlmYYx3wRhj/38kdQ8N01DQpVLplHTvy8uJgOSJTg+n359f58vPx68O1BZrWX3RZ+QBAR3tU0PMPoVUS5wwR0onKixL1voTXI54uj7sCK7Y5eff+fn984boC5WNHr0JpB1ByWbZCFVBRPYOi5H1DdEFTn0qsNSDD0YXfXz7Pv95f7sxGusQqjkMy4EhmZuC9L+hCIJNuDJ9KscSC90ZgHZj6FPP5fL6cf77+tWMyWkGkc4FcvOcATJluEK/wDqTovugW6LYMp4uORaD4cG4k6Ozezlj4AzOcZeDNdwwbBhISdZhQhPxbVZOMgxfIEQH406Prt9VXN1p3skJPH0IqtXzOmgSZuDbOUXCxgiiHgvj0lLpYNzpMT3UKi+F48xC2Iah4EqC4wjTrLkMQ8pXo7ksdNlaX86l0c6wez26h5YysIqMb1JFbRieUH7BUQuF0HnzHcbuK4uxAfEKZTsYd3p0tZ5pcA13HlXGmaFgPb2cNYZ1KQ+rdkHW0iU3zcNnDqQryyqn6/U/", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [quarter = _t, label = _t, quarter_index = _t, agents = _t, active_agents = _t, accounts = _t, active_accounts = _t, deposits_pkr_mn = _t, active_account_share = _t, active_agent_share = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"quarter", type text}, {"label", type text}, {"quarter_index", Int64.Type}, {"agents", type number}, {"active_agents", type number}, {"accounts", type number}, {"active_accounts", type number}, {"deposits_pkr_mn", type number}, {"active_account_share", type number}, {"active_agent_share", type number}}, "en-US")
+				in
+					Typed
+

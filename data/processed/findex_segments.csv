@@ -1,0 +1,58 @@
+indicator,segment,group,year,value
+account.t.d.3,Young adults (15-24),age,2011,7.9549
+account.t.d.3,Young adults (15-24),age,2014,13.1964
+account.t.d.3,Young adults (15-24),age,2017,14.8923
+account.t.d.3,Young adults (15-24),age,2021,18.1023
+account.t.d.3,Young adults (15-24),age,2024,24.3425
+account.t.d.4,Older adults (25+),age,2011,11.4479
+account.t.d.4,Older adults (25+),age,2014,12.9555
+account.t.d.4,Older adults (25+),age,2017,24.5316
+account.t.d.4,Older adults (25+),age,2021,22.457
+account.t.d.4,Older adults (25+),age,2024,28.5427
+account.t.d.5,Primary education or less,education,2011,3.7467
+account.t.d.5,Primary education or less,education,2014,10.0275
+account.t.d.5,Primary education or less,education,2017,15.9199
+account.t.d.5,Primary education or less,education,2021,15.3095
+account.t.d.5,Primary education or less,education,2024,18.9107
+account.t.d.6,Secondary education or more,education,2011,24.4552
+account.t.d.6,Secondary education or more,education,2014,25.1896
+account.t.d.6,Secondary education or more,education,2017,34.0312
+account.t.d.6,Secondary education or more,education,2021,35.2951
+account.t.d.6,Secondary education or more,education,2024,46.686
+account.t.d.1,Women,gender,2011,2.9536
+account.t.d.1,Women,gender,2014,4.8437
+account.t.d.1,Women,gender,2017,7.0251
+account.t.d.1,Women,gender,2021,13.4785
+account.t.d.1,Women,gender,2024,11.9122
+account.t.d.2,Men,gender,2011,17.2815
+account.t.d.2,Men,gender,2014,20.9724
+account.t.d.2,Men,gender,2017,34.6077
+account.t.d.2,Men,gender,2021,28.1764
+account.t.d.2,Men,gender,2024,42.2935
+account.t.d.7,Poorest 40%,income,2011,4.8079
+account.t.d.7,Poorest 40%,income,2014,9.7548
+account.t.d.7,Poorest 40%,income,2017,14.2159
+account.t.d.7,Poorest 40%,income,2021,17.6114
+account.t.d.7,Poorest 40%,income,2024,13.6063
+account.t.d.8,Richest 60%,income,2011,13.9449
+account.t.d.8,Richest 60%,income,2014,15.2103
+account.t.d.8,Richest 60%,income,2017,25.9984
+account.t.d.8,Richest 60%,income,2021,23.2123
+account.t.d.8,Richest 60%,income,2024,36.4062
+account.t.d.11,Out of the labour force,labour,2011,3.875
+account.t.d.11,Out of the labour force,labour,2014,5.0342
+account.t.d.11,Out of the labour force,labour,2017,13.4498
+account.t.d.11,Out of the labour force,labour,2021,15.6518
+account.t.d.11,Out of the labour force,labour,2024,13.9101
+account.t.d.12,In the labour force,labour,2011,17.357
+account.t.d.12,In the labour force,labour,2014,22.7688
+account.t.d.12,In the labour force,labour,2017,35.1852
+account.t.d.12,In the labour force,labour,2021,28.3211
+account.t.d.12,In the labour force,labour,2024,42.734
+account.t.d.10,Urban,location,2024,32.9358
+account.t.d.9,Rural,location,2024,21.0631
+account.t.d,All adults,overall,2011,10.3063
+account.t.d,All adults,overall,2014,13.0362
+account.t.d,All adults,overall,2017,21.2932
+account.t.d,All adults,overall,2021,20.9806
+account.t.d,All adults,overall,2024,27.296

@@ -1,0 +1,81 @@
+table headline
+
+	column gini_banks_2020
+		dataType: double
+		summarizeBy: none
+		sourceColumn: gini_banks_2020
+
+	column gini_banks_2024
+		dataType: double
+		summarizeBy: none
+		sourceColumn: gini_banks_2024
+
+	column gini_all_branches_2024
+		dataType: double
+		summarizeBy: none
+		sourceColumn: gini_all_branches_2024
+
+	column net_new_banks
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: net_new_banks
+
+	column low_density_share_of_new_pct
+		dataType: double
+		summarizeBy: none
+		sourceColumn: low_density_share_of_new_pct
+
+	column low_density_share_of_population_pct
+		dataType: double
+		summarizeBy: none
+		sourceColumn: low_density_share_of_population_pct
+
+	column convergence_slope
+		dataType: double
+		summarizeBy: none
+		sourceColumn: convergence_slope
+
+	column convergence_p_value
+		dataType: double
+		summarizeBy: none
+		sourceColumn: convergence_p_value
+
+	column total_shortfall
+		dataType: double
+		summarizeBy: none
+		sourceColumn: total_shortfall
+
+	column shortfall_p05
+		dataType: double
+		summarizeBy: none
+		sourceColumn: shortfall_p05
+
+	column shortfall_p95
+		dataType: double
+		summarizeBy: none
+		sourceColumn: shortfall_p95
+
+	column districts_flagged
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: districts_flagged
+
+	column model_error_reduction_pct
+		dataType: double
+		summarizeBy: none
+		sourceColumn: model_error_reduction_pct
+
+	column development_index_variance_pct
+		dataType: double
+		summarizeBy: none
+		sourceColumn: development_index_variance_pct
+
+	partition headline = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("JczJDcAwCETRXnyOEAybqcVK/23EkBNf6GnOWUwKq/VMuP7B1oGMuEeMckf2oyiZbQyDfSICraABgqBdbicJueXORTJr0tyVsMvHUG319b4f", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [gini_banks_2020 = _t, gini_banks_2024 = _t, gini_all_branches_2024 = _t, net_new_banks = _t, low_density_share_of_new_pct = _t, low_density_share_of_population_pct = _t, convergence_slope = _t, convergence_p_value = _t, total_shortfall = _t, shortfall_p05 = _t, shortfall_p95 = _t, districts_flagged = _t, model_error_reduction_pct = _t, development_index_variance_pct = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"gini_banks_2020", type number}, {"gini_banks_2024", type number}, {"gini_all_branches_2024", type number}, {"net_new_banks", Int64.Type}, {"low_density_share_of_new_pct", type number}, {"low_density_share_of_population_pct", type number}, {"convergence_slope", type number}, {"convergence_p_value", type number}, {"total_shortfall", type number}, {"shortfall_p05", type number}, {"shortfall_p95", type number}, {"districts_flagged", Int64.Type}, {"model_error_reduction_pct", type number}, {"development_index_variance_pct", type number}}, "en-US")
+				in
+					Typed
+

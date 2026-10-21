@@ -1,0 +1,21 @@
+table notes
+
+	column topic
+		dataType: string
+		summarizeBy: none
+		sourceColumn: topic
+
+	column note
+		dataType: string
+		summarizeBy: none
+		sourceColumn: note
+
+	partition notes = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("XVRNb9w2EP0rgwVatIAs2EnRQ2/eujWSosCiLuCDkcOIGklsKFIhqVW2v75vKGlj92DYpubjvXnz5uXlcIzszSDpUB2ejieK0tuUJVLoKOG9nZ201LD/TOxbGq2JobMeObK+Nlt+Re/v6EGMjA2y392++6mm++0rmTD7nGgZJArZTBbhPuTrQyIzpxxGiYmcPUtFKZCx2UqiPHCmJPEs+FNspDTHiHqt9T2iQwAGyQq5BLWa4DX0QhylPnyqXg6nMM2Osw0eNE/HJ/pVfJqTwnxf0wMYR2uAAgkU/NYHH2+p0U4crRIEpvYaaqJwRjfusmyxmg0KPV6tz0HLXBNWQIZHoS6GEbP5l1v6yOM40/f0B6dhREsd8aN1vc03R3YZuaCiZXVYJpwxrXZldG/KTCksHkMb7ARizyG6lo6qyqMLDTv63fpWvlaAd3dHQLTLghGeAQcaMwTOKzdB+Qt1tp/R0HBU0pR4nBwmTYKhrwDf0DpbWRDsFWCDlZity4UhVF2R/vZ1EqOTar5t2j156aEHNG2sD6MF1jG04hTSHqdKTFfhKpojFo7SoPNQHEwtILswjYJBbEwnTMiWdovNQ5jzW7hYNXFdTR90B1FhEohnwjhB4qRNlAdTZqi44X8aQswdOwfcVy6j9VgfNnkG8h1wTaeQbGE1CvtEnSwoX/Yx2dE6jq8WaOCzvN69BlQWktKhMC7Cd457Xajg3UXtUpaTzFAMqB4N2kXJYE/R7O72u23lHUSRqKC/zDZfKMLJv5Aw7OiRMQXsKPVBdltOEianv+LuWhQdbA9iuaY/VZ2bnqetzpqjWNI+H+KerU/rxFc1UcHpKLXCM+ztt2xOJAVVRYughY40v3aXigcdFtsKDgIcxuZC6F7TX5J0Y7XtAhRBe0RlJe1+U3AvCjuYNKRclWW5LtXuJu5FI7DTC7BLTuvYnss/lFSClK3Z7+Ka7ySlcvbUEd9iKrqfonU3H2cvxWNK5u3TzzXMqM5KZTxaEt8VQblv/8zjRLqtkBR2k3UAXmeDCxS13ZeZY9YDqQycdPCbU6tHRsFtyyYXcAm3E/HBY7FhMAHwkeNn9d3/r8ZVs8eHU5EeP/AB/XA6nX6kLsSCVkxQk8qmSxPyUNPf+mH3w5ndLKulICGrpDeFR4drv15UnOpe6dkCCxA//Qc=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [topic = _t, note = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"topic", type text}, {"note", type text}}, "en-US")
+				in
+					Typed
+

@@ -1,7 +1,24 @@
 # Python
 __pycache__/
 *.pyc
-
-# Local virtual environments
 .venv/
 venv/
+*.egg-info/
+build/
+dist/
+
+# Tools
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Power BI writes these on the machine that opens a project; they are not part of it
+.pbi/
+diagramLayout.json
+*.abf
+
+# Editors and the operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

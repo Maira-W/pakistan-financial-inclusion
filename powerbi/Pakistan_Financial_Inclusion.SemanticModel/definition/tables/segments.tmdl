@@ -1,0 +1,31 @@
+table segments
+
+	column segment
+		dataType: string
+		summarizeBy: none
+		sourceColumn: segment
+
+	column group
+		dataType: string
+		summarizeBy: none
+		sourceColumn: group
+
+	column year
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: year
+
+	column value
+		dataType: double
+		summarizeBy: none
+		sourceColumn: value
+
+	partition segments = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("lZNda4MwFIb/ShAGG+tCcvKhXu5yF6OjY4xRemE1bYXUQNTB/v2ORopbLbY3Bj3Pez7eHNfr6Mu11Z5kRWubmtxz9QTyIVpE2d7gExhwPHhCOQMRbRbzvOwOSYUE1fNLWxh/4kE9nmUHoFLFV8B96oQqCYF+8+Ux8z/EFG2eNaWriPPEmrpG7vRtNIWigqXqVqkMBqScharvJndVcSY+Om+m6wpFIVX8dnFXWWqqE91rP93RdJG9qdCl0VyCyjhRF5l+AI4DAPTM62QWNJbHWl4g+lYA5xCDfw47rhsi2R1GyirHuqOOYqo5lzOkDL1rpsNmrcr80JF6MicIChzmyC6n0FQyHWZdtg1xO9IcDLHZ1rWe7JzPOzi8/tkOrXhyg2roHxcj3O1LdU0d9FkAv1Yx+B6LYOaH32bd1Vj3f08EULyb0P6q9ZmdpIBTdDsUf7Z2+NMw4L4NauyoTUbThOkZss8Z41oguPkF", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [segment = _t, group = _t, year = _t, value = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"segment", type text}, {"group", type text}, {"year", Int64.Type}, {"value", type number}}, "en-US")
+				in
+					Typed
+

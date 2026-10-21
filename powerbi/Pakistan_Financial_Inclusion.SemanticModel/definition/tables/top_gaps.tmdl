@@ -1,0 +1,72 @@
+table top_gaps
+
+	column gap_rank
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: gap_rank
+
+	column district
+		dataType: string
+		summarizeBy: none
+		sourceColumn: district
+
+	column province
+		dataType: string
+		summarizeBy: none
+		sourceColumn: province
+
+	column district_type
+		dataType: string
+		summarizeBy: none
+		sourceColumn: district_type
+
+	column population
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: population
+
+	column branches_2024
+		dataType: int64
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: branches_2024
+
+	column expected_branches
+		dataType: double
+		summarizeBy: none
+		sourceColumn: expected_branches
+
+	column expected_low
+		dataType: double
+		summarizeBy: none
+		sourceColumn: expected_low
+
+	column expected_high
+		dataType: double
+		summarizeBy: none
+		sourceColumn: expected_high
+
+	column shortfall
+		dataType: double
+		summarizeBy: none
+		sourceColumn: shortfall
+
+	column chance_of_this_few
+		dataType: double
+		summarizeBy: none
+		sourceColumn: chance_of_this_few
+
+	column flagged_short
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: flagged_short
+
+	partition top_gaps = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("jVRLTxsxEP4rKGdkeeyZsX2uaJFoVSSOiIPDLtolUYL2IUR/fWcmWUoq8ThlbE/8+XvM3t6uYHW++lm7/dBKcT3vHutail/tNOyf9tt+qruzbl6PsgfRe4RIWhb28hMQyGWfsm2V4mKISfcToyNPKDXSa4t3gShI8VC3Y7u6O79d6erH/DjU3XPd1s9eQIVKIkXGrP9MOTjMoC9KgFImljJzcOBjkVJevDR456noK6ZhPmBHWVzVod53vVQ3/a7p3sENPuaQMxg1r7eFIiCEYGwFwaUS9b5IJToCUOaB0tIir/CIJ8x1ddO1/aabn+bhhPrFONX1th+7tjlr+nEa+vtJnyF3FIR8EF7BsmB5Nlz2jnIh62KXY1JYwLA0CP3k41v62nv50rRDXdfmMwEwBkKznMEwhFGM6kGM0flsr0IGFwmiZaUsDYKc+UR4Nel77Udx/AD9oenFJ8qgbnIxewM7JtaNJAozGmABSRcfoP1y7p0EAE5kT2b6OA9fEzxjyAoKlqxQwHE0lJCEYApoIcuuJHMEZB6ODZo3xre0VYPL+tD/+Z/1e/AQZah8MXbmJjs8REs5JjQrgATdpk4G7XisZlv+X7F18XtTv5Yz8ZCwmNuej0EWRY026jQfB8ER2RgSLMfiAVry/gkOes+3rg5jbRqFv+pe1u1wdl033TTvNt1z/UiCHIm8cmL77vjkUkbLtpfZD2YAQHAsI6qOheVcNGDmVw3u/gI=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [gap_rank = _t, district = _t, province = _t, district_type = _t, population = _t, branches_2024 = _t, expected_branches = _t, expected_low = _t, expected_high = _t, shortfall = _t, chance_of_this_few = _t, flagged_short = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"gap_rank", Int64.Type}, {"district", type text}, {"province", type text}, {"district_type", type text}, {"population", Int64.Type}, {"branches_2024", Int64.Type}, {"expected_branches", type number}, {"expected_low", type number}, {"expected_high", type number}, {"shortfall", type number}, {"chance_of_this_few", type number}, {"flagged_short", type logical}}, "en-US")
+				in
+					Typed
+

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Inclusion in Pakistan</title>
+<meta name="description" content="Who is left out of formal finance in Pakistan, where, and what it would take to reach them: an interactive analysis of bank branches, mobile wallets and the Global Findex.">
+<script src="__PLOTLY_URL__" charset="utf-8"></script>
+<style>
+  :root {
+    --navy:#1F3B57; --teal:#2A9D8F; --orange:#E76F51; --amber:#E9C46A; --grey:#8D99AE; --purple:#7B2CBF;
+    --ink:#1d2733; --muted:#5b6777; --line:#e3e7ee; --bg:#f4f6f9; --card:#ffffff;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  a { color:var(--navy); }
+  .skip { position:absolute; left:-999px; top:0; background:#fff; padding:8px 12px; z-index:100; }
+  .skip:focus { left:8px; top:8px; }
+  header.hero { background:linear-gradient(135deg,#1F3B57 0%,#24506b 100%); color:#fff; padding:28px 16px 22px; }
+  .wrap { max-width:1240px; margin:0 auto; }
+  header.hero h1 { margin:0 0 6px; font-size:28px; font-weight:700; letter-spacing:-.01em; }
+  header.hero p { margin:0; max-width:860px; color:#d3deea; font-size:15px; }
+  .vintage { margin-top:10px; font-size:12.5px; color:#b8c9db; }
+  nav.tabs { position:sticky; top:0; z-index:20; background:#fff; border-bottom:1px solid var(--line); }
+  nav.tabs .wrap { display:flex; gap:2px; overflow-x:auto; padding:0 8px; }
+  nav.tabs button { font:inherit; font-size:14px; font-weight:600; color:var(--muted); background:none; border:0; border-bottom:3px solid transparent; padding:13px 14px; cursor:pointer; white-space:nowrap; }
+  nav.tabs button:hover { color:var(--navy); }
+  nav.tabs button[aria-selected="true"] { color:var(--navy); border-bottom-color:var(--orange); }
+  nav.tabs button:focus-visible { outline:2px solid var(--orange); outline-offset:-2px; }
+  main { max-width:1240px; margin:0 auto; padding:18px 16px 44px; }
+  section.tab[hidden] { display:none; }
+  .intro h2 { margin:6px 0 4px; font-size:22px; color:var(--navy); }
+  .intro p { margin:0 0 14px; color:var(--muted); max-width:900px; }
+  h3 { margin:0 0 4px; font-size:16px; color:var(--ink); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:16px; min-width:0; }
+  .card .sub { margin:0 0 8px; color:var(--muted); font-size:13px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid2 > .card { margin-bottom:16px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-bottom:16px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .kpi .label { font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+  .kpi .value { font-size:28px; font-weight:750; color:var(--navy); margin:3px 0 1px; line-height:1.15; }
+  .kpi .note { font-size:12.5px; color:var(--muted); }
+  .kpi.alert .value { color:var(--orange); }
+  ol.findings { list-style:none; counter-reset:f; padding:0; margin:0 0 16px; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  ol.findings li { counter-increment:f; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px 14px 52px; position:relative; }
+  ol.findings li::before { content:counter(f); position:absolute; left:14px; top:14px; width:26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+  ol.findings h4 { margin:0 0 3px; font-size:15px; color:var(--navy); }
+  ol.findings p { margin:0 0 6px; font-size:13.5px; }
+  ol.findings button { font:inherit; font-size:12.5px; color:var(--navy); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:2px 0 10px; }
+  .controls label { font-size:13px; color:var(--muted); }
+  select, input[type="search"] { font:inherit; font-size:13.5px; padding:7px 10px; border:1px solid #c9d1dc; border-radius:7px; background:#fff; color:var(--ink); max-width:100%; }
+  input[type="search"] { min-width:220px; }
+  input[type="range"] { width:min(420px,100%); accent-color:var(--orange); }
+  .chart { width:100%; min-height:340px; }
+  .chart.tall { min-height:460px; }
+  .chart.map { min-height:560px; }
+  .note { font-size:12.5px; color:var(--muted); margin:6px 0 0; }
+  .map-layout { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr); gap:16px; align-items:start; }
+  .profile h3 { font-size:18px; color:var(--navy); margin-bottom:2px; }
+  .tag { display:inline-block; font-size:12px; font-weight:600; padding:2px 9px; border-radius:99px; color:#fff; margin:0 6px 6px 0; }
+  .metrics { display:grid; grid-template-columns:1fr 1fr; gap:8px 12px; margin:10px 0; }
+  .metrics div { border-top:1px solid var(--line); padding-top:6px; }
+  .metrics span { display:block; font-size:11.5px; color:var(--muted); }
+  .metrics strong { font-size:16px; }
+  .scroll { max-height:520px; overflow:auto; border:1px solid var(--line); border-radius:8px; }
+  table { border-collapse:collapse; width:100%; font-size:13px; background:#fff; }
+  th, td { padding:7px 10px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+  th { position:sticky; top:0; background:#eef2f7; cursor:pointer; user-select:none; font-weight:600; z-index:1; }
+  th[data-num], td.num { text-align:right; }
+  tr:hover td { background:#fafbfd; }
+  .pill { display:inline-block; padding:1px 8px; border-radius:99px; font-size:12px; font-weight:600; }
+  .pill.low { background:#fde8e1; color:#a5391f; }
+  .pill.high { background:#dff1ee; color:#1b6b61; }
+  .compare { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:8px 0 14px; }
+  .compare .opt { border:2px solid var(--line); border-radius:12px; padding:12px; background:#fff; cursor:pointer; text-align:left; font:inherit; }
+  .compare .opt[aria-pressed="true"] { border-color:var(--orange); background:#fff8f5; }
+  .compare .opt h4 { margin:0 0 4px; font-size:13.5px; color:var(--navy); }
+  .compare .opt .big { font-size:22px; font-weight:750; }
+  .compare .opt .row { display:flex; justify-content:space-between; font-size:12.5px; color:var(--muted); }
+  .sources li { margin-bottom:6px; }
+  .pass { color:#1b6b61; font-weight:700; }
+  .warn { color:#a5391f; font-weight:700; }
+  footer { max-width:1240px; margin:0 auto; padding:0 16px 40px; color:var(--muted); font-size:12.5px; }
+  .legend { display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12.5px; margin:4px 0 0; }
+  .legend i { display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:5px; vertical-align:-1px; }
+  @media (max-width: 920px) {
+    .grid2, .map-layout, ol.findings { grid-template-columns:1fr; }
+    .compare { grid-template-columns:1fr 1fr; }
+    header.hero h1 { font-size:23px; }
+    .chart.map { min-height:420px; }
+    input[type="search"] { min-width:0; width:100%; }
+  }
+  @media (max-width: 520px) { .compare { grid-template-columns:1fr; } .metrics { grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="hero">
+  <div class="wrap">
+    <h1>Financial inclusion in Pakistan</h1>
+    <p>Who is left out of formal finance, where they live, why, and what it would take to reach them. Built from the World Bank Global Findex, the State Bank of Pakistan's branch register and wallet statistics, and the 2023 census.</p>
+    <div class="vintage" id="vintage"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections"><div class="wrap" role="tablist" id="tablist">
+  <button role="tab" id="t-overview" aria-controls="tab-overview" aria-selected="true" data-tab="overview">Overview</button>
+  <button role="tab" id="t-who" aria-controls="tab-who" aria-selected="false" data-tab="who">Who and why</button>
+  <button role="tab" id="t-where" aria-controls="tab-where" aria-selected="false" data-tab="where">Where</button>
+  <button role="tab" id="t-digital" aria-controls="tab-digital" aria-selected="false" data-tab="digital">Digital layer</button>
+  <button role="tab" id="t-model" aria-controls="tab-model" aria-selected="false" data-tab="model">Model and change</button>
+  <button role="tab" id="t-planner" aria-controls="tab-planner" aria-selected="false" data-tab="planner">Planner</button>
+  <button role="tab" id="t-method" aria-controls="tab-method" aria-selected="false" data-tab="method">Method and data</button>
+</div></nav>
+
+<main id="main">
+
+<!-- ============ OVERVIEW ============ -->
+<section class="tab" id="tab-overview" role="tabpanel" aria-labelledby="t-overview">
+  <div class="intro"><h2>The short version</h2>
+    <p>Most adults in Pakistan have no account, and the gap is widest for women, the poorest and rural households. Branches thin out away from the big cities, and four years of new branches did not change that. The digital layer is denser than branches but follows the same map.</p></div>
+  <div class="kpis" id="kpis"></div>
+  <ol class="findings" id="findings"></ol>
+  <div class="card">
+    <h3>Pakistan against the world</h3>
+    <p class="sub">Each dot is an economy in the Global Findex 2024. Hover for details.</p>
+    <div class="controls"><label for="ccView">Show</label>
+      <select id="ccView">
+        <option value="account">Account ownership against income</option>
+        <option value="accountGap">Account gap between men and women</option>
+        <option value="phoneGap">Mobile phone gap between men and women</option>
+      </select></div>
+    <div id="ccChart" class="chart tall"></div>
+    <p class="note" id="ccNote"></p>
+  </div>
+</section>
+
+<!-- ============ WHO AND WHY ============ -->
+<section class="tab" id="tab-who" role="tabpanel" aria-labelledby="t-who" hidden>
+  <div class="intro"><h2>Who is left out, and why</h2>
+    <p>Survey evidence from the World Bank Global Findex: account ownership by group between 2021 and 2024, the gender gap in accounts and phones, and the reasons adults give for having no account.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Account ownership by group</h3><p class="sub">Hollow dot 2021, filled dot 2024. Orange: groups that lost ground.</p>
+      <div id="segChart" class="chart tall"></div></div>
+    <div class="card"><h3>Women and men: accounts and phones</h3><p class="sub">2024. PAK Pakistan, IND India, BGD Bangladesh, LKA Sri Lanka.</p>
+      <div id="genderChart" class="chart tall"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Why adults have no account</h3>
+      <div class="controls"><label for="barrierView">Account type</label>
+        <select id="barrierView"><option value="bank">Bank or similar institution</option><option value="mm">Mobile money</option></select></div>
+      <div id="barrierChart" class="chart"></div><p class="note" id="barrierNote"></p></div>
+    <div class="card"><h3>What kind of account</h3><p class="sub">Share of adults, Pakistan.</p>
+      <div id="typesChart" class="chart"></div></div>
+  </div>
+</section>
+
+<!-- ============ WHERE ============ -->
+<section class="tab" id="tab-where" role="tabpanel" aria-labelledby="t-where" hidden>
+  <div class="intro"><h2>Where the branches are</h2>
+    <p>Bank and microfinance branches at 31 December 2024 against the 2023 census, for 120 districts on their 2020 boundaries. Click a district on the map for its profile.</p></div>
+  <div class="map-layout">
+    <div class="card">
+      <div class="controls"><label for="mapMetric">Colour by</label><select id="mapMetric"></select></div>
+      <div id="mapChart" class="chart map"></div>
+      <div class="legend" id="mapLegend"></div>
+      <p class="note" id="mapNote"></p>
+    </div>
+    <aside class="card profile" id="profile" aria-live="polite"></aside>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>By province</h3><p class="sub">Branches per 100,000 people.</p><div id="provChart" class="chart"></div></div>
+    <div class="card"><h3>Rural and urban</h3><p class="sub">Branches per 100,000 residents of the same kind of area.</p><div id="ruralChart" class="chart"></div></div>
+  </div>
+  <div class="card"><h3>All districts</h3>
+    <div class="controls"><input type="search" id="search" placeholder="Search district, province or type" aria-label="Search districts">
+      <a href="../data/processed/units.csv">Download the full table (CSV)</a><span class="note" id="tCount"></span></div>
+    <div class="scroll"><table id="unitTable"><thead></thead><tbody></tbody></table></div></div>
+</section>
+
+<!-- ============ DIGITAL ============ -->
+<section class="tab" id="tab-digital" role="tabpanel" aria-labelledby="t-digital" hidden>
+  <div class="intro"><h2>The digital layer</h2>
+    <p>Mobile wallet accounts and agents from the State Bank of Pakistan's quarterly branchless banking statistics, from Apr-Jun 2024 to Apr-Jun 2026. Wallet accounts are accounts, not people: one person can hold several and many are dormant.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Agents and accounts by region</h3><p class="sub" id="walletSub"></p><div id="walletBars" class="chart"></div></div>
+    <div class="card"><h3>Wallet accounts per 100 adults over time</h3><p class="sub">Points that are out of line with the quarters either side are left out.</p><div id="walletLines" class="chart"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Women's share of wallet accounts</h3><div id="walletWomen" class="chart"></div></div>
+    <div class="card"><h3>Agents: a bigger network, fewer active</h3><div id="walletAgents" class="chart"></div></div>
+  </div>
+  <div class="card"><h3>Branches and agents side by side</h3><div class="scroll"><table id="digitalTable"><thead></thead><tbody></tbody></table></div>
+    <p class="note">Branch counts are banks plus microfinance banks and DFIs at 31 Dec 2024; wallet figures are Apr-Jun 2026. SBP reports Islamabad inside Punjab, so the two are combined here.</p></div>
+</section>
+
+<!-- ============ MODEL AND CHANGE ============ -->
+<section class="tab" id="tab-model" role="tabpanel" aria-labelledby="t-model" hidden>
+  <div class="intro"><h2>What explains the pattern, and did it change?</h2>
+    <p>A count model predicts how many branches a district should have given its population, urbanisation and development. Districts well below that line have fewer branches than similar districts. A second test asks whether districts that started with few branches caught up between 2020 and 2024.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Actual against expected branches</h3><p class="sub" id="modelSub"></p><div id="modelScatter" class="chart tall"></div></div>
+    <div class="card"><h3>What predicts branches</h3><p class="sub">Rate ratios with 95% intervals.</p><div id="modelCoef" class="chart"></div>
+      <p class="note" id="modelNote"></p></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Inequality in branches</h3><p class="sub">Lorenz curves: districts ordered from fewest to most branches per person.</p><div id="lorenzChart" class="chart"></div><p class="note" id="lorenzNote"></p></div>
+    <div class="card"><h3>Did low-density districts catch up?</h3><p class="sub">Change in bank branches per 100,000 people, 2020 to 2024.</p><div id="catchChart" class="chart"></div><p class="note" id="catchNote"></p></div>
+  </div>
+  <div class="card"><h3>Four types of district</h3><div class="scroll"><table id="clusterTable"><thead></thead><tbody></tbody></table></div><p class="note" id="clusterNote"></p></div>
+  <div class="card"><h3>Districts with the biggest shortfall</h3>
+    <p class="sub">Ranked by branches missing against the model. "Flagged" means the chance of seeing this few branches is under 10% and the bootstrap range agrees. A model that was exactly right would still flag about one district in ten, so read the flags as a list to review.</p>
+    <div class="scroll"><table id="gapTable"><thead></thead><tbody></tbody></table></div></div>
+</section>
+
+<!-- ============ PLANNER ============ -->
+<section class="tab" id="tab-planner" role="tabpanel" aria-labelledby="t-planner" hidden>
+  <div class="intro"><h2>Where would new access points go?</h2>
+    <p>Add new branches or agent points and choose a rule for placing them. The planner shows who is reached under each rule. It is a thinking tool, not a forecast: it does not model cost, demand or what a branch versus an agent can do.</p></div>
+  <div class="card">
+    <div class="controls"><label for="planK">New access points</label>
+      <input type="range" id="planK" min="0" max="5000" step="50" value="1000"><strong id="planKValue">1,000</strong>
+      <span class="note" id="planKShare"></span></div>
+    <div class="compare" id="planCompare"></div>
+    <p class="note" id="planRule"></p>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Where the points go</h3><p class="sub">Districts receiving the most under the chosen rule.</p><div id="planBars" class="chart tall"></div></div>
+    <div class="card"><h3>Map of new points</h3><div id="planMap" class="chart tall"></div></div>
+  </div>
+  <div class="card"><h3>Allocation by district</h3>
+    <div class="controls"><button type="button" id="planDownload" class="opt-button">Download allocation (CSV)</button><span class="note" id="planCount"></span></div>
+    <div class="scroll"><table id="planTable"><thead></thead><tbody></tbody></table></div></div>
+</section>
+
+<!-- ============ METHOD ============ -->
+<section class="tab" id="tab-method" role="tabpanel" aria-labelledby="t-method" hidden>
+  <div class="intro"><h2>Method, data and checks</h2>
+    <p>Everything on this page is computed by the project's code from public files. The repository holds the raw files with checksums, the pipeline, tests and a longer methodology note.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Data sources</h3><ul class="sources" id="sourceList"></ul></div>
+    <div class="card"><h3>Checks that passed</h3><div id="checks"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Known limits</h3><ul id="limits"></ul></div>
+    <div class="card"><h3>Find out more</h3><ul id="links"></ul></div>
+  </div>
+</section>
+
+</main>
+<footer>Financial inclusion in Pakistan. Open data, open code: see the repository for the data dictionary, methodology and tests.</footer>
+
+<script>const DATA = __DATA__;</script>
+<script>
+__DASHBOARD_JS__
+</script>
+</body>
+</html>

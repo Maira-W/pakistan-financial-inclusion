@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fininc"
+version = "2.0.0"
+description = "Financial inclusion in Pakistan: a reproducible pipeline, models, dashboard and Power BI report"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0", "pandas>=2.2", "scipy>=1.13", "scikit-learn>=1.5", "statsmodels>=0.14",
+    "matplotlib>=3.9", "plotly>=5.24", "shapely>=2.0", "pdfplumber>=0.11", "openpyxl>=3.1", "requests>=2.32",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5", "nbclient>=0.10", "nbformat>=5.10", "ipykernel>=6.29"]
+
+[project.scripts]
+fininc = "fininc.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["fininc*"]
+
+[tool.setuptools.package-data]
+fininc = ["templates/*", "templates/docs/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]            # the package sits at the repository root, so plain `pytest` can import it without an install
+markers =["slow: rebuilds tables from the raw files (about a minute)"]
+filterwarnings = [
+    "ignore::FutureWarning", "ignore::RuntimeWarning", "ignore::DeprecationWarning",
+    "ignore:Maximum Likelihood optimization failed",
+    "ignore:Inverting hessian failed",
+]
+
+[tool.ruff]
+line-length = 125
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/*.ipynb" = ["E402", "E702"]        # a notebook sets its path before importing, and may put two short statements on a line

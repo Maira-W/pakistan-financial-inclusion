@@ -1,0 +1,61 @@
+table scenario
+
+	column points_added
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: points_added
+
+	column rule_key
+		dataType: string
+		summarizeBy: none
+		sourceColumn: rule_key
+
+	column rule
+		dataType: string
+		summarizeBy: none
+		sourceColumn: rule
+
+	column points_placed
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: points_placed
+
+	column national_density
+		dataType: double
+		summarizeBy: none
+		sourceColumn: national_density
+
+	column districts_below_half
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: districts_below_half
+
+	column population_below_half_pct
+		dataType: double
+		summarizeBy: none
+		sourceColumn: population_below_half_pct
+
+	column gini
+		dataType: double
+		summarizeBy: none
+		sourceColumn: gini
+
+	column worst_people_per_branch
+		dataType: double
+		summarizeBy: none
+		sourceColumn: worst_people_per_branch
+
+	column share_to_low_female_literacy_pct
+		dataType: double
+		summarizeBy: none
+		sourceColumn: share_to_low_female_literacy_pct
+
+	partition scenario = m
+		mode: import
+		source =
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("tZjPbhQxDMZfBe0ZotiO7eQBOHLmUPWARIWQyl9RId4ex8mUTHYmHKrtYXe66f7G/mJ/zvTu7hIvry8PP54+//pjF2/94tXPp8cH+60uaeAs2S4S2AtQEEpa1wLFRHaBkaj+wdenx8f714336cN3e3337ePD4xu7fjHv97cvD1/t/X19fxENeZFvW9QgJdbvOgBS0CziTMzKdkGUSwoiUu8EMV7+gU8S/x+YAMZgLyPyMPcJSDUswEASS4+0visLc/CYS3Ykx0X6bVGDFqpBtNCEOlHRQ9SoEhLmulokyIA9SX7CHiQv6Tr59q3D5Ccg1pccsCj1SLXyhCN75uQ8XW28djlzY4BzIjvZgJzVNWcLGysSQx6gJ3lP0FSDAglZiHreJV/nreebPgHRswvC1CoeRXXMu/GsPheJ99Uc7D33noqNluruIJKUVkG59KT7d06ynonXaaPX6JR2/9ph3jMSmwwgsO1P4SHxzIEbc9nsfTUHiB7jkDo16wAUCJk87iymyEg9S3+iHqSPB60Oi16fkVA3xtpaI/f0sQrK2JbzVpywbPa+an0TtezTRw/VqjNbudtPg2oVYuCeCTBxNwEKdCMh03UnQEgj9liCCeqEZHsDsBXrToJoeps7O3bZ+H01VweeigDIR0pOuUapJaTMO+SZABPS+whs9/od7HMd8wfbSUgj+FiCCeuZU+3+7nrJP94kqPFWk/Y5srQA3LrLAFMhRPdXyIhps3wzfxyhZwNvgh6I4GX8rAKFXazHQ2+Cuo0ELoS9bVl8vpC6QWjvA1zP/K272LZ6lz4Uhqv0yUarzdaBe6bAxG1jT0PUhNsBpeKlcILWXNXU0la3uJr+E9vryeYedz809CiE9A7DpSHg1mPiHT/okL25QDRSGwVq/bVDnmmQOpJzrOpR4wSW2CMtxY3bpA7kaLD7PUuwcIQp2lZCRfokRNZRAA6xl8LSDHBrMUUfJIMEzXUEJYcSi+9bDjvmjSRYOMIc7qyBdxopqLl4dkHsKpK0naOlKdDWahnLpIT3LXBJ0uMVM/cReRslaGEMU7STEKDXQtAAXtoDba1mLjPVhLTRNirBdggDHrE3EmNhDnPEsxp+WtyrYd4B3Mti6RF9tdQy2ovB6mWRbMy3MC14u2vCMmJvpMbCJ6aIPXcr4u0xCeK1GmDDKbWjDi39oq+WYEebWQ4fz4Yxx/fKwLD13S3tghZ2MUfr4zc8z4zoG7hXwo5mzePS0iz6arEziJ+ZBh2SR5gqlNnHsx2pE/JIvY0UaeEXc8DcDhLa/3VgR6jij/nFHiX8UdKesuwG9/d/AQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [points_added = _t, rule_key = _t, rule = _t, points_placed = _t, national_density = _t, districts_below_half = _t, population_below_half_pct = _t, gini = _t, worst_people_per_branch = _t, share_to_low_female_literacy_pct = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"points_added", Int64.Type}, {"rule_key", type text}, {"rule", type text}, {"points_placed", Int64.Type}, {"national_density", type number}, {"districts_below_half", Int64.Type}, {"population_below_half_pct", type number}, {"gini", type number}, {"worst_people_per_branch", type number}, {"share_to_low_female_literacy_pct", type number}}, "en-US")
+				in
+					Typed
+

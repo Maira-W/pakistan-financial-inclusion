@@ -1,0 +1,599 @@
+indicator,label,group,country,year,value,country_name
+dig.acc,Digitally enabled account,account_type,BGD,2024,22.835506,Bangladesh
+dig.acc,Digitally enabled account,account_type,IND,2024,31.066887,India
+dig.acc,Digitally enabled account,account_type,LKA,2024,34.386583,Sri Lanka
+dig.acc,Digitally enabled account,account_type,PAK,2024,19.84837,Pakistan
+fiaccount.t.d,Bank or similar institution account,account_type,BGD,2011,31.743649,Bangladesh
+fiaccount.t.d,Bank or similar institution account,account_type,BGD,2014,29.142103,Bangladesh
+fiaccount.t.d,Bank or similar institution account,account_type,BGD,2017,40.972649,Bangladesh
+fiaccount.t.d,Bank or similar institution account,account_type,BGD,2021,37.686187,Bangladesh
+fiaccount.t.d,Bank or similar institution account,account_type,BGD,2024,32.947894,Bangladesh
+fiaccount.t.d,Bank or similar institution account,account_type,IND,2011,35.231839,India
+fiaccount.t.d,Bank or similar institution account,account_type,IND,2014,52.753809,India
+fiaccount.t.d,Bank or similar institution account,account_type,IND,2017,79.840186,India
+fiaccount.t.d,Bank or similar institution account,account_type,IND,2021,77.302051,India
+fiaccount.t.d,Bank or similar institution account,account_type,IND,2024,88.65536,India
+fiaccount.t.d,Bank or similar institution account,account_type,LKA,2011,68.526165,Sri Lanka
+fiaccount.t.d,Bank or similar institution account,account_type,LKA,2014,82.691382,Sri Lanka
+fiaccount.t.d,Bank or similar institution account,account_type,LKA,2017,73.591525,Sri Lanka
+fiaccount.t.d,Bank or similar institution account,account_type,LKA,2021,88.925616,Sri Lanka
+fiaccount.t.d,Bank or similar institution account,account_type,LKA,2024,81.227015,Sri Lanka
+fiaccount.t.d,Bank or similar institution account,account_type,PAK,2011,10.306297,Pakistan
+fiaccount.t.d,Bank or similar institution account,account_type,PAK,2014,8.706138,Pakistan
+fiaccount.t.d,Bank or similar institution account,account_type,PAK,2017,18.049384,Pakistan
+fiaccount.t.d,Bank or similar institution account,account_type,PAK,2021,16.288199,Pakistan
+fiaccount.t.d,Bank or similar institution account,account_type,PAK,2024,18.281262,Pakistan
+fin10,Credit card,account_type,BGD,2011,0.948079,Bangladesh
+fin10,Credit card,account_type,BGD,2014,0.344064,Bangladesh
+fin10,Credit card,account_type,BGD,2017,0.199958,Bangladesh
+fin10,Credit card,account_type,BGD,2021,0.621357,Bangladesh
+fin10,Credit card,account_type,BGD,2024,1.727212,Bangladesh
+fin10,Credit card,account_type,IND,2011,1.766797,India
+fin10,Credit card,account_type,IND,2014,4.175352,India
+fin10,Credit card,account_type,IND,2017,3.003514,India
+fin10,Credit card,account_type,IND,2021,4.624978,India
+fin10,Credit card,account_type,IND,2024,4.648492,India
+fin10,Credit card,account_type,LKA,2011,3.531403,Sri Lanka
+fin10,Credit card,account_type,LKA,2014,3.752827,Sri Lanka
+fin10,Credit card,account_type,LKA,2017,5.33665,Sri Lanka
+fin10,Credit card,account_type,LKA,2021,10.034853,Sri Lanka
+fin10,Credit card,account_type,LKA,2024,8.143803,Sri Lanka
+fin10,Credit card,account_type,PAK,2011,0.709,Pakistan
+fin10,Credit card,account_type,PAK,2014,0.125974,Pakistan
+fin10,Credit card,account_type,PAK,2017,0.972708,Pakistan
+fin10,Credit card,account_type,PAK,2021,0.222517,Pakistan
+fin10,Credit card,account_type,PAK,2024,1.634481,Pakistan
+fin2.t.d,Debit card,account_type,BGD,2011,2.275452,Bangladesh
+fin2.t.d,Debit card,account_type,BGD,2014,5.169035,Bangladesh
+fin2.t.d,Debit card,account_type,BGD,2017,6.198428,Bangladesh
+fin2.t.d,Debit card,account_type,BGD,2021,4.861259,Bangladesh
+fin2.t.d,Debit card,account_type,BGD,2024,7.668213,Bangladesh
+fin2.t.d,Debit card,account_type,IND,2011,8.399502,India
+fin2.t.d,Debit card,account_type,IND,2014,22.068014,India
+fin2.t.d,Debit card,account_type,IND,2017,32.721977,India
+fin2.t.d,Debit card,account_type,IND,2021,27.068094,India
+fin2.t.d,Debit card,account_type,IND,2024,37.562143,India
+fin2.t.d,Debit card,account_type,LKA,2011,9.989312,Sri Lanka
+fin2.t.d,Debit card,account_type,LKA,2014,24.859771,Sri Lanka
+fin2.t.d,Debit card,account_type,LKA,2017,32.255796,Sri Lanka
+fin2.t.d,Debit card,account_type,LKA,2021,52.612563,Sri Lanka
+fin2.t.d,Debit card,account_type,LKA,2024,42.195087,Sri Lanka
+fin2.t.d,Debit card,account_type,PAK,2011,2.872385,Pakistan
+fin2.t.d,Debit card,account_type,PAK,2014,2.943282,Pakistan
+fin2.t.d,Debit card,account_type,PAK,2017,8.30456,Pakistan
+fin2.t.d,Debit card,account_type,PAK,2021,7.7437,Pakistan
+fin2.t.d,Debit card,account_type,PAK,2024,10.558977,Pakistan
+inactive.t.d,Inactive account,account_type,BGD,2014,7.828641,Bangladesh
+inactive.t.d,Inactive account,account_type,BGD,2017,8.100203,Bangladesh
+inactive.t.d,Inactive account,account_type,BGD,2021,4.404508,Bangladesh
+inactive.t.d,Inactive account,account_type,BGD,2024,3.43572,Bangladesh
+inactive.t.d,Inactive account,account_type,IND,2014,17.394651,India
+inactive.t.d,Inactive account,account_type,IND,2017,30.624223,India
+inactive.t.d,Inactive account,account_type,IND,2021,27.439797,India
+inactive.t.d,Inactive account,account_type,IND,2024,14.320473,India
+inactive.t.d,Inactive account,account_type,LKA,2014,23.328044,Sri Lanka
+inactive.t.d,Inactive account,account_type,LKA,2017,13.66753,Sri Lanka
+inactive.t.d,Inactive account,account_type,LKA,2021,16.476624,Sri Lanka
+inactive.t.d,Inactive account,account_type,LKA,2024,14.35012,Sri Lanka
+inactive.t.d,Inactive account,account_type,PAK,2014,0.850364,Pakistan
+inactive.t.d,Inactive account,account_type,PAK,2017,1.50406,Pakistan
+inactive.t.d,Inactive account,account_type,PAK,2021,1.395016,Pakistan
+inactive.t.d,Inactive account,account_type,PAK,2024,0.700583,Pakistan
+mobileaccount.t.d,Mobile money account,account_type,BGD,2014,2.691714,Bangladesh
+mobileaccount.t.d,Mobile money account,account_type,BGD,2017,21.245959,Bangladesh
+mobileaccount.t.d,Mobile money account,account_type,BGD,2021,29.005792,Bangladesh
+mobileaccount.t.d,Mobile money account,account_type,BGD,2024,20.768373,Bangladesh
+mobileaccount.t.d,Mobile money account,account_type,IND,2014,2.35221,India
+mobileaccount.t.d,Mobile money account,account_type,IND,2017,1.994543,India
+mobileaccount.t.d,Mobile money account,account_type,IND,2021,10.439688,India
+mobileaccount.t.d,Mobile money account,account_type,IND,2024,23.100755,India
+mobileaccount.t.d,Mobile money account,account_type,LKA,2014,0.076637,Sri Lanka
+mobileaccount.t.d,Mobile money account,account_type,LKA,2017,2.42076,Sri Lanka
+mobileaccount.t.d,Mobile money account,account_type,LKA,2021,3.126422,Sri Lanka
+mobileaccount.t.d,Mobile money account,account_type,LKA,2024,2.996165,Sri Lanka
+mobileaccount.t.d,Mobile money account,account_type,PAK,2014,5.799799,Pakistan
+mobileaccount.t.d,Mobile money account,account_type,PAK,2017,6.885558,Pakistan
+mobileaccount.t.d,Mobile money account,account_type,PAK,2021,8.537406,Pakistan
+mobileaccount.t.d,Mobile money account,account_type,PAK,2024,18.357864,Pakistan
+account.t.d.3,Young adults (15-24),age,BGD,2011,20.318977,Bangladesh
+account.t.d.3,Young adults (15-24),age,BGD,2014,20.830711,Bangladesh
+account.t.d.3,Young adults (15-24),age,BGD,2017,40.993214,Bangladesh
+account.t.d.3,Young adults (15-24),age,BGD,2021,47.799315,Bangladesh
+account.t.d.3,Young adults (15-24),age,BGD,2024,38.72815,Bangladesh
+account.t.d.3,Young adults (15-24),age,IND,2011,27.30086,India
+account.t.d.3,Young adults (15-24),age,IND,2014,43.233898,India
+account.t.d.3,Young adults (15-24),age,IND,2017,71.400155,India
+account.t.d.3,Young adults (15-24),age,IND,2021,67.501931,India
+account.t.d.3,Young adults (15-24),age,IND,2024,83.329888,India
+account.t.d.3,Young adults (15-24),age,LKA,2011,68.715906,Sri Lanka
+account.t.d.3,Young adults (15-24),age,LKA,2014,85.196019,Sri Lanka
+account.t.d.3,Young adults (15-24),age,LKA,2017,76.614499,Sri Lanka
+account.t.d.3,Young adults (15-24),age,LKA,2021,86.401521,Sri Lanka
+account.t.d.3,Young adults (15-24),age,LKA,2024,75.064124,Sri Lanka
+account.t.d.3,Young adults (15-24),age,PAK,2011,7.954911,Pakistan
+account.t.d.3,Young adults (15-24),age,PAK,2014,13.196437,Pakistan
+account.t.d.3,Young adults (15-24),age,PAK,2017,14.892327,Pakistan
+account.t.d.3,Young adults (15-24),age,PAK,2021,18.102341,Pakistan
+account.t.d.3,Young adults (15-24),age,PAK,2024,24.34249,Pakistan
+account.t.d.4,Older adults (25+),age,BGD,2011,36.762135,Bangladesh
+account.t.d.4,Older adults (25+),age,BGD,2014,35.442006,Bangladesh
+account.t.d.4,Older adults (25+),age,BGD,2017,53.526372,Bangladesh
+account.t.d.4,Older adults (25+),age,BGD,2021,54.549053,Bangladesh
+account.t.d.4,Older adults (25+),age,BGD,2024,44.947391,Bangladesh
+account.t.d.4,Older adults (25+),age,IND,2011,38.026061,India
+account.t.d.4,Older adults (25+),age,IND,2014,56.811979,India
+account.t.d.4,Older adults (25+),age,IND,2017,83.084312,India
+account.t.d.4,Older adults (25+),age,IND,2021,81.304888,India
+account.t.d.4,Older adults (25+),age,IND,2024,91.167446,India
+account.t.d.4,Older adults (25+),age,LKA,2011,68.471479,Sri Lanka
+account.t.d.4,Older adults (25+),age,LKA,2014,81.988457,Sri Lanka
+account.t.d.4,Older adults (25+),age,LKA,2017,72.901132,Sri Lanka
+account.t.d.4,Older adults (25+),age,LKA,2021,90.052574,Sri Lanka
+account.t.d.4,Older adults (25+),age,LKA,2024,83.412361,Sri Lanka
+account.t.d.4,Older adults (25+),age,PAK,2011,11.44789,Pakistan
+account.t.d.4,Older adults (25+),age,PAK,2014,12.955489,Pakistan
+account.t.d.4,Older adults (25+),age,PAK,2017,24.531575,Pakistan
+account.t.d.4,Older adults (25+),age,PAK,2021,22.457031,Pakistan
+account.t.d.4,Older adults (25+),age,PAK,2024,28.54272,Pakistan
+fin11a.s,Financial institutions are too far away,barrier,PAK,2024,31.853395,Pakistan
+fin11b.s,Financial services are too expensive,barrier,BGD,2024,18.137257,Bangladesh
+fin11b.s,Financial services are too expensive,barrier,PAK,2024,48.302333,Pakistan
+fin11c,Lack of necessary documentation (% of all adults),barrier,BGD,2024,7.4767,Bangladesh
+fin11c,Lack of necessary documentation (% of all adults),barrier,IND,2024,3.40887,India
+fin11c,Lack of necessary documentation (% of all adults),barrier,LKA,2024,3.895644,Sri Lanka
+fin11c,Lack of necessary documentation (% of all adults),barrier,PAK,2024,21.407256,Pakistan
+fin11d.s,Insufficient funds,barrier,BGD,2024,81.801552,Bangladesh
+fin11d.s,Insufficient funds,barrier,LKA,2024,60.445596,Sri Lanka
+fin11d.s,Insufficient funds,barrier,PAK,2024,63.52352,Pakistan
+fin11e.s,Someone in the family has an account,barrier,BGD,2024,17.877566,Bangladesh
+fin11e.s,Someone in the family has an account,barrier,LKA,2024,56.16349,Sri Lanka
+fin11e.s,Someone in the family has an account,barrier,PAK,2024,13.98684,Pakistan
+fin11f.s,Lack of trust in financial institutions,barrier,PAK,2024,18.815852,Pakistan
+fin22a,Borrowed from a formal financial institution,credit,BGD,2014,9.999949,Bangladesh
+fin22a,Borrowed from a formal financial institution,credit,BGD,2017,9.205771,Bangladesh
+fin22a,Borrowed from a formal financial institution,credit,BGD,2021,14.219865,Bangladesh
+fin22a,Borrowed from a formal financial institution,credit,BGD,2024,12.723885,Bangladesh
+fin22a,Borrowed from a formal financial institution,credit,IND,2014,9.116331,India
+fin22a,Borrowed from a formal financial institution,credit,IND,2017,8.146004,India
+fin22a,Borrowed from a formal financial institution,credit,IND,2021,11.78062,India
+fin22a,Borrowed from a formal financial institution,credit,IND,2024,14.494373,India
+fin22a,Borrowed from a formal financial institution,credit,LKA,2014,19.729177,Sri Lanka
+fin22a,Borrowed from a formal financial institution,credit,LKA,2017,17.374818,Sri Lanka
+fin22a,Borrowed from a formal financial institution,credit,LKA,2021,21.282623,Sri Lanka
+fin22a,Borrowed from a formal financial institution,credit,LKA,2024,18.095478,Sri Lanka
+fin22a,Borrowed from a formal financial institution,credit,PAK,2014,1.57451,Pakistan
+fin22a,Borrowed from a formal financial institution,credit,PAK,2017,2.636903,Pakistan
+fin22a,Borrowed from a formal financial institution,credit,PAK,2021,3.50503,Pakistan
+fin22a,Borrowed from a formal financial institution,credit,PAK,2024,5.675364,Pakistan
+fin22b,Borrowed from family or friends,credit,BGD,2014,25.175566,Bangladesh
+fin22b,Borrowed from family or friends,credit,BGD,2017,21.426499,Bangladesh
+fin22b,Borrowed from family or friends,credit,BGD,2021,35.488843,Bangladesh
+fin22b,Borrowed from family or friends,credit,BGD,2024,27.053729,Bangladesh
+fin22b,Borrowed from family or friends,credit,IND,2014,32.300648,India
+fin22b,Borrowed from family or friends,credit,IND,2017,32.743465,India
+fin22b,Borrowed from family or friends,credit,IND,2021,31.010363,India
+fin22b,Borrowed from family or friends,credit,IND,2024,33.518075,India
+fin22b,Borrowed from family or friends,credit,LKA,2014,8.995464,Sri Lanka
+fin22b,Borrowed from family or friends,credit,LKA,2017,15.938835,Sri Lanka
+fin22b,Borrowed from family or friends,credit,LKA,2021,22.529152,Sri Lanka
+fin22b,Borrowed from family or friends,credit,LKA,2024,24.466959,Sri Lanka
+fin22b,Borrowed from family or friends,credit,PAK,2014,33.962431,Pakistan
+fin22b,Borrowed from family or friends,credit,PAK,2017,28.641498,Pakistan
+fin22b,Borrowed from family or friends,credit,PAK,2021,21.863348,Pakistan
+fin22b,Borrowed from family or friends,credit,PAK,2024,53.967927,Pakistan
+fin22c,Borrowed from a savings club,credit,BGD,2017,2.62503,Bangladesh
+fin22c,Borrowed from a savings club,credit,BGD,2021,4.188228,Bangladesh
+fin22c,Borrowed from a savings club,credit,BGD,2024,2.292848,Bangladesh
+fin22c,Borrowed from a savings club,credit,IND,2017,4.334493,India
+fin22c,Borrowed from a savings club,credit,IND,2021,2.878201,India
+fin22c,Borrowed from a savings club,credit,IND,2024,5.023725,India
+fin22c,Borrowed from a savings club,credit,LKA,2017,5.748652,Sri Lanka
+fin22c,Borrowed from a savings club,credit,LKA,2021,3.519696,Sri Lanka
+fin22c,Borrowed from a savings club,credit,LKA,2024,5.910258,Sri Lanka
+fin22c,Borrowed from a savings club,credit,PAK,2017,10.955687,Pakistan
+fin22c,Borrowed from a savings club,credit,PAK,2021,1.890504,Pakistan
+fin22c,Borrowed from a savings club,credit,PAK,2024,5.179205,Pakistan
+fin31b,Paid a utility bill by mobile phone,digital,BGD,2014,0.725831,Bangladesh
+fin31b,Paid a utility bill by mobile phone,digital,BGD,2017,2.374416,Bangladesh
+fin31b,Paid a utility bill by mobile phone,digital,BGD,2021,10.857347,Bangladesh
+fin31b,Paid a utility bill by mobile phone,digital,BGD,2024,11.952229,Bangladesh
+fin31b,Paid a utility bill by mobile phone,digital,IND,2014,0.178452,India
+fin31b,Paid a utility bill by mobile phone,digital,IND,2017,1.331109,India
+fin31b,Paid a utility bill by mobile phone,digital,IND,2021,5.24787,India
+fin31b,Paid a utility bill by mobile phone,digital,IND,2024,9.474727,India
+fin31b,Paid a utility bill by mobile phone,digital,LKA,2014,0.074446,Sri Lanka
+fin31b,Paid a utility bill by mobile phone,digital,LKA,2017,1.415093,Sri Lanka
+fin31b,Paid a utility bill by mobile phone,digital,LKA,2021,3.29427,Sri Lanka
+fin31b,Paid a utility bill by mobile phone,digital,LKA,2024,3.870042,Sri Lanka
+fin31b,Paid a utility bill by mobile phone,digital,PAK,2014,0.285405,Pakistan
+fin31b,Paid a utility bill by mobile phone,digital,PAK,2017,3.478695,Pakistan
+fin31b,Paid a utility bill by mobile phone,digital,PAK,2021,3.017888,Pakistan
+fin31b,Paid a utility bill by mobile phone,digital,PAK,2024,7.65723,Pakistan
+fin32.acc,Received wages into an account,digital,BGD,2014,1.622724,Bangladesh
+fin32.acc,Received wages into an account,digital,BGD,2017,3.551886,Bangladesh
+fin32.acc,Received wages into an account,digital,BGD,2021,4.93494,Bangladesh
+fin32.acc,Received wages into an account,digital,BGD,2024,4.787113,Bangladesh
+fin32.acc,Received wages into an account,digital,IND,2014,4.007918,India
+fin32.acc,Received wages into an account,digital,IND,2017,6.487937,India
+fin32.acc,Received wages into an account,digital,IND,2021,7.698265,India
+fin32.acc,Received wages into an account,digital,IND,2024,13.481919,India
+fin32.acc,Received wages into an account,digital,LKA,2014,7.139093,Sri Lanka
+fin32.acc,Received wages into an account,digital,LKA,2017,8.941009,Sri Lanka
+fin32.acc,Received wages into an account,digital,LKA,2021,18.782546,Sri Lanka
+fin32.acc,Received wages into an account,digital,LKA,2024,16.269656,Sri Lanka
+fin32.acc,Received wages into an account,digital,PAK,2014,1.418874,Pakistan
+fin32.acc,Received wages into an account,digital,PAK,2017,3.422117,Pakistan
+fin32.acc,Received wages into an account,digital,PAK,2021,3.825366,Pakistan
+fin32.acc,Received wages into an account,digital,PAK,2024,9.481515,Pakistan
+g20.any,Made or received a digital payment,digital,BGD,2014,7.606322,Bangladesh
+g20.any,Made or received a digital payment,digital,BGD,2017,34.110825,Bangladesh
+g20.any,Made or received a digital payment,digital,BGD,2021,45.264157,Bangladesh
+g20.any,Made or received a digital payment,digital,BGD,2024,33.947536,Bangladesh
+g20.any,Made or received a digital payment,digital,IND,2014,22.240815,India
+g20.any,Made or received a digital payment,digital,IND,2017,28.692638,India
+g20.any,Made or received a digital payment,digital,IND,2021,34.93173,India
+g20.any,Made or received a digital payment,digital,IND,2024,48.457965,India
+g20.any,Made or received a digital payment,digital,LKA,2014,25.241411,Sri Lanka
+g20.any,Made or received a digital payment,digital,LKA,2017,47.159703,Sri Lanka
+g20.any,Made or received a digital payment,digital,LKA,2021,55.061198,Sri Lanka
+g20.any,Made or received a digital payment,digital,LKA,2024,47.261531,Sri Lanka
+g20.any,Made or received a digital payment,digital,PAK,2014,9.454292,Pakistan
+g20.any,Made or received a digital payment,digital,PAK,2017,17.69078,Pakistan
+g20.any,Made or received a digital payment,digital,PAK,2021,17.623327,Pakistan
+g20.any,Made or received a digital payment,digital,PAK,2024,24.641799,Pakistan
+g20.made,Made a digital payment,digital,BGD,2014,5.935634,Bangladesh
+g20.made,Made a digital payment,digital,BGD,2017,30.13482,Bangladesh
+g20.made,Made a digital payment,digital,BGD,2021,40.578475,Bangladesh
+g20.made,Made a digital payment,digital,BGD,2024,28.133104,Bangladesh
+g20.made,Made a digital payment,digital,IND,2014,15.723303,India
+g20.made,Made a digital payment,digital,IND,2017,19.971896,India
+g20.made,Made a digital payment,digital,IND,2021,24.277861,India
+g20.made,Made a digital payment,digital,IND,2024,29.327464,India
+g20.made,Made a digital payment,digital,LKA,2014,13.79286,Sri Lanka
+g20.made,Made a digital payment,digital,LKA,2017,37.347937,Sri Lanka
+g20.made,Made a digital payment,digital,LKA,2021,42.741714,Sri Lanka
+g20.made,Made a digital payment,digital,LKA,2024,28.311597,Sri Lanka
+g20.made,Made a digital payment,digital,PAK,2014,6.18613,Pakistan
+g20.made,Made a digital payment,digital,PAK,2017,14.317141,Pakistan
+g20.made,Made a digital payment,digital,PAK,2021,14.871212,Pakistan
+g20.made,Made a digital payment,digital,PAK,2024,20.230182,Pakistan
+g20.received,Received a digital payment,digital,BGD,2014,2.721832,Bangladesh
+g20.received,Received a digital payment,digital,BGD,2017,15.604639,Bangladesh
+g20.received,Received a digital payment,digital,BGD,2021,26.284881,Bangladesh
+g20.received,Received a digital payment,digital,BGD,2024,14.862548,Bangladesh
+g20.received,Received a digital payment,digital,IND,2014,11.477389,India
+g20.received,Received a digital payment,digital,IND,2017,16.459097,India
+g20.received,Received a digital payment,digital,IND,2021,19.400243,India
+g20.received,Received a digital payment,digital,IND,2024,36.186511,India
+g20.received,Received a digital payment,digital,LKA,2014,17.615273,Sri Lanka
+g20.received,Received a digital payment,digital,LKA,2017,21.588677,Sri Lanka
+g20.received,Received a digital payment,digital,LKA,2021,29.735342,Sri Lanka
+g20.received,Received a digital payment,digital,LKA,2024,34.758661,Sri Lanka
+g20.received,Received a digital payment,digital,PAK,2014,6.111481,Pakistan
+g20.received,Received a digital payment,digital,PAK,2017,8.50884,Pakistan
+g20.received,Received a digital payment,digital,PAK,2021,8.12552,Pakistan
+g20.received,Received a digital payment,digital,PAK,2024,17.334487,Pakistan
+merchant.pay,Made a digital merchant payment,digital,BGD,2021,2.78161,Bangladesh
+merchant.pay,Made a digital merchant payment,digital,BGD,2024,2.761961,Bangladesh
+merchant.pay,Made a digital merchant payment,digital,IND,2021,11.904568,India
+merchant.pay,Made a digital merchant payment,digital,IND,2024,18.300649,India
+merchant.pay,Made a digital merchant payment,digital,LKA,2021,18.085672,Sri Lanka
+merchant.pay,Made a digital merchant payment,digital,LKA,2024,14.782464,Sri Lanka
+merchant.pay,Made a digital merchant payment,digital,PAK,2021,1.074016,Pakistan
+merchant.pay,Made a digital merchant payment,digital,PAK,2024,4.267098,Pakistan
+account.t.d.5,Primary education or less,education,BGD,2011,21.06172,Bangladesh
+account.t.d.5,Primary education or less,education,BGD,2014,24.90489,Bangladesh
+account.t.d.5,Primary education or less,education,BGD,2017,39.838752,Bangladesh
+account.t.d.5,Primary education or less,education,BGD,2021,46.566354,Bangladesh
+account.t.d.5,Primary education or less,education,BGD,2024,31.171097,Bangladesh
+account.t.d.5,Primary education or less,education,IND,2011,30.514922,India
+account.t.d.5,Primary education or less,education,IND,2014,43.353407,India
+account.t.d.5,Primary education or less,education,IND,2017,75.369542,India
+account.t.d.5,Primary education or less,education,IND,2021,75.904527,India
+account.t.d.5,Primary education or less,education,IND,2024,87.077516,India
+account.t.d.5,Primary education or less,education,LKA,2011,62.881292,Sri Lanka
+account.t.d.5,Primary education or less,education,LKA,2014,73.995875,Sri Lanka
+account.t.d.5,Primary education or less,education,LKA,2017,62.432462,Sri Lanka
+account.t.d.5,Primary education or less,education,LKA,2021,76.927907,Sri Lanka
+account.t.d.5,Primary education or less,education,LKA,2024,75.652596,Sri Lanka
+account.t.d.5,Primary education or less,education,PAK,2011,3.746694,Pakistan
+account.t.d.5,Primary education or less,education,PAK,2014,10.027492,Pakistan
+account.t.d.5,Primary education or less,education,PAK,2017,15.919867,Pakistan
+account.t.d.5,Primary education or less,education,PAK,2021,15.309484,Pakistan
+account.t.d.5,Primary education or less,education,PAK,2024,18.910698,Pakistan
+account.t.d.6,Secondary education or more,education,BGD,2011,42.505161,Bangladesh
+account.t.d.6,Secondary education or more,education,BGD,2014,37.206732,Bangladesh
+account.t.d.6,Secondary education or more,education,BGD,2017,57.231282,Bangladesh
+account.t.d.6,Secondary education or more,education,BGD,2021,56.626955,Bangladesh
+account.t.d.6,Secondary education or more,education,BGD,2024,50.27052,Bangladesh
+account.t.d.6,Secondary education or more,education,IND,2011,59.469441,India
+account.t.d.6,Secondary education or more,education,IND,2014,64.234808,India
+account.t.d.6,Secondary education or more,education,IND,2017,84.941584,India
+account.t.d.6,Secondary education or more,education,IND,2021,81.304363,India
+account.t.d.6,Secondary education or more,education,IND,2024,93.135696,India
+account.t.d.6,Secondary education or more,education,LKA,2011,76.418764,Sri Lanka
+account.t.d.6,Secondary education or more,education,LKA,2014,91.319366,Sri Lanka
+account.t.d.6,Secondary education or more,education,LKA,2017,85.350765,Sri Lanka
+account.t.d.6,Secondary education or more,education,LKA,2021,92.980979,Sri Lanka
+account.t.d.6,Secondary education or more,education,LKA,2024,84.488928,Sri Lanka
+account.t.d.6,Secondary education or more,education,PAK,2011,24.455195,Pakistan
+account.t.d.6,Secondary education or more,education,PAK,2014,25.189608,Pakistan
+account.t.d.6,Secondary education or more,education,PAK,2017,34.031174,Pakistan
+account.t.d.6,Secondary education or more,education,PAK,2021,35.295065,Pakistan
+account.t.d.6,Secondary education or more,education,PAK,2024,46.686,Pakistan
+fing2p,Received government payments,g2p,BGD,2017,7.727695,Bangladesh
+fing2p,Received government payments,g2p,BGD,2021,12.034041,Bangladesh
+fing2p,Received government payments,g2p,BGD,2024,11.201599,Bangladesh
+fing2p,Received government payments,g2p,IND,2017,13.849277,India
+fing2p,Received government payments,g2p,IND,2021,20.137575,India
+fing2p,Received government payments,g2p,IND,2024,26.567975,India
+fing2p,Received government payments,g2p,LKA,2017,22.099303,Sri Lanka
+fing2p,Received government payments,g2p,LKA,2021,25.217885,Sri Lanka
+fing2p,Received government payments,g2p,LKA,2024,26.697767,Sri Lanka
+fing2p,Received government payments,g2p,PAK,2017,4.012091,Pakistan
+fing2p,Received government payments,g2p,PAK,2021,7.640191,Pakistan
+fing2p,Received government payments,g2p,PAK,2024,8.713368,Pakistan
+fing2p.acc,Government payments received into an account,g2p,BGD,2017,3.118748,Bangladesh
+fing2p.acc,Government payments received into an account,g2p,BGD,2021,8.715858,Bangladesh
+fing2p.acc,Government payments received into an account,g2p,BGD,2024,5.933633,Bangladesh
+fing2p.acc,Government payments received into an account,g2p,IND,2017,8.146988,India
+fing2p.acc,Government payments received into an account,g2p,IND,2021,11.379658,India
+fing2p.acc,Government payments received into an account,g2p,IND,2024,21.249707,India
+fing2p.acc,Government payments received into an account,g2p,LKA,2017,13.006968,Sri Lanka
+fing2p.acc,Government payments received into an account,g2p,LKA,2021,13.803769,Sri Lanka
+fing2p.acc,Government payments received into an account,g2p,LKA,2024,20.823473,Sri Lanka
+fing2p.acc,Government payments received into an account,g2p,PAK,2017,2.775364,Pakistan
+fing2p.acc,Government payments received into an account,g2p,PAK,2021,2.053894,Pakistan
+fing2p.acc,Government payments received into an account,g2p,PAK,2024,4.119786,Pakistan
+fing2p.cash,Government payments received in cash only,g2p,BGD,2017,2.985212,Bangladesh
+fing2p.cash,Government payments received in cash only,g2p,BGD,2021,2.594931,Bangladesh
+fing2p.cash,Government payments received in cash only,g2p,BGD,2024,4.558585,Bangladesh
+fing2p.cash,Government payments received in cash only,g2p,IND,2017,2.82104,India
+fing2p.cash,Government payments received in cash only,g2p,IND,2021,2.220572,India
+fing2p.cash,Government payments received in cash only,g2p,IND,2024,1.749145,India
+fing2p.cash,Government payments received in cash only,g2p,LKA,2017,3.741676,Sri Lanka
+fing2p.cash,Government payments received in cash only,g2p,LKA,2021,8.755944,Sri Lanka
+fing2p.cash,Government payments received in cash only,g2p,LKA,2024,2.734731,Sri Lanka
+fing2p.cash,Government payments received in cash only,g2p,PAK,2017,0.53301,Pakistan
+fing2p.cash,Government payments received in cash only,g2p,PAK,2021,2.971707,Pakistan
+fing2p.cash,Government payments received in cash only,g2p,PAK,2024,1.695373,Pakistan
+account.t.d.1,Women,gender,BGD,2011,26.011697,Bangladesh
+account.t.d.1,Women,gender,BGD,2014,26.453287,Bangladesh
+account.t.d.1,Women,gender,BGD,2017,35.836345,Bangladesh
+account.t.d.1,Women,gender,BGD,2021,43.456693,Bangladesh
+account.t.d.1,Women,gender,BGD,2024,33.346,Bangladesh
+account.t.d.1,Women,gender,IND,2011,26.4905,India
+account.t.d.1,Women,gender,IND,2014,43.13261,India
+account.t.d.1,Women,gender,IND,2017,76.639633,India
+account.t.d.1,Women,gender,IND,2021,77.552613,India
+account.t.d.1,Women,gender,IND,2024,89.248233,India
+account.t.d.1,Women,gender,LKA,2011,67.238421,Sri Lanka
+account.t.d.1,Women,gender,LKA,2014,83.108437,Sri Lanka
+account.t.d.1,Women,gender,LKA,2017,73.442071,Sri Lanka
+account.t.d.1,Women,gender,LKA,2021,89.277473,Sri Lanka
+account.t.d.1,Women,gender,LKA,2024,80.201889,Sri Lanka
+account.t.d.1,Women,gender,PAK,2011,2.953577,Pakistan
+account.t.d.1,Women,gender,PAK,2014,4.843747,Pakistan
+account.t.d.1,Women,gender,PAK,2017,7.025064,Pakistan
+account.t.d.1,Women,gender,PAK,2021,13.478497,Pakistan
+account.t.d.1,Women,gender,PAK,2024,11.91217,Pakistan
+account.t.d.2,Men,gender,BGD,2011,37.291646,Bangladesh
+account.t.d.2,Men,gender,BGD,2014,35.369253,Bangladesh
+account.t.d.2,Men,gender,BGD,2017,64.586155,Bangladesh
+account.t.d.2,Men,gender,BGD,2021,62.862457,Bangladesh
+account.t.d.2,Men,gender,BGD,2024,53.511028,Bangladesh
+account.t.d.2,Men,gender,IND,2011,43.737074,India
+account.t.d.2,Men,gender,IND,2014,62.763366,India
+account.t.d.2,Men,gender,IND,2017,83.008996,India
+account.t.d.2,Men,gender,IND,2021,77.507232,India
+account.t.d.2,Men,gender,IND,2024,88.805247,India
+account.t.d.2,Men,gender,LKA,2011,69.986988,Sri Lanka
+account.t.d.2,Men,gender,LKA,2014,82.226117,Sri Lanka
+account.t.d.2,Men,gender,LKA,2017,73.888593,Sri Lanka
+account.t.d.2,Men,gender,LKA,2021,89.263418,Sri Lanka
+account.t.d.2,Men,gender,LKA,2024,83.383335,Sri Lanka
+account.t.d.2,Men,gender,PAK,2011,17.281527,Pakistan
+account.t.d.2,Men,gender,PAK,2014,20.972356,Pakistan
+account.t.d.2,Men,gender,PAK,2017,34.607659,Pakistan
+account.t.d.2,Men,gender,PAK,2021,28.176414,Pakistan
+account.t.d.2,Men,gender,PAK,2024,42.293544,Pakistan
+account.t.d.7,Poorest 40%,income,BGD,2011,19.063757,Bangladesh
+account.t.d.7,Poorest 40%,income,BGD,2014,23.033988,Bangladesh
+account.t.d.7,Poorest 40%,income,BGD,2017,40.078733,Bangladesh
+account.t.d.7,Poorest 40%,income,BGD,2021,48.651172,Bangladesh
+account.t.d.7,Poorest 40%,income,BGD,2024,35.546707,Bangladesh
+account.t.d.7,Poorest 40%,income,IND,2011,26.97145,India
+account.t.d.7,Poorest 40%,income,IND,2014,43.610677,India
+account.t.d.7,Poorest 40%,income,IND,2017,77.08295,India
+account.t.d.7,Poorest 40%,income,IND,2021,78.25276,India
+account.t.d.7,Poorest 40%,income,IND,2024,86.316681,India
+account.t.d.7,Poorest 40%,income,LKA,2011,59.134586,Sri Lanka
+account.t.d.7,Poorest 40%,income,LKA,2014,78.699179,Sri Lanka
+account.t.d.7,Poorest 40%,income,LKA,2017,70.58422,Sri Lanka
+account.t.d.7,Poorest 40%,income,LKA,2021,87.079031,Sri Lanka
+account.t.d.7,Poorest 40%,income,LKA,2024,80.186232,Sri Lanka
+account.t.d.7,Poorest 40%,income,PAK,2011,4.807874,Pakistan
+account.t.d.7,Poorest 40%,income,PAK,2014,9.754767,Pakistan
+account.t.d.7,Poorest 40%,income,PAK,2017,14.21589,Pakistan
+account.t.d.7,Poorest 40%,income,PAK,2021,17.611367,Pakistan
+account.t.d.7,Poorest 40%,income,PAK,2024,13.606254,Pakistan
+account.t.d.8,Richest 60%,income,BGD,2011,40.180988,Bangladesh
+account.t.d.8,Richest 60%,income,BGD,2014,36.292209,Bangladesh
+account.t.d.8,Richest 60%,income,BGD,2017,56.67993,Bangladesh
+account.t.d.8,Richest 60%,income,BGD,2021,55.574733,Bangladesh
+account.t.d.8,Richest 60%,income,BGD,2024,48.189055,Bangladesh
+account.t.d.8,Richest 60%,income,IND,2011,40.730017,India
+account.t.d.8,Richest 60%,income,IND,2014,59.484029,India
+account.t.d.8,Richest 60%,income,IND,2017,81.735424,India
+account.t.d.8,Richest 60%,income,IND,2021,77.047704,India
+account.t.d.8,Richest 60%,income,IND,2024,90.831171,India
+account.t.d.8,Richest 60%,income,LKA,2011,74.758564,Sri Lanka
+account.t.d.8,Richest 60%,income,LKA,2014,85.346559,Sri Lanka
+account.t.d.8,Richest 60%,income,LKA,2017,75.679178,Sri Lanka
+account.t.d.8,Richest 60%,income,LKA,2021,90.718988,Sri Lanka
+account.t.d.8,Richest 60%,income,LKA,2024,82.696607,Sri Lanka
+account.t.d.8,Richest 60%,income,PAK,2011,13.94489,Pakistan
+account.t.d.8,Richest 60%,income,PAK,2014,15.210295,Pakistan
+account.t.d.8,Richest 60%,income,PAK,2017,25.998449,Pakistan
+account.t.d.8,Richest 60%,income,PAK,2021,23.2123,Pakistan
+account.t.d.8,Richest 60%,income,PAK,2024,36.406162,Pakistan
+account.t.d.11,Out of the labour force,labour,BGD,2011,25.180912,Bangladesh
+account.t.d.11,Out of the labour force,labour,BGD,2014,25.583311,Bangladesh
+account.t.d.11,Out of the labour force,labour,BGD,2017,39.731349,Bangladesh
+account.t.d.11,Out of the labour force,labour,BGD,2021,46.770452,Bangladesh
+account.t.d.11,Out of the labour force,labour,BGD,2024,34.698377,Bangladesh
+account.t.d.11,Out of the labour force,labour,IND,2011,26.183339,India
+account.t.d.11,Out of the labour force,labour,IND,2014,41.210703,India
+account.t.d.11,Out of the labour force,labour,IND,2017,75.044901,India
+account.t.d.11,Out of the labour force,labour,IND,2021,74.086335,India
+account.t.d.11,Out of the labour force,labour,IND,2024,85.547725,India
+account.t.d.11,Out of the labour force,labour,LKA,2011,65.215993,Sri Lanka
+account.t.d.11,Out of the labour force,labour,LKA,2014,75.915638,Sri Lanka
+account.t.d.11,Out of the labour force,labour,LKA,2017,68.03352,Sri Lanka
+account.t.d.11,Out of the labour force,labour,LKA,2021,87.646437,Sri Lanka
+account.t.d.11,Out of the labour force,labour,LKA,2024,77.341623,Sri Lanka
+account.t.d.11,Out of the labour force,labour,PAK,2011,3.875042,Pakistan
+account.t.d.11,Out of the labour force,labour,PAK,2014,5.034228,Pakistan
+account.t.d.11,Out of the labour force,labour,PAK,2017,13.449767,Pakistan
+account.t.d.11,Out of the labour force,labour,PAK,2021,15.651797,Pakistan
+account.t.d.11,Out of the labour force,labour,PAK,2024,13.910075,Pakistan
+account.t.d.12,In the labour force,labour,BGD,2011,41.217174,Bangladesh
+account.t.d.12,In the labour force,labour,BGD,2014,39.529457,Bangladesh
+account.t.d.12,In the labour force,labour,BGD,2017,63.720589,Bangladesh
+account.t.d.12,In the labour force,labour,BGD,2021,61.798282,Bangladesh
+account.t.d.12,In the labour force,labour,BGD,2024,58.493678,Bangladesh
+account.t.d.12,In the labour force,labour,IND,2011,44.224517,India
+account.t.d.12,In the labour force,labour,IND,2014,64.823671,India
+account.t.d.12,In the labour force,labour,IND,2017,84.603742,India
+account.t.d.12,In the labour force,labour,IND,2021,81.873469,India
+account.t.d.12,In the labour force,labour,IND,2024,91.367133,India
+account.t.d.12,In the labour force,labour,LKA,2011,71.675002,Sri Lanka
+account.t.d.12,In the labour force,labour,LKA,2014,92.325711,Sri Lanka
+account.t.d.12,In the labour force,labour,LKA,2017,82.293924,Sri Lanka
+account.t.d.12,In the labour force,labour,LKA,2021,91.197091,Sri Lanka
+account.t.d.12,In the labour force,labour,LKA,2024,86.696996,Sri Lanka
+account.t.d.12,In the labour force,labour,PAK,2011,17.356984,Pakistan
+account.t.d.12,In the labour force,labour,PAK,2014,22.768842,Pakistan
+account.t.d.12,In the labour force,labour,PAK,2017,35.185187,Pakistan
+account.t.d.12,In the labour force,labour,PAK,2021,28.321086,Pakistan
+account.t.d.12,In the labour force,labour,PAK,2024,42.733978,Pakistan
+account.t.d.10,Urban,location,BGD,2024,41.763436,Bangladesh
+account.t.d.10,Urban,location,IND,2024,87.15065,India
+account.t.d.10,Urban,location,LKA,2024,79.564251,Sri Lanka
+account.t.d.10,Urban,location,PAK,2024,32.935755,Pakistan
+account.t.d.9,Rural,location,BGD,2024,44.471435,Bangladesh
+account.t.d.9,Rural,location,IND,2024,89.883556,India
+account.t.d.9,Rural,location,LKA,2024,82.827919,Sri Lanka
+account.t.d.9,Rural,location,PAK,2024,21.06309,Pakistan
+fin14a,Mobile money agents are too far away,mm_barrier,BGD,2024,5.776004,Bangladesh
+fin14a,Mobile money agents are too far away,mm_barrier,PAK,2024,17.722378,Pakistan
+fin14b,Mobile money products are too expensive,mm_barrier,BGD,2024,8.863615,Bangladesh
+fin14b,Mobile money products are too expensive,mm_barrier,PAK,2024,35.155079,Pakistan
+fin14c,Lack of necessary documentation,mm_barrier,BGD,2024,6.490406,Bangladesh
+fin14c,Lack of necessary documentation,mm_barrier,PAK,2024,18.140389,Pakistan
+fin14d,Not enough money to use a mobile money account,mm_barrier,BGD,2024,42.050439,Bangladesh
+fin14d,Not enough money to use a mobile money account,mm_barrier,PAK,2024,47.29992,Pakistan
+con1,Own a mobile phone,mobile,BGD,2024,82.387709,Bangladesh
+con1,Own a mobile phone,mobile,IND,2024,66.473553,India
+con1,Own a mobile phone,mobile,LKA,2024,76.628624,Sri Lanka
+con1,Own a mobile phone,mobile,PAK,2024,62.93525,Pakistan
+con1.1,"Own a mobile phone, women",mobile,BGD,2024,73.699544,Bangladesh
+con1.1,"Own a mobile phone, women",mobile,IND,2024,54.299342,India
+con1.1,"Own a mobile phone, women",mobile,LKA,2024,72.31858,Sri Lanka
+con1.1,"Own a mobile phone, women",mobile,PAK,2024,30.130151,Pakistan
+con1.2,"Own a mobile phone, men",mobile,BGD,2024,91.328601,Bangladesh
+con1.2,"Own a mobile phone, men",mobile,IND,2024,78.438777,India
+con1.2,"Own a mobile phone, men",mobile,LKA,2024,81.519897,Sri Lanka
+con1.2,"Own a mobile phone, men",mobile,PAK,2024,94.916586,Pakistan
+con11.s,SIM registered in own name (% of phone owners),mobile,BGD,2024,74.610974,Bangladesh
+con11.s,SIM registered in own name (% of phone owners),mobile,IND,2024,75.289962,India
+con11.s,SIM registered in own name (% of phone owners),mobile,LKA,2024,68.532148,Sri Lanka
+con11.s,SIM registered in own name (% of phone owners),mobile,PAK,2024,73.435096,Pakistan
+con9a,Main phone is a smartphone,mobile,BGD,2024,38.20831,Bangladesh
+con9a,Main phone is a smartphone,mobile,IND,2024,41.968744,India
+con9a,Main phone is a smartphone,mobile,LKA,2024,43.985719,Sri Lanka
+con9a,Main phone is a smartphone,mobile,PAK,2024,32.41208,Pakistan
+account.t.d,All adults,overall,BGD,2011,31.743649,Bangladesh
+account.t.d,All adults,overall,BGD,2014,30.990819,Bangladesh
+account.t.d,All adults,overall,BGD,2017,50.046913,Bangladesh
+account.t.d,All adults,overall,BGD,2021,52.806065,Bangladesh
+account.t.d,All adults,overall,BGD,2024,43.283973,Bangladesh
+account.t.d,All adults,overall,IND,2011,35.231839,India
+account.t.d,All adults,overall,IND,2014,53.14155,India
+account.t.d,All adults,overall,IND,2017,79.875328,India
+account.t.d,All adults,overall,IND,2021,77.529137,India
+account.t.d,All adults,overall,IND,2024,89.024822,India
+account.t.d,All adults,overall,LKA,2011,68.526165,Sri Lanka
+account.t.d,All adults,overall,LKA,2014,82.691382,Sri Lanka
+account.t.d,All adults,overall,LKA,2017,73.646461,Sri Lanka
+account.t.d,All adults,overall,LKA,2021,89.270713,Sri Lanka
+account.t.d,All adults,overall,LKA,2024,81.692129,Sri Lanka
+account.t.d,All adults,overall,PAK,2011,10.306297,Pakistan
+account.t.d,All adults,overall,PAK,2014,13.036191,Pakistan
+account.t.d,All adults,overall,PAK,2017,21.293245,Pakistan
+account.t.d,All adults,overall,PAK,2021,20.980631,Pakistan
+account.t.d,All adults,overall,PAK,2024,27.296007,Pakistan
+fh1.fh2,Sent or received domestic remittances,remittance,BGD,2021,32.333699,Bangladesh
+fh1.fh2,Sent or received domestic remittances,remittance,BGD,2024,26.005023,Bangladesh
+fh1.fh2,Sent or received domestic remittances,remittance,IND,2021,17.985241,India
+fh1.fh2,Sent or received domestic remittances,remittance,IND,2024,22.566118,India
+fh1.fh2,Sent or received domestic remittances,remittance,LKA,2021,24.678625,Sri Lanka
+fh1.fh2,Sent or received domestic remittances,remittance,LKA,2024,22.867926,Sri Lanka
+fh1.fh2,Sent or received domestic remittances,remittance,PAK,2021,13.29004,Pakistan
+fh1.fh2,Sent or received domestic remittances,remittance,PAK,2024,25.626173,Pakistan
+fh2a,Received international remittances,remittance,BGD,2024,12.129817,Bangladesh
+fh2a,Received international remittances,remittance,IND,2024,7.53723,India
+fh2a,Received international remittances,remittance,LKA,2024,12.050731,Sri Lanka
+fh2a,Received international remittances,remittance,PAK,2024,6.088397,Pakistan
+fin28.29,Domestic remittances sent or received using an account,remittance,BGD,2021,30.382159,Bangladesh
+fin28.29,Domestic remittances sent or received using an account,remittance,BGD,2024,18.205642,Bangladesh
+fin28.29,Domestic remittances sent or received using an account,remittance,IND,2021,7.078341,India
+fin28.29,Domestic remittances sent or received using an account,remittance,IND,2024,12.291397,India
+fin28.29,Domestic remittances sent or received using an account,remittance,LKA,2021,10.125561,Sri Lanka
+fin28.29,Domestic remittances sent or received using an account,remittance,LKA,2024,12.658856,Sri Lanka
+fin28.29,Domestic remittances sent or received using an account,remittance,PAK,2021,6.384677,Pakistan
+fin28.29,Domestic remittances sent or received using an account,remittance,PAK,2024,12.256376,Pakistan
+fin17a,Saved at a financial institution,saving,BGD,2011,16.636794,Bangladesh
+fin17a,Saved at a financial institution,saving,BGD,2014,7.446175,Bangladesh
+fin17a,Saved at a financial institution,saving,BGD,2017,9.923267,Bangladesh
+fin17a,Saved at a financial institution,saving,BGD,2021,6.00856,Bangladesh
+fin17a,Saved at a financial institution,saving,BGD,2024,9.658462,Bangladesh
+fin17a,Saved at a financial institution,saving,IND,2011,11.603979,India
+fin17a,Saved at a financial institution,saving,IND,2014,14.360089,India
+fin17a,Saved at a financial institution,saving,IND,2017,19.603958,India
+fin17a,Saved at a financial institution,saving,IND,2021,12.751303,India
+fin17a,Saved at a financial institution,saving,IND,2024,23.849029,India
+fin17a,Saved at a financial institution,saving,LKA,2011,28.090589,Sri Lanka
+fin17a,Saved at a financial institution,saving,LKA,2014,30.858344,Sri Lanka
+fin17a,Saved at a financial institution,saving,LKA,2017,28.788043,Sri Lanka
+fin17a,Saved at a financial institution,saving,LKA,2021,33.912693,Sri Lanka
+fin17a,Saved at a financial institution,saving,LKA,2024,23.217529,Sri Lanka
+fin17a,Saved at a financial institution,saving,PAK,2011,1.440549,Pakistan
+fin17a,Saved at a financial institution,saving,PAK,2014,3.27778,Pakistan
+fin17a,Saved at a financial institution,saving,PAK,2017,6.096227,Pakistan
+fin17a,Saved at a financial institution,saving,PAK,2021,2.373278,Pakistan
+fin17a,Saved at a financial institution,saving,PAK,2024,6.96381,Pakistan
+fin17b,Saved using a mobile money account,saving,BGD,2021,1.731149,Bangladesh
+fin17b,Saved using a mobile money account,saving,BGD,2024,1.645519,Bangladesh
+fin17b,Saved using a mobile money account,saving,IND,2021,3.477386,India
+fin17b,Saved using a mobile money account,saving,IND,2024,10.923365,India
+fin17b,Saved using a mobile money account,saving,LKA,2021,0.593751,Sri Lanka
+fin17b,Saved using a mobile money account,saving,LKA,2024,0.604472,Sri Lanka
+fin17b,Saved using a mobile money account,saving,PAK,2021,0.813031,Pakistan
+fin17b,Saved using a mobile money account,saving,PAK,2024,9.431834,Pakistan
+fin17c,Saved with a savings club,saving,BGD,2014,5.227077,Bangladesh
+fin17c,Saved with a savings club,saving,BGD,2017,11.708433,Bangladesh
+fin17c,Saved with a savings club,saving,BGD,2021,8.687935,Bangladesh
+fin17c,Saved with a savings club,saving,BGD,2024,8.399581,Bangladesh
+fin17c,Saved with a savings club,saving,IND,2014,8.781978,India
+fin17c,Saved with a savings club,saving,IND,2017,8.443402,India
+fin17c,Saved with a savings club,saving,IND,2021,8.324624,India
+fin17c,Saved with a savings club,saving,IND,2024,13.083045,India
+fin17c,Saved with a savings club,saving,LKA,2014,10.417337,Sri Lanka
+fin17c,Saved with a savings club,saving,LKA,2017,12.408094,Sri Lanka
+fin17c,Saved with a savings club,saving,LKA,2021,11.659264,Sri Lanka
+fin17c,Saved with a savings club,saving,LKA,2024,13.331001,Sri Lanka
+fin17c,Saved with a savings club,saving,PAK,2014,11.400154,Pakistan
+fin17c,Saved with a savings club,saving,PAK,2017,21.115503,Pakistan
+fin17c,Saved with a savings club,saving,PAK,2021,5.913495,Pakistan
+fin17c,Saved with a savings club,saving,PAK,2024,16.746986,Pakistan

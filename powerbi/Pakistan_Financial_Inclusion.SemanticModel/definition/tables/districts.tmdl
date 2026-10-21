@@ -2,65 +2,168 @@ table districts
 
 	column district
 		dataType: string
-		sourceColumn: district
 		summarizeBy: none
+		sourceColumn: district
 
 	column province
 		dataType: string
+		summarizeBy: none
 		sourceColumn: province
-		summarizeBy: none
 
-	column province_key
+	column district_type
 		dataType: string
-		sourceColumn: province_key
 		summarizeBy: none
+		sourceColumn: district_type
+		sortByColumn: type_rank
 
-	column is_combined_unit
-		dataType: boolean
-		sourceColumn: is_combined_unit
-		summarizeBy: none
-
-	column population_2023
+	column type_rank
 		dataType: int64
-		sourceColumn: population_2023
 		summarizeBy: none
+		sourceColumn: type_rank
 
-	column branches_total
-		dataType: double
-		sourceColumn: branches_total
+	column population
+		dataType: int64
+		formatString: #,0
 		summarizeBy: none
+		sourceColumn: population
+
+	column population_2017
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: population_2017
+
+	column urban_population
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: urban_population
+
+	column rural_population
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: rural_population
+
+	column urban_share
+		dataType: double
+		summarizeBy: none
+		sourceColumn: urban_share
+
+	column development_index
+		dataType: double
+		summarizeBy: none
+		sourceColumn: development_index
+
+	column female_literacy
+		dataType: double
+		summarizeBy: none
+		sourceColumn: female_literacy
+
+	column literacy_gap
+		dataType: double
+		summarizeBy: none
+		sourceColumn: literacy_gap
+
+	column banks_2020
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: banks_2020
+
+	column banks_2024
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: banks_2024
+
+	column microfinance_2024
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: microfinance_2024
+
+	column branches_2024
+		dataType: int64
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: branches_2024
+
+	column rural_branches_2024
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: rural_branches_2024
+
+	column urban_branches_2024
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: urban_branches_2024
+
+	column bank_branch_change
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: bank_branch_change
 
 	column branches_per_100k
 		dataType: double
+		summarizeBy: none
 		sourceColumn: branches_per_100k
-		summarizeBy: none
 
-	column has_branch_data
-		dataType: boolean
-		sourceColumn: has_branch_data
-		summarizeBy: none
-
-	column status
-		dataType: string
-		sourceColumn: status
-		summarizeBy: none
-
-	column below_half_national_avg
-		dataType: boolean
-		sourceColumn: below_half_national_avg
-		summarizeBy: none
-
-	column national_branches_per_100k
+	column people_per_branch
 		dataType: double
-		sourceColumn: national_branches_per_100k
 		summarizeBy: none
+		sourceColumn: people_per_branch
+
+	column expected_branches
+		dataType: double
+		summarizeBy: none
+		sourceColumn: expected_branches
+
+	column expected_low
+		dataType: double
+		summarizeBy: none
+		sourceColumn: expected_low
+
+	column expected_high
+		dataType: double
+		summarizeBy: none
+		sourceColumn: expected_high
+
+	column shortfall
+		dataType: double
+		summarizeBy: none
+		sourceColumn: shortfall
+
+	column gap_ratio
+		dataType: double
+		summarizeBy: none
+		sourceColumn: gap_ratio
+
+	column chance_of_this_few
+		dataType: double
+		summarizeBy: none
+		sourceColumn: chance_of_this_few
+
+	column below_expected
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: below_expected
+
+	column flagged_short
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: flagged_short
+
+	column below_half_national
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: below_half_national
+
+	column low_female_literacy
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: low_female_literacy
 
 	partition districts = m
 		mode: import
 		source =
-			let
-				Source = Csv.Document(File.Contents(DataFolder & "\districts.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-				Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				Typed = Table.TransformColumnTypes(Promoted, {{"district", type text}, {"province", type text}, {"province_key", type text}, {"is_combined_unit", type logical}, {"population_2023", Int64.Type}, {"branches_total", type number}, {"branches_per_100k", type number}, {"has_branch_data", type logical}, {"status", type text}, {"below_half_national_avg", type logical}, {"national_branches_per_100k", type number}})
-			in
-				Typed
+				let
+					Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("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", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [district = _t, province = _t, district_type = _t, type_rank = _t, population = _t, population_2017 = _t, urban_population = _t, rural_population = _t, urban_share = _t, development_index = _t, female_literacy = _t, literacy_gap = _t, banks_2020 = _t, banks_2024 = _t, microfinance_2024 = _t, branches_2024 = _t, rural_branches_2024 = _t, urban_branches_2024 = _t, bank_branch_change = _t, branches_per_100k = _t, people_per_branch = _t, expected_branches = _t, expected_low = _t, expected_high = _t, shortfall = _t, gap_ratio = _t, chance_of_this_few = _t, below_expected = _t, flagged_short = _t, below_half_national = _t, low_female_literacy = _t]),
+					Typed = Table.TransformColumnTypes(Source, {{"district", type text}, {"province", type text}, {"district_type", type text}, {"type_rank", Int64.Type}, {"population", Int64.Type}, {"population_2017", Int64.Type}, {"urban_population", Int64.Type}, {"rural_population", Int64.Type}, {"urban_share", type number}, {"development_index", type number}, {"female_literacy", type number}, {"literacy_gap", type number}, {"banks_2020", Int64.Type}, {"banks_2024", Int64.Type}, {"microfinance_2024", Int64.Type}, {"branches_2024", Int64.Type}, {"rural_branches_2024", Int64.Type}, {"urban_branches_2024", Int64.Type}, {"bank_branch_change", Int64.Type}, {"branches_per_100k", type number}, {"people_per_branch", type number}, {"expected_branches", type number}, {"expected_low", type number}, {"expected_high", type number}, {"shortfall", type number}, {"gap_ratio", type number}, {"chance_of_this_few", type number}, {"below_expected", type logical}, {"flagged_short", type logical}, {"below_half_national", type logical}, {"low_female_literacy", type logical}}, "en-US")
+				in
+					Typed
+

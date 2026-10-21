@@ -1,0 +1,173 @@
+{
+ "census_notes": [
+  "Table 01: dropped 3 duplicate rows (second Tando Muhammad Khan block, 272,427 people) so provincial totals match the PBS report.",
+  "Table 01: 19 missing urban or rural rows treated as zero population."
+ ],
+ "census_official_check": [
+  {
+   "province": "Punjab",
+   "districts": 36,
+   "pop_2023": 127688922,
+   "official_2023": 127688922,
+   "diff_2023": 0,
+   "pop_2017": 109989655,
+   "official_2017": 109989655,
+   "diff_2017": 0
+  },
+  {
+   "province": "Sindh",
+   "districts": 30,
+   "pop_2023": 55696147,
+   "official_2023": 55696147,
+   "diff_2023": 0,
+   "pop_2017": 47854510,
+   "official_2017": 47854510,
+   "diff_2017": 0
+  },
+  {
+   "province": "Khyber Pakhtunkhwa",
+   "districts": 35,
+   "pop_2023": 40856097,
+   "official_2023": 40856097,
+   "diff_2023": 0,
+   "pop_2017": 35501964,
+   "official_2017": 35501964,
+   "diff_2017": 0
+  },
+  {
+   "province": "Balochistan",
+   "districts": 34,
+   "pop_2023": 14894402,
+   "official_2023": 14894402,
+   "diff_2023": 0,
+   "pop_2017": 12335129,
+   "official_2017": 12335129,
+   "diff_2017": 0
+  },
+  {
+   "province": "Islamabad",
+   "districts": 1,
+   "pop_2023": 2363863,
+   "official_2023": 2363863,
+   "diff_2023": 0,
+   "pop_2017": 2003368,
+   "official_2017": 2003368,
+   "diff_2017": 0
+  }
+ ],
+ "units": 120,
+ "ses_index": {
+  "explained_variance": 0.789835050076331,
+  "loadings": {
+   "literacy": 0.40579067269170566,
+   "literacy_female": 0.39730807018187975,
+   "pakka_share": 0.3970692122841554,
+   "electricity_share": 0.38489936963810634,
+   "water_improved_share": 0.32323774206195227,
+   "flush_toilet_share": 0.3891068679900754,
+   "clean_cooking_share": 0.3402674692394743
+  }
+ },
+ "sbp_2020": {
+  "districts": 134,
+  "grand_total": 14849,
+  "in_scope": 14211,
+  "outside_coverage": 638,
+  "outside_districts": 15
+ },
+ "register_2024": {
+  "rows": 19115,
+  "banks": 17708,
+  "mfb_dfi": 1407,
+  "in_scope": 18322,
+  "outside_coverage": 793,
+  "province_mismatches": [
+   {
+    "district_reg": "Gujranwala",
+    "province_reg": "Sindh",
+    "unit": "Gujranwala",
+    "unit_province": "Punjab",
+    "branches": 1
+   },
+   {
+    "district_reg": "Islamabad",
+    "province_reg": "Khyber Pakhtunkhwa",
+    "unit": "Islamabad",
+    "unit_province": "Islamabad",
+    "branches": 1
+   },
+   {
+    "district_reg": "Karachi",
+    "province_reg": "Punjab",
+    "unit": "Karachi",
+    "unit_province": "Sindh",
+    "branches": 1
+   },
+   {
+    "district_reg": "Mansehra",
+    "province_reg": "Punjab",
+    "unit": "Mansehra",
+    "unit_province": "Khyber Pakhtunkhwa",
+    "branches": 1
+   },
+   {
+    "district_reg": "Rawalpindi",
+    "province_reg": "Azad Jammu & Kashmir",
+    "unit": "Rawalpindi",
+    "unit_province": "Punjab",
+    "branches": 1
+   },
+   {
+    "district_reg": "Vehari",
+    "province_reg": "Khyber Pakhtunkhwa",
+    "unit": "Vehari",
+    "unit_province": "Punjab",
+    "branches": 1
+   }
+  ]
+ },
+ "external_checks": {
+  "banks_per_100k_adults_2024": {
+   "this_project": 11.828911366215223,
+   "world_bank_wdi": 11.150833388396
+  },
+  "banks_per_100k_adults_2020": {
+   "this_project": 10.680600720787423,
+   "world_bank_wdi": 10.1697935751721
+  },
+  "note": "This project excludes Azad Jammu & Kashmir and Gilgit-Baltistan on both sides of the ratio and uses census age shares; the World Bank figure comes from the IMF Financial Access Survey."
+ },
+ "wallet_irregularities": [
+  {
+   "region": "Balochistan",
+   "quarter": "2024Q4",
+   "what": "accounts",
+   "accounts_vs_neighbouring_quarters_pct": 45.1,
+   "female_share": 25.3
+  },
+  {
+   "region": "Balochistan",
+   "quarter": "2026Q1",
+   "what": "women's share",
+   "accounts_vs_neighbouring_quarters_pct": 1.3,
+   "female_share": 20.6
+  },
+  {
+   "region": "Gilgit-Baltistan",
+   "quarter": "2024Q4",
+   "what": "accounts",
+   "accounts_vs_neighbouring_quarters_pct": 96.6,
+   "female_share": 29.8
+  }
+ ],
+ "data_vintages": {
+  "branch_register": "2024-12-31",
+  "branch_baseline": "2020-12-31",
+  "census": 2023,
+  "findex": 2024,
+  "wallet_statistics": [
+   "Apr-Jun 2024",
+   "Apr-Jun 2026"
+  ]
+ }
+}
