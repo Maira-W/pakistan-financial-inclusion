@@ -5,7 +5,7 @@
   * cluster_units         district archetypes (k-means) with stability checks
   * inequality            Lorenz curve, Gini and Theil decomposition of branches against population
   * convergence           did low-density districts gain branches faster between 2020 and 2024?
-  * cross_country         Pakistan against 139 economies, adjusted for income
+  * cross_country         Pakistan against other economies, adjusted for income
   * allocate / outcomes   a planner that places new access points under three rules
 """
 
@@ -431,7 +431,8 @@ class Outcome:
     share_to_low_female_literacy: float
 
     def as_dict(self) -> dict:
-        return self.__dict__.copy()
+        """The outcomes as plain values; a number that does not exist (no points placed) is None so the JSON is valid."""
+        return {k: (None if isinstance(v, float) and v != v else v) for k, v in self.__dict__.items()}
 
 
 def outcomes(units: pd.DataFrame, added: pd.Series | None = None) -> Outcome:
@@ -442,7 +443,7 @@ def outcomes(units: pd.DataFrame, added: pd.Series | None = None) -> Outcome:
     national = total.sum() / units["pop"].sum() * 1e5
     below = density < config.LOW_DENSITY_SHARE_OF_AVERAGE * national
     _, _, gini = lorenz(units["pop"].to_numpy(float), total.to_numpy(float))
-    per_branch = (units["pop"] / total.replace(0, np.nan)).max()
+    per_branch = (units["pop"] / total.clip(lower=1)).max()      # a district with no branch counts as one
     low_female = units["literacy_female"] < config.LOW_FEMALE_LITERACY
     placed = int(extra.sum())
     share = float(extra[low_female].sum() / placed) if placed else float("nan")
@@ -456,3 +457,20 @@ def scenario_table(units: pd.DataFrame, k: int) -> list[dict]:
     for name, label in STRATEGIES.items():
         rows.append({"strategy": name, "label": label, **outcomes(units, allocate(units, k, name)).as_dict()})
     return rows
+
+
+def scenario_curve(units: pd.DataFrame, sizes: list[int]) -> pd.DataFrame:
+    """Outcomes under each rule for a range of programme sizes, one row per size and rule.
+
+    A size of 0 is today's network, repeated under every rule so each line starts from the same point.
+    """
+    rows = []
+    for k in sizes:
+        for name, label in STRATEGIES.items():
+            o = outcomes(units, allocate(units, k, name) if k else None)
+            rows.append({"points_requested": k, "strategy": name, "rule": label, "points_placed": o.placed,
+                         "national_density": o.national_density, "units_below_half": o.units_below_half,
+                         "population_below_half_pct": o.population_below_half * 100, "gini": o.gini,
+                         "worst_people_per_branch": o.worst_people_per_branch,
+                         "share_to_low_female_literacy_pct": o.share_to_low_female_literacy * 100})
+    return pd.DataFrame(rows)

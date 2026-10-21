@@ -1,0 +1,658 @@
+{
+ "headline": {
+  "population": 241499431,
+  "units": 120,
+  "banks_2024": 16977,
+  "mfb_2024": 1345,
+  "branches_2024": 18322,
+  "banks_2020": 14211,
+  "banks_growth_pct": 19.463795651256067,
+  "branches_per_100k": 7.586767357642346,
+  "banks_per_100k_adults": 11.828911366215374,
+  "rural_branch_share": 29.887566859513154,
+  "rural_pop_share": 61.12425540248996,
+  "rural_per_100k_rural": 3.7096569137081166,
+  "urban_per_100k_urban": 13.682740346771297,
+  "mfb_rural_share": 52.19330855018587,
+  "bank_rural_share": 28.120398185780758,
+  "islamic_share_of_banks": 33.58661718796018,
+  "units_below_half_average": 41,
+  "population_below_half_average": 0.13634740613529645,
+  "units_zero_branches": 1,
+  "ses_explained_variance": 0.789835050076331
+ },
+ "quality": {
+  "census_notes": [
+   "Table 01: dropped 3 duplicate rows (second Tando Muhammad Khan block, 272,427 people) so provincial totals match the PBS report.",
+   "Table 01: 19 missing urban or rural rows treated as zero population."
+  ],
+  "census_official_check": [
+   {
+    "province": "Punjab",
+    "districts": 36,
+    "pop_2023": 127688922,
+    "official_2023": 127688922,
+    "diff_2023": 0,
+    "pop_2017": 109989655,
+    "official_2017": 109989655,
+    "diff_2017": 0
+   },
+   {
+    "province": "Sindh",
+    "districts": 30,
+    "pop_2023": 55696147,
+    "official_2023": 55696147,
+    "diff_2023": 0,
+    "pop_2017": 47854510,
+    "official_2017": 47854510,
+    "diff_2017": 0
+   },
+   {
+    "province": "Khyber Pakhtunkhwa",
+    "districts": 35,
+    "pop_2023": 40856097,
+    "official_2023": 40856097,
+    "diff_2023": 0,
+    "pop_2017": 35501964,
+    "official_2017": 35501964,
+    "diff_2017": 0
+   },
+   {
+    "province": "Balochistan",
+    "districts": 34,
+    "pop_2023": 14894402,
+    "official_2023": 14894402,
+    "diff_2023": 0,
+    "pop_2017": 12335129,
+    "official_2017": 12335129,
+    "diff_2017": 0
+   },
+   {
+    "province": "Islamabad",
+    "districts": 1,
+    "pop_2023": 2363863,
+    "official_2023": 2363863,
+    "diff_2023": 0,
+    "pop_2017": 2003368,
+    "official_2017": 2003368,
+    "diff_2017": 0
+   }
+  ],
+  "units": 120,
+  "ses_index": {
+   "explained_variance": 0.789835050076331,
+   "loadings": {
+    "literacy": 0.40579067269170566,
+    "literacy_female": 0.39730807018187975,
+    "pakka_share": 0.3970692122841554,
+    "electricity_share": 0.38489936963810634,
+    "water_improved_share": 0.32323774206195227,
+    "flush_toilet_share": 0.3891068679900754,
+    "clean_cooking_share": 0.3402674692394743
+   }
+  },
+  "sbp_2020": {
+   "districts": 134,
+   "grand_total": 14849,
+   "in_scope": 14211,
+   "outside_coverage": 638,
+   "outside_districts": 15
+  },
+  "register_2024": {
+   "rows": 19115,
+   "banks": 17708,
+   "mfb_dfi": 1407,
+   "in_scope": 18322,
+   "outside_coverage": 793,
+   "province_mismatches": [
+    {
+     "district_reg": "Gujranwala",
+     "province_reg": "Sindh",
+     "unit": "Gujranwala",
+     "unit_province": "Punjab",
+     "branches": 1
+    },
+    {
+     "district_reg": "Islamabad",
+     "province_reg": "Khyber Pakhtunkhwa",
+     "unit": "Islamabad",
+     "unit_province": "Islamabad",
+     "branches": 1
+    },
+    {
+     "district_reg": "Karachi",
+     "province_reg": "Punjab",
+     "unit": "Karachi",
+     "unit_province": "Sindh",
+     "branches": 1
+    },
+    {
+     "district_reg": "Mansehra",
+     "province_reg": "Punjab",
+     "unit": "Mansehra",
+     "unit_province": "Khyber Pakhtunkhwa",
+     "branches": 1
+    },
+    {
+     "district_reg": "Rawalpindi",
+     "province_reg": "Azad Jammu & Kashmir",
+     "unit": "Rawalpindi",
+     "unit_province": "Punjab",
+     "branches": 1
+    },
+    {
+     "district_reg": "Vehari",
+     "province_reg": "Khyber Pakhtunkhwa",
+     "unit": "Vehari",
+     "unit_province": "Punjab",
+     "branches": 1
+    }
+   ]
+  },
+  "external_checks": {
+   "banks_per_100k_adults_2024": {
+    "this_project": 11.828911366215223,
+    "world_bank_wdi": 11.150833388396
+   },
+   "banks_per_100k_adults_2020": {
+    "this_project": 10.680600720787423,
+    "world_bank_wdi": 10.1697935751721
+   },
+   "note": "This project excludes Azad Jammu & Kashmir and Gilgit-Baltistan on both sides of the ratio and uses census age shares; the World Bank figure comes from the IMF Financial Access Survey."
+  },
+  "wallet_irregularities": [
+   {
+    "region": "Balochistan",
+    "quarter": "2024Q4",
+    "what": "accounts",
+    "accounts_vs_neighbouring_quarters_pct": 45.1,
+    "female_share": 25.3
+   },
+   {
+    "region": "Balochistan",
+    "quarter": "2026Q1",
+    "what": "women's share",
+    "accounts_vs_neighbouring_quarters_pct": 1.3,
+    "female_share": 20.6
+   },
+   {
+    "region": "Gilgit-Baltistan",
+    "quarter": "2024Q4",
+    "what": "accounts",
+    "accounts_vs_neighbouring_quarters_pct": 96.6,
+    "female_share": 29.8
+   }
+  ],
+  "data_vintages": {
+   "branch_register": "2024-12-31",
+   "branch_baseline": "2020-12-31",
+   "census": 2023,
+   "findex": 2024,
+   "wallet_statistics": [
+    "Apr-Jun 2024",
+    "Apr-Jun 2026"
+   ]
+  }
+ },
+ "access_model": {
+  "formula": "branches_2024 ~ NegativeBinomial(log(population) + urban share + development index)",
+  "n_units": 120,
+  "alpha": 0.07208526274267207,
+  "aic": 1071.499957518886,
+  "loo_failures": 0,
+  "coefficients": [
+   {
+    "term": "intercept",
+    "coefficient": -7.39646416173813,
+    "std_error": 0.6047910215764766,
+    "p_value": 2.155082928582619e-34,
+    "ci_low": -8.58183278220121,
+    "ci_high": -6.21109554127505,
+    "rate_ratio": null
+   },
+   {
+    "term": "log_pop",
+    "coefficient": 0.8025740314453604,
+    "std_error": 0.04336924014359022,
+    "p_value": 1.8607748674532533e-76,
+    "ci_low": 0.7175718827270549,
+    "ci_high": 0.887576180163666,
+    "rate_ratio": 2.23127691996951
+   },
+   {
+    "term": "urban",
+    "coefficient": 1.0082573519274896,
+    "std_error": 0.19402979550873756,
+    "p_value": 2.031796247091169e-07,
+    "ci_low": 0.6279659408026924,
+    "ci_high": 1.3885487630522868,
+    "rate_ratio": 2.7408205652307984
+   },
+   {
+    "term": "ses_index",
+    "coefficient": 0.5277146313329744,
+    "std_error": 0.04108236424628885,
+    "p_value": 9.141596727357673e-38,
+    "ci_low": 0.4471946770104922,
+    "ci_high": 0.6082345856554565,
+    "rate_ratio": 1.6950540552603706
+   },
+   {
+    "term": "alpha",
+    "coefficient": 0.07208526274267207,
+    "std_error": 0.01286705214503409,
+    "p_value": 2.1150929432990837e-08,
+    "ci_low": 0.04686630395120641,
+    "ci_high": 0.09730422153413773,
+    "rate_ratio": null
+   }
+  ],
+  "loo_mae": 31.618023840504307,
+  "baseline_mae": 67.68935760743055,
+  "loo_correlation": 0.9837967294413769,
+  "spearman": 0.9701118083122001,
+  "shortfall_total": 2362.2126636172743,
+  "shortfall_p05": 785.1609635463009,
+  "shortfall_p95": 5509.142998657499,
+  "bootstrap_draws_used": 500,
+  "units_below_expected": 15,
+  "units_above_expected": 13,
+  "units_robust_shortfall": 15,
+  "specification_comparison": [
+   {
+    "specification": "population only",
+    "predictors": "log_pop",
+    "aic": 1205.8525561744134,
+    "alpha": 0.3022861579667784,
+    "loo_mae": 48.90272521341602,
+    "loo_median_rel_error": 0.38064190008999166
+   },
+   {
+    "specification": "population + urban share",
+    "predictors": "log_pop, urban",
+    "aic": 1171.6420233222007,
+    "alpha": 0.21806409232249965,
+    "loo_mae": 77.63221159718859,
+    "loo_median_rel_error": 0.3823859407325978
+   },
+   {
+    "specification": "population + development",
+    "predictors": "log_pop, ses_index",
+    "aic": 1094.2326323975003,
+    "alpha": 0.09771519360808097,
+    "loo_mae": 39.14065831036582,
+    "loo_median_rel_error": 0.2462491531441363
+   },
+   {
+    "specification": "population + urban share + development",
+    "predictors": "log_pop, urban, ses_index",
+    "aic": 1071.499957518886,
+    "alpha": 0.07208526274267207,
+    "loo_mae": 31.618023840504307,
+    "loo_median_rel_error": 0.22408663410581853
+   },
+   {
+    "specification": "... + population density",
+    "predictors": "log_pop, urban, ses_index, log_density",
+    "aic": 1072.3521085848947,
+    "alpha": 0.07148738355193063,
+    "loo_mae": 29.98150840900437,
+    "loo_median_rel_error": 0.23460460047389686
+   },
+   {
+    "specification": "... + population growth",
+    "predictors": "log_pop, urban, ses_index, pop_growth_pct_pa",
+    "aic": 1066.5378046624128,
+    "alpha": 0.06801424240184906,
+    "loo_mae": 30.508414096224673,
+    "loo_median_rel_error": 0.2204557657331468
+   },
+   {
+    "specification": "baseline: proportional to population",
+    "predictors": "population",
+    "aic": null,
+    "alpha": null,
+    "loo_mae": 67.68935760743055,
+    "loo_median_rel_error": 0.5780085417008537
+   }
+  ],
+  "mae_reduction_vs_baseline": 0.5328952001010945
+ },
+ "clusters": {
+  "k": 4,
+  "features": [
+   "log_pop",
+   "urban_share",
+   "ses_index",
+   "log_branch_density"
+  ],
+  "selection_note": "k = 4 chosen for interpretability. Silhouette scores are flat across k = 3 to 6, which means districts form a continuum rather than sharp groups.",
+  "search": [
+   {
+    "k": 2,
+    "silhouette": 0.3791391828142215,
+    "stability_ari": 0.8817676487646422
+   },
+   {
+    "k": 3,
+    "silhouette": 0.33725115540950246,
+    "stability_ari": 0.7274035289021715
+   },
+   {
+    "k": 4,
+    "silhouette": 0.29228410687697637,
+    "stability_ari": 0.6669666284587462
+   },
+   {
+    "k": 5,
+    "silhouette": 0.29905592610430626,
+    "stability_ari": 0.6749314331957965
+   },
+   {
+    "k": 6,
+    "silhouette": 0.2750381044782719,
+    "stability_ari": 0.5586345658025039
+   }
+  ],
+  "profile": [
+   {
+    "cluster": "Frontier and remote",
+    "units": 28,
+    "population": 15947883.0,
+    "urban_share": 9.667435285714287,
+    "ses_index": -1.1969332857142856,
+    "literacy_female": 21.54933982142857,
+    "branches_per_100k": 1.654821,
+    "mfb_share": 2.0723104444444442,
+    "rural_branch_share": 76.12289962962963,
+    "cluster_rank": 0,
+    "largest_units": "Tharparkar, Bajaur, Khyber, Kohistan"
+   },
+   {
+    "cluster": "Developing rural",
+    "units": 37,
+    "population": 41658386.0,
+    "urban_share": 24.36480256756757,
+    "ses_index": -0.46271362162162166,
+    "literacy_female": 32.56546054054054,
+    "branches_per_100k": 4.271333,
+    "mfb_share": 10.343503216216215,
+    "rural_branch_share": 58.69903127027027,
+    "cluster_rank": 1,
+    "largest_units": "Khairpur, Rajanpur, Sanghar, Dera Ismail Khan"
+   },
+   {
+    "cluster": "Established districts",
+    "units": 45,
+    "population": 113378091.0,
+    "urban_share": 25.33777502222222,
+    "ses_index": 0.7802092888888889,
+    "literacy_female": 51.97874242222222,
+    "branches_per_100k": 5.975943,
+    "mfb_share": 10.965069555555555,
+    "rural_branch_share": 47.9183142,
+    "cluster_rank": 2,
+    "largest_units": "Rahim Yar Khan, Muzaffargarh, Peshawar, Sialkot"
+   },
+   {
+    "cluster": "Metropolitan hubs",
+    "units": 10,
+    "population": 70515071.0,
+    "urban_share": 64.8210381,
+    "ses_index": 1.5525114,
+    "literacy_female": 69.55681530000001,
+    "branches_per_100k": 12.000233,
+    "mfb_share": 4.5969283,
+    "rural_branch_share": 15.9343319,
+    "cluster_rank": 3,
+    "largest_units": "Karachi, Lahore, Faisalabad, Rawalpindi"
+   }
+  ],
+  "silhouette_selected": 0.29228410687697637
+ },
+ "inequality": {
+  "banks_2020": {
+   "gini": 0.32486344318846827,
+   "theil": 0.17471968255672,
+   "between": 0.03916161960171226,
+   "within": 0.13555806295500775,
+   "between_share": 0.22413971356088663
+  },
+  "banks_2024": {
+   "gini": 0.325258556637243,
+   "theil": 0.17515889822121178,
+   "between": 0.04201287776154729,
+   "within": 0.13314602045966462,
+   "between_share": 0.23985580057993033
+  },
+  "branches_2024": {
+   "gini": 0.30428996067409153,
+   "theil": 0.15421653041781275,
+   "between": 0.041265779784684466,
+   "within": 0.11295075063312826,
+   "between_share": 0.26758337561404555
+  },
+  "bottom_20pct_population": {
+   "units": 48,
+   "population_share": 0.1968197142460348,
+   "branch_share": 0.07853946075755922
+  },
+  "top10_by_branches": {
+   "units": "Karachi, Lahore, Rawalpindi, Islamabad, Faisalabad, Sialkot, Multan, Gujranwala, Gujrat, Peshawar",
+   "branch_share": 0.5067132409125641,
+   "population_share": 0.30950464226973684
+  }
+ },
+ "convergence": {
+  "slope_initial_density": 0.020493561650020364,
+  "slope_ci": [
+   -0.07157208189453707,
+   0.1125592051945778
+  ],
+  "p_value": 0.6626316698869765,
+  "slope_population_growth": 0.014628701657123655,
+  "r_squared": 0.004831894438889872,
+  "median_density_2020": 4.116433000000001,
+  "net_new_banks": 2766,
+  "low_density_units": 60,
+  "low_density_share_of_new": 0.14786695589298626,
+  "low_density_share_of_population": 0.29700439749690344,
+  "units_losing_branches": 14,
+  "interpretation": "A negative slope means districts that started with fewer branches per person gained more per person (convergence)."
+ },
+ "cross_country": {
+  "year": 2024,
+  "n_economies": 138,
+  "slope_per_log_point": 15.923120860655246,
+  "r_squared": 0.5795861541463362,
+  "pakistan": {
+   "account": 27.296007,
+   "expected": 52.590813334811344,
+   "shortfall_pts": 25.294806334811344,
+   "prediction_interval_90": [
+    27.722675450190792,
+    77.4589512194319
+   ],
+   "gdp_pc_ppp": 5502.073612,
+   "account_women": 11.91217,
+   "account_men": 42.293544,
+   "account_gap": 30.381374,
+   "phone_women": 30.130151,
+   "phone_men": 94.916586,
+   "phone_gap": 64.786435
+  },
+  "rank_lowest_account": [
+   6,
+   138
+  ],
+  "rank_largest_account_gap": [
+   2,
+   138
+  ],
+  "rank_largest_phone_gap": [
+   1,
+   138
+  ],
+  "rank_largest_shortfall": [
+   11,
+   138
+  ],
+  "largest_account_gaps": [
+   {
+    "name": "Algeria",
+    "account_gap": 33.791927
+   },
+   {
+    "name": "Pakistan",
+    "account_gap": 30.381374
+   },
+   {
+    "name": "Togo",
+    "account_gap": 24.6505
+   },
+   {
+    "name": "West Bank and Gaza",
+    "account_gap": 23.446915
+   },
+   {
+    "name": "Tunisia",
+    "account_gap": 22.959101
+   }
+  ],
+  "largest_phone_gaps": [
+   {
+    "name": "Pakistan",
+    "phone_gap": 64.786435
+   },
+   {
+    "name": "Ethiopia",
+    "phone_gap": 29.015567
+   },
+   {
+    "name": "India",
+    "phone_gap": 24.139435
+   },
+   {
+    "name": "Chad",
+    "phone_gap": 21.382524
+   },
+   {
+    "name": "Tajikistan",
+    "phone_gap": 19.879393
+   }
+  ],
+  "south_asia": [
+   {
+    "country": "IND",
+    "name": "India",
+    "account": 89.02,
+    "account_women": 89.25,
+    "account_men": 88.81,
+    "account_gap": -0.44,
+    "phone_women": 54.3,
+    "phone_men": 78.44,
+    "phone_gap": 24.14,
+    "expected_account": 61.15,
+    "account_residual": 27.88
+   },
+   {
+    "country": "LKA",
+    "name": "Sri Lanka",
+    "account": 81.69,
+    "account_women": 80.2,
+    "account_men": 83.38,
+    "account_gap": 3.18,
+    "phone_women": 72.32,
+    "phone_men": 81.52,
+    "phone_gap": 9.2,
+    "expected_account": 67.22,
+    "account_residual": 14.47
+   },
+   {
+    "country": "NPL",
+    "name": "Nepal",
+    "account": 59.99,
+    "account_women": 59.78,
+    "account_men": 60.23,
+    "account_gap": 0.45,
+    "phone_women": 75.75,
+    "phone_men": 81.36,
+    "phone_gap": 5.61,
+    "expected_account": 51.22,
+    "account_residual": 8.77
+   },
+   {
+    "country": "BGD",
+    "name": "Bangladesh",
+    "account": 43.28,
+    "account_women": 33.35,
+    "account_men": 53.51,
+    "account_gap": 20.17,
+    "phone_women": 73.7,
+    "phone_men": 91.33,
+    "phone_gap": 17.63,
+    "expected_account": 59.49,
+    "account_residual": -16.21
+   },
+   {
+    "country": "PAK",
+    "name": "Pakistan",
+    "account": 27.3,
+    "account_women": 11.91,
+    "account_men": 42.29,
+    "account_gap": 30.38,
+    "phone_women": 30.13,
+    "phone_men": 94.92,
+    "phone_gap": 64.79,
+    "expected_account": 52.59,
+    "account_residual": -25.29
+   }
+  ]
+ },
+ "scenario_default": [
+  {
+   "strategy": "before",
+   "label": "Today",
+   "national_density": 7.586767357642346,
+   "units_below_half": 41,
+   "population_below_half": 0.13634740613529645,
+   "gini": 0.30428996067409153,
+   "worst_people_per_branch": 203368.0,
+   "placed": 0,
+   "share_to_low_female_literacy": null
+  },
+  {
+   "strategy": "equity",
+   "label": "Even out people per branch",
+   "national_density": 8.000847008206822,
+   "units_below_half": 0,
+   "population_below_half": 0.0,
+   "gini": 0.24599584911973293,
+   "worst_people_per_branch": 22369.75,
+   "placed": 1000,
+   "share_to_low_female_literacy": 0.898
+  },
+  {
+   "strategy": "gap",
+   "label": "Close the peer-adjusted model gap first",
+   "national_density": 8.000847008206822,
+   "units_below_half": 44,
+   "population_below_half": 0.1686334863455641,
+   "gini": 0.32086179074035803,
+   "worst_people_per_branch": 203368.0,
+   "placed": 1000,
+   "share_to_low_female_literacy": 0.0
+  },
+  {
+   "strategy": "women",
+   "label": "Even out people per branch, weighted to districts where women are furthest behind",
+   "national_density": 8.000847008206822,
+   "units_below_half": 20,
+   "population_below_half": 0.07161814389533697,
+   "gini": 0.2595105207289512,
+   "worst_people_per_branch": 65055.0,
+   "placed": 1000,
+   "share_to_low_female_literacy": 0.855
+  }
+ ]
+}

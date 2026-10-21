@@ -23,10 +23,30 @@ REGISTER_PROVINCE = {
 SES_COLUMNS = ["literacy", "literacy_female", "pakka_share", "electricity_share", "water_improved_share",
                "flush_toilet_share", "clean_cooking_share"]
 CENSUS_YEARS_BETWEEN = 6   # March 2017 to March 2023
+WALLET_ACCOUNT_JUMP_PCT = 25.0    # accounts more than this far from the average of the quarters either side
+WALLET_FEMALE_JUMP_PTS = 4.0      # female share more than this many points from the quarters either side
 
 
 def _share(numerator: pd.Series, denominator: pd.Series) -> pd.Series:
     return 100.0 * numerator / denominator.replace(0, np.nan)
+
+
+def _flag_jumps(values: pd.Series, threshold: float, relative: bool) -> pd.Series:
+    """Flag points that sit far from the average of the quarters either side, worst first.
+
+    After a point is flagged it is set aside, so one bad quarter does not make its good neighbours look bad.
+    relative=True measures the distance in percent of the neighbours' average, False in the series' own units.
+    """
+    work = values.astype(float).copy()
+    flagged = pd.Series(False, index=values.index)
+    while True:
+        neighbours = (work.ffill().shift(1) + work.bfill().shift(-1)) / 2
+        distance = ((work / neighbours - 1) * 100 if relative else work - neighbours).abs()
+        if distance.isna().all() or distance.max() <= threshold:
+            return flagged
+        worst = distance.idxmax()
+        flagged[worst] = True
+        work[worst] = np.nan
 
 
 def _census_by_unit(districts: pd.DataFrame, units: pd.DataFrame) -> pd.DataFrame:
@@ -232,6 +252,18 @@ def bb_region_table(units: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     out["agents_per_100k_adults"] = out["agents"] / out["adults_15plus"] * 1e5
     out["female_share"] = _share(out["accounts_female"], out["accounts_female"] + out["accounts_male"])
     out["transactions_per_account"] = out["transactions"] / out["accounts"]
+
+    # Some quarters in the published tables are out of line with the quarters on either side (for example
+    # Balochistan in Oct-Dec 2024). The provinces still add up to the national total, so the split between
+    # provinces is what is irregular. Flag those points so charts can leave them out.
+    out = out.sort_values(["region", "quarter"]).reset_index(drop=True)
+    by_region = out.groupby("region")
+    neighbour_accounts = (by_region["accounts"].shift(1) + by_region["accounts"].shift(-1)) / 2
+    out["accounts_vs_neighbours_pct"] = (out["accounts"] / neighbour_accounts - 1) * 100
+    out["flag_accounts"] = by_region["accounts"].transform(
+        lambda s: _flag_jumps(s, WALLET_ACCOUNT_JUMP_PCT, relative=True))
+    out["flag_female"] = by_region["female_share"].transform(
+        lambda s: _flag_jumps(s, WALLET_FEMALE_JUMP_PTS, relative=False))
     national = national.copy()
     national["active_account_share"] = _share(national["active_accounts"], national["accounts"])
     national["active_agent_share"] = _share(national["active_agents"], national["agents"])

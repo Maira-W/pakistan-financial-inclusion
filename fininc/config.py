@@ -77,13 +77,14 @@ MOBILE_INDICATORS = {
     "con11.s": ("SIM registered in own name (% of phone owners)", "mobile"),
 }
 
-# Reasons for not having a bank or similar account, as % of adults without such an account.
+# Reasons for not having a bank or similar account, as % of adults without such an account. The labels are the
+# World Bank's own wording for each code (checked against the API; a test pins the key words).
 BARRIER_INDICATORS = {
     "fin11a.s": ("Financial institutions are too far away", "barrier"),
     "fin11b.s": ("Financial services are too expensive", "barrier"),
-    "fin11d.s": ("Lack of trust in financial institutions", "barrier"),
-    "fin11e.s": ("Religious reasons", "barrier"),
-    "fin11f.s": ("Insufficient funds", "barrier"),
+    "fin11d.s": ("Insufficient funds", "barrier"),
+    "fin11e.s": ("Someone in the family has an account", "barrier"),
+    "fin11f.s": ("Lack of trust in financial institutions", "barrier"),
 }
 # The documentation barrier is only published as a share of all adults; the loader derives the
 # share of adults without an account from it. See docs/methodology.md.

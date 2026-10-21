@@ -1,0 +1,52 @@
+points_requested,strategy,rule,points_placed,national_density,units_below_half,population_below_half_pct,gini,worst_people_per_branch,share_to_low_female_literacy_pct
+0,equity,Even out people per branch,0,7.5868,41,13.6347,0.3043,203368.0,
+0,gap,Close the peer-adjusted model gap first,0,7.5868,41,13.6347,0.3043,203368.0,
+0,women,"Even out people per branch, weighted to districts where women are furthest behind",0,7.5868,41,13.6347,0.3043,203368.0,
+250,equity,Even out people per branch,250,7.6903,43,14.7866,0.2875,33894.6667,100.0
+250,gap,Close the peer-adjusted model gap first,250,7.6903,43,14.7866,0.3113,203368.0,0.0
+250,women,"Even out people per branch, weighted to districts where women are furthest behind",250,7.6903,35,12.3609,0.289,75655.75,98.0
+500,equity,Even out people per branch,500,7.7938,6,0.639,0.2723,27076.4286,96.6
+500,gap,Close the peer-adjusted model gap first,500,7.7938,43,14.7866,0.3164,203368.0,0.0
+500,women,"Even out people per branch, weighted to districts where women are furthest behind",500,7.7938,28,8.2973,0.2774,65055.0,93.0
+750,equity,Even out people per branch,750,7.8973,1,0.0528,0.2587,25514.2,92.8
+750,gap,Close the peer-adjusted model gap first,750,7.8973,44,16.8633,0.3198,203368.0,0.0
+750,women,"Even out people per branch, weighted to districts where women are furthest behind",750,7.8973,25,9.6537,0.2677,65055.0,90.0
+1000,equity,Even out people per branch,1000,8.0008,0,0.0,0.246,22369.75,89.8
+1000,gap,Close the peer-adjusted model gap first,1000,8.0008,44,16.8633,0.3209,203368.0,0.0
+1000,women,"Even out people per branch, weighted to districts where women are furthest behind",1000,8.0008,20,7.1618,0.2595,65055.0,85.5
+1250,equity,Even out people per branch,1250,8.1044,0,0.0,0.2343,21261.8333,86.24
+1250,gap,Close the peer-adjusted model gap first,1250,8.1044,44,16.8633,0.3223,203368.0,0.0
+1250,women,"Even out people per branch, weighted to districts where women are furthest behind",1250,8.1044,16,5.7705,0.2529,52044.0,82.8
+1500,equity,Even out people per branch,1500,8.2079,0,0.0,0.2233,19884.2222,82.7333
+1500,gap,Close the peer-adjusted model gap first,1500,8.2079,44,16.9139,0.3212,203368.0,0.4
+1500,women,"Even out people per branch, weighted to districts where women are furthest behind",1500,8.2079,12,4.8311,0.2469,52044.0,80.8667
+1750,equity,Even out people per branch,1750,8.3114,0,0.0,0.2131,18488.0,79.4857
+1750,gap,Close the peer-adjusted model gap first,1750,8.3114,46,18.1114,0.317,203368.0,1.7714
+1750,women,"Even out people per branch, weighted to districts where women are furthest behind",1750,8.3114,11,3.6533,0.2414,52044.0,79.4286
+2000,equity,Even out people per branch,2000,8.4149,0,0.0,0.2038,18224.4286,76.2
+2000,gap,Close the peer-adjusted model gap first,2000,8.4149,46,18.1114,0.3116,203368.0,3.6
+2000,women,"Even out people per branch, weighted to districts where women are furthest behind",2000,8.4149,9,2.5932,0.2356,43370.0,77.8
+2250,equity,Even out people per branch,2250,8.5184,0,0.0,0.1951,18224.4286,73.2889
+2250,gap,Close the peer-adjusted model gap first,2250,8.5184,43,17.0742,0.3041,69541.7333,7.4667
+2250,women,"Even out people per branch, weighted to districts where women are furthest behind",2250,8.5184,7,2.2758,0.2304,43370.0,76.4
+2500,equity,Even out people per branch,2500,8.622,0,0.0,0.1869,16703.75,70.84
+2500,gap,Close the peer-adjusted model gap first,2400,8.5806,39,16.5608,0.299,65195.375,10.1667
+2500,women,"Even out people per branch, weighted to districts where women are furthest behind",2500,8.622,8,3.967,0.2257,43370.0,75.08
+2750,equity,Even out people per branch,2750,8.7255,0,0.0,0.179,16268.9091,68.8
+2750,gap,Close the peer-adjusted model gap first,2400,8.5806,39,16.5608,0.299,65195.375,10.1667
+2750,women,"Even out people per branch, weighted to districts where women are furthest behind",2750,8.7255,8,3.967,0.2214,37174.2857,74.0364
+3000,equity,Even out people per branch,3000,8.829,0,0.0,0.1716,15946.375,66.9
+3000,gap,Close the peer-adjusted model gap first,2400,8.5806,39,16.5608,0.299,65195.375,10.1667
+3000,women,"Even out people per branch, weighted to districts where women are furthest behind",3000,8.829,8,3.967,0.2174,37174.2857,73.1667
+3250,equity,Even out people per branch,3250,8.9325,0,0.0,0.1644,15946.375,65.2615
+3250,gap,Close the peer-adjusted model gap first,2400,8.5806,39,16.5608,0.299,65195.375,10.1667
+3250,women,"Even out people per branch, weighted to districts where women are furthest behind",3250,8.9325,8,3.967,0.2137,37174.2857,72.2154
+3500,equity,Even out people per branch,3500,9.036,0,0.0,0.1576,14913.1667,63.9429
+3500,gap,Close the peer-adjusted model gap first,2400,8.5806,39,16.5608,0.299,65195.375,10.1667
+3500,women,"Even out people per branch, weighted to districts where women are furthest behind",3500,9.036,7,3.1709,0.2107,37174.2857,71.3143
+3750,equity,Even out people per branch,3750,9.1396,0,0.0,0.1511,14317.5,62.64
+3750,gap,Close the peer-adjusted model gap first,2400,8.5806,39,16.5608,0.299,65195.375,10.1667
+3750,women,"Even out people per branch, weighted to districts where women are furthest behind",3750,9.1396,6,2.758,0.2076,37174.2857,70.48
+4000,equity,Even out people per branch,4000,9.2431,0,0.0,0.145,14174.5556,61.425
+4000,gap,Close the peer-adjusted model gap first,2400,8.5806,39,16.5608,0.299,65195.375,10.1667
+4000,women,"Even out people per branch, weighted to districts where women are furthest behind",4000,9.2431,5,2.5747,0.2049,33985.4,69.675

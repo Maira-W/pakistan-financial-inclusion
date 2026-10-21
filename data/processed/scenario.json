@@ -1,0 +1,287 @@
+{
+ "default_k": 1000,
+ "network_size": 18322,
+ "table": [
+  {
+   "strategy": "before",
+   "label": "Today",
+   "national_density": 7.586767357642346,
+   "units_below_half": 41,
+   "population_below_half": 0.13634740613529645,
+   "gini": 0.30428996067409153,
+   "worst_people_per_branch": 203368.0,
+   "placed": 0,
+   "share_to_low_female_literacy": null
+  },
+  {
+   "strategy": "equity",
+   "label": "Even out people per branch",
+   "national_density": 8.000847008206822,
+   "units_below_half": 0,
+   "population_below_half": 0.0,
+   "gini": 0.24599584911973293,
+   "worst_people_per_branch": 22369.75,
+   "placed": 1000,
+   "share_to_low_female_literacy": 0.898
+  },
+  {
+   "strategy": "gap",
+   "label": "Close the peer-adjusted model gap first",
+   "national_density": 8.000847008206822,
+   "units_below_half": 44,
+   "population_below_half": 0.1686334863455641,
+   "gini": 0.32086179074035803,
+   "worst_people_per_branch": 203368.0,
+   "placed": 1000,
+   "share_to_low_female_literacy": 0.0
+  },
+  {
+   "strategy": "women",
+   "label": "Even out people per branch, weighted to districts where women are furthest behind",
+   "national_density": 8.000847008206822,
+   "units_below_half": 20,
+   "population_below_half": 0.07161814389533697,
+   "gini": 0.2595105207289512,
+   "worst_people_per_branch": 65055.0,
+   "placed": 1000,
+   "share_to_low_female_literacy": 0.855
+  }
+ ],
+ "sizes": {
+  "250": [
+   {
+    "strategy": "before",
+    "label": "Today",
+    "national_density": 7.586767357642346,
+    "units_below_half": 41,
+    "population_below_half": 0.13634740613529645,
+    "gini": 0.30428996067409153,
+    "worst_people_per_branch": 203368.0,
+    "placed": 0,
+    "share_to_low_female_literacy": null
+   },
+   {
+    "strategy": "equity",
+    "label": "Even out people per branch",
+    "national_density": 7.690287270283465,
+    "units_below_half": 43,
+    "population_below_half": 0.14786604611089124,
+    "gini": 0.28754305687072546,
+    "worst_people_per_branch": 33894.666666666664,
+    "placed": 250,
+    "share_to_low_female_literacy": 1.0
+   },
+   {
+    "strategy": "gap",
+    "label": "Close the peer-adjusted model gap first",
+    "national_density": 7.690287270283465,
+    "units_below_half": 43,
+    "population_below_half": 0.14786604611089124,
+    "gini": 0.31126596393558303,
+    "worst_people_per_branch": 203368.0,
+    "placed": 250,
+    "share_to_low_female_literacy": 0.0
+   },
+   {
+    "strategy": "women",
+    "label": "Even out people per branch, weighted to districts where women are furthest behind",
+    "national_density": 7.690287270283465,
+    "units_below_half": 35,
+    "population_below_half": 0.12360920635046962,
+    "gini": 0.2889505866689226,
+    "worst_people_per_branch": 75655.75,
+    "placed": 250,
+    "share_to_low_female_literacy": 0.98
+   }
+  ],
+  "500": [
+   {
+    "strategy": "before",
+    "label": "Today",
+    "national_density": 7.586767357642346,
+    "units_below_half": 41,
+    "population_below_half": 0.13634740613529645,
+    "gini": 0.30428996067409153,
+    "worst_people_per_branch": 203368.0,
+    "placed": 0,
+    "share_to_low_female_literacy": null
+   },
+   {
+    "strategy": "equity",
+    "label": "Even out people per branch",
+    "national_density": 7.793807182924584,
+    "units_below_half": 6,
+    "population_below_half": 0.006389708636622005,
+    "gini": 0.27232627806688536,
+    "worst_people_per_branch": 27076.428571428572,
+    "placed": 500,
+    "share_to_low_female_literacy": 0.966
+   },
+   {
+    "strategy": "gap",
+    "label": "Close the peer-adjusted model gap first",
+    "national_density": 7.793807182924584,
+    "units_below_half": 43,
+    "population_below_half": 0.14786604611089124,
+    "gini": 0.3164218915390249,
+    "worst_people_per_branch": 203368.0,
+    "placed": 500,
+    "share_to_low_female_literacy": 0.0
+   },
+   {
+    "strategy": "women",
+    "label": "Even out people per branch, weighted to districts where women are furthest behind",
+    "national_density": 7.793807182924584,
+    "units_below_half": 28,
+    "population_below_half": 0.0829728621596628,
+    "gini": 0.2774195167484489,
+    "worst_people_per_branch": 65055.0,
+    "placed": 500,
+    "share_to_low_female_literacy": 0.93
+   }
+  ],
+  "1000": [
+   {
+    "strategy": "before",
+    "label": "Today",
+    "national_density": 7.586767357642346,
+    "units_below_half": 41,
+    "population_below_half": 0.13634740613529645,
+    "gini": 0.30428996067409153,
+    "worst_people_per_branch": 203368.0,
+    "placed": 0,
+    "share_to_low_female_literacy": null
+   },
+   {
+    "strategy": "equity",
+    "label": "Even out people per branch",
+    "national_density": 8.000847008206822,
+    "units_below_half": 0,
+    "population_below_half": 0.0,
+    "gini": 0.24599584911973293,
+    "worst_people_per_branch": 22369.75,
+    "placed": 1000,
+    "share_to_low_female_literacy": 0.898
+   },
+   {
+    "strategy": "gap",
+    "label": "Close the peer-adjusted model gap first",
+    "national_density": 8.000847008206822,
+    "units_below_half": 44,
+    "population_below_half": 0.1686334863455641,
+    "gini": 0.32086179074035803,
+    "worst_people_per_branch": 203368.0,
+    "placed": 1000,
+    "share_to_low_female_literacy": 0.0
+   },
+   {
+    "strategy": "women",
+    "label": "Even out people per branch, weighted to districts where women are furthest behind",
+    "national_density": 8.000847008206822,
+    "units_below_half": 20,
+    "population_below_half": 0.07161814389533697,
+    "gini": 0.2595105207289512,
+    "worst_people_per_branch": 65055.0,
+    "placed": 1000,
+    "share_to_low_female_literacy": 0.855
+   }
+  ],
+  "2000": [
+   {
+    "strategy": "before",
+    "label": "Today",
+    "national_density": 7.586767357642346,
+    "units_below_half": 41,
+    "population_below_half": 0.13634740613529645,
+    "gini": 0.30428996067409153,
+    "worst_people_per_branch": 203368.0,
+    "placed": 0,
+    "share_to_low_female_literacy": null
+   },
+   {
+    "strategy": "equity",
+    "label": "Even out people per branch",
+    "national_density": 8.4149266587713,
+    "units_below_half": 0,
+    "population_below_half": 0.0,
+    "gini": 0.20377709805180244,
+    "worst_people_per_branch": 18224.428571428572,
+    "placed": 2000,
+    "share_to_low_female_literacy": 0.762
+   },
+   {
+    "strategy": "gap",
+    "label": "Close the peer-adjusted model gap first",
+    "national_density": 8.4149266587713,
+    "units_below_half": 46,
+    "population_below_half": 0.18111378076083334,
+    "gini": 0.31164211670973785,
+    "worst_people_per_branch": 203368.0,
+    "placed": 2000,
+    "share_to_low_female_literacy": 0.036
+   },
+   {
+    "strategy": "women",
+    "label": "Even out people per branch, weighted to districts where women are furthest behind",
+    "national_density": 8.4149266587713,
+    "units_below_half": 9,
+    "population_below_half": 0.02593218946341948,
+    "gini": 0.2356137488583172,
+    "worst_people_per_branch": 43370.0,
+    "placed": 2000,
+    "share_to_low_female_literacy": 0.778
+   }
+  ],
+  "4000": [
+   {
+    "strategy": "before",
+    "label": "Today",
+    "national_density": 7.586767357642346,
+    "units_below_half": 41,
+    "population_below_half": 0.13634740613529645,
+    "gini": 0.30428996067409153,
+    "worst_people_per_branch": 203368.0,
+    "placed": 0,
+    "share_to_low_female_literacy": null
+   },
+   {
+    "strategy": "equity",
+    "label": "Even out people per branch",
+    "national_density": 9.243085959900252,
+    "units_below_half": 0,
+    "population_below_half": 0.0,
+    "gini": 0.14501377866317178,
+    "worst_people_per_branch": 14174.555555555555,
+    "placed": 4000,
+    "share_to_low_female_literacy": 0.61425
+   },
+   {
+    "strategy": "gap",
+    "label": "Close the peer-adjusted model gap first",
+    "national_density": 8.58055851899709,
+    "units_below_half": 39,
+    "population_below_half": 0.16560751234233756,
+    "gini": 0.2990362016439312,
+    "worst_people_per_branch": 65195.375,
+    "placed": 2400,
+    "share_to_low_female_literacy": 0.10166666666666667
+   },
+   {
+    "strategy": "women",
+    "label": "Even out people per branch, weighted to districts where women are furthest behind",
+    "national_density": 9.243085959900252,
+    "units_below_half": 5,
+    "population_below_half": 0.025746814285454778,
+    "gini": 0.20488572149234052,
+    "worst_people_per_branch": 33985.4,
+    "placed": 4000,
+    "share_to_low_female_literacy": 0.69675
+   }
+  ]
+ },
+ "strategies": {
+  "equity": "Even out people per branch",
+  "gap": "Close the peer-adjusted model gap first",
+  "women": "Even out people per branch, weighted to districts where women are furthest behind"
+ }
+}

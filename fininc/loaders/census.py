@@ -110,7 +110,11 @@ def _table20() -> pd.DataFrame:
     raw = _read("20")
     raw["kind"] = raw["hh_type"].map(_clean)
     wide = raw.pivot_table(index="district", columns="kind", values="overall", aggfunc="first")
-    return pd.DataFrame({"hh_pakka": wide["PAKKA"], "hh_housing_total": wide.sum(axis=1)}).reset_index()
+    # The table carries its own TOTAL row, so adding every column would count each house twice.
+    by_type = wide[["PAKKA", "SEMI PAKKA", "KACHA"]].sum(axis=1)
+    if ((by_type - wide["TOTAL"]).abs() > 0.001 * wide["TOTAL"]).any():
+        raise ValueError("Table 20: pakka, semi-pakka and kacha houses do not add up to the total")
+    return pd.DataFrame({"hh_pakka": wide["PAKKA"], "hh_housing_total": wide["TOTAL"]}).reset_index()
 
 
 def _overall(table: str, columns: dict[str, str]) -> pd.DataFrame:
@@ -146,6 +150,9 @@ def load_districts() -> tuple[pd.DataFrame, list[str]]:
     if out.isna().any().any():
         raise ValueError(f"Missing census values after merging tables:\n{out.isna().sum()[out.isna().sum() > 0]}")
     out["hh_gas_or_lpg"] = out["hh_fuel_gas"] + out["hh_fuel_lpg"]
+    # Two tables count the same households, so they must agree.
+    if ((out["hh_housing_total"] - out["hh_total"]).abs() > 0.005 * out["hh_total"]).any():
+        raise ValueError("Table 20 houses differ from Table 22 households by more than 0.5%")
     return out.drop(columns=["hh_fuel_gas", "hh_fuel_lpg"]), notes
 
 

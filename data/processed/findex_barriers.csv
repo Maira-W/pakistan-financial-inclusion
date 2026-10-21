@@ -1,0 +1,7 @@
+indicator,reason,share_of_unbanked,derived
+fin11d.s,Insufficient funds,63.5235,False
+fin11b.s,Financial services are too expensive,48.3023,False
+fin11a.s,Financial institutions are too far away,31.8534,False
+fin11c,Lack of necessary documentation,26.1963,True
+fin11f.s,Lack of trust in financial institutions,18.8159,False
+fin11e.s,Someone in the family has an account,13.9868,False

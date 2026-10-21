@@ -15,12 +15,12 @@ import hashlib
 import io
 import json
 import time
-import zipfile
 import urllib.error
 import urllib.request
+import zipfile
+from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
-from typing import Callable
+from datetime import UTC, datetime
 
 from . import config
 from .paths import MANIFEST, RAW
@@ -58,7 +58,7 @@ def _json(url: str) -> list | dict:
 
 
 def _now() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%MZ")
 
 
 def _load_manifest() -> dict:
