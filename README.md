@@ -16,7 +16,7 @@ Pakistan has the lowest account ownership of the four countries compared, and th
 ## Dashboard
 
 - Interactive web dashboard: [dashboard/dashboard.html](dashboard/dashboard.html). Open it in a browser (it loads Plotly from a CDN, so it needs an internet connection). Live at https://maira-w.github.io/pakistan-financial-inclusion/dashboard/dashboard.html once GitHub Pages has built.
-- Power BI report: `powerbi/Pakistan_Financial_Inclusion.pbix`. Build it with [powerbi/BUILD_GUIDE.md](powerbi/BUILD_GUIDE.md), using the tables in `powerbi/data/` and the measures in `powerbi/measures.dax`.
+- Power BI report: [powerbi/Pakistan_Financial_Inclusion_PowerBI.zip](powerbi/Pakistan_Financial_Inclusion_PowerBI.zip). Unzip it and open `Pakistan_Financial_Inclusion.pbip` in Power BI Desktop. The measures are in `powerbi/measures.dax`.
 - Static charts: [dashboard/](dashboard/)
 
 ![Account ownership by country](dashboard/01_peer_benchmark.png)
@@ -32,7 +32,7 @@ data/clean/      Analysis tables produced by scripts/build_clean_data.py
 scripts/         build_clean_data.py (extract and clean), analysis.py (charts and web dashboard),
                  build_powerbi_model.py (tables for Power BI)
 dashboard/       Charts (PNG) and the interactive web dashboard (HTML)
-powerbi/         Power BI report: BUILD_GUIDE.md, measures.dax, theme.json, data/ (tables to import)
+powerbi/         Power BI project (Pakistan_Financial_Inclusion.pbip), measures.dax, theme.json, data/ (tables)
 docs/            data_sources.md (sources and data issues), recommendation_memo.md
 ```
 

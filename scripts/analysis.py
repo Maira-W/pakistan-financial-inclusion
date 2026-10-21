@@ -128,23 +128,6 @@ def chart_districts(density, path, n=12):
     plt.close(fig)
 
 
-def chart_scatter(density, path):
-    d = density.dropna(subset=["branches_per_100k"])
-    fig, ax = plt.subplots(figsize=(7, 5))
-    ax.scatter(d["population_2023"] / 1e6, d["branches_total"], s=18, color=NAVY, alpha=0.6)
-    labelled = pd.concat([d.nlargest(4, "population_2023"), d[d["unit"] == "ISLAMABAD"]])
-    for _, row in labelled.iterrows():
-        ax.annotate(row["unit"].title(), (row["population_2023"] / 1e6, row["branches_total"]),
-                    xytext=(5, 4), textcoords="offset points", fontsize=8)
-    ax.set_xlabel("Population 2023 (millions)")
-    ax.set_ylabel("Bank branches (Dec 2020)")
-    ax.set_title("Branches vs population, by district (119 matched districts)",
-                 loc="left", fontweight="bold")
-    fig.tight_layout()
-    fig.savefig(path, bbox_inches="tight")
-    plt.close(fig)
-
-
 def _records(df: pd.DataFrame, columns: list[str]) -> list[dict]:
     """Rows as plain dicts, with NaN turned into None so the JSON is valid."""
     out = []
@@ -210,7 +193,6 @@ def main():
     chart_gender_gap(findex, OUT / "02_gender_gap.png")
     chart_province(province, OUT / "03_province_branch_density.png")
     chart_districts(density, OUT / "04_district_extremes.png")
-    chart_scatter(density, OUT / "05_population_vs_branches.png")
     build_dashboard_page(findex, density, province, headline, OUT / "dashboard.html")
 
     print("Headline numbers:")
