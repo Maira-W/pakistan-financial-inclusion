@@ -2,6 +2,7 @@
 
 [![tests](https://github.com/Maira-W/pakistan-financial-inclusion/actions/workflows/ci.yml/badge.svg)](https://github.com/Maira-W/pakistan-financial-inclusion/actions/workflows/ci.yml)
 ![python 3.11](https://img.shields.io/badge/python-3.11-blue)
+[![licence: MIT](https://img.shields.io/badge/licence-MIT-green)](LICENSE)
 
 Only {{acct:.0f}}% of Pakistani adults have a financial account, {{shortfall_pts:.0f}} points fewer than the country's income would predict. This project asks **where the gaps are and who is left out**, by combining four public sources down to {{n_units}} districts: the World Bank Global Findex survey, the State Bank of Pakistan's branch registers and wallet statistics, and the 2023 census. It is delivered as reproducible Python code, an interactive dashboard, a nine-page Power BI report, a notebook and a policy memo.
 
@@ -130,8 +131,13 @@ notebooks/         the analysis notebook
 tests/             pytest suite
 .github/workflows/ the continuous integration job (lint, checksums, tests)
 requirements*.txt  pinned package versions; pyproject.toml describes the package
+LICENSE            the MIT licence (the data keep the terms of their sources)
 ```
 
 ## What this project shows
 
 Data engineering (messy PDFs and spreadsheets turned into validated tables with provenance), statistics (count models with leave-one-out and bootstrap uncertainty, PCA, clustering, inequality decomposition, regression with robust errors), decision support (a placement planner with explicit trade-offs), business intelligence (a star-schema Power BI model with {{n_measures}} DAX measures) and communication (a dashboard and a plain-language memo), all reproducible from one command.
+
+## Licence
+
+The code and the documents are released under the [MIT licence](LICENSE). The data keep the terms of their sources, which are listed in [`docs/data_sources.md`](docs/data_sources.md).

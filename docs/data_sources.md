@@ -24,7 +24,7 @@ Everything in this project comes from public sources. The raw files are stored i
 | Pakistan Bureau of Statistics tables | Public statistics of the PBS; cite the source. The CSV files are a conversion by a third party, kept with that repository's licence file and re-checked here against the official totals |
 | geoBoundaries / WFP | CC BY 3.0 IGO |
 
-The code in this repository is the author's own work. This project is independent and is not endorsed by any of these organisations.
+The code in this repository is the author's own work, released under the MIT licence ([`LICENSE`](../LICENSE)); the data keep the terms above. This project is independent and is not endorsed by any of these organisations.
 
 ## Raw files
 
