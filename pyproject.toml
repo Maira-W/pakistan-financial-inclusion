@@ -27,7 +27,8 @@ fininc = ["templates/*", "templates/docs/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-markers = ["slow: rebuilds tables from the raw files (about a minute)"]
+pythonpath = ["."]            # the package sits at the repository root, so plain `pytest` can import it without an install
+markers =["slow: rebuilds tables from the raw files (about a minute)"]
 filterwarnings = [
     "ignore::FutureWarning", "ignore::RuntimeWarning", "ignore::DeprecationWarning",
     "ignore:Maximum Likelihood optimization failed",
