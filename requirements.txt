@@ -1,5 +1,12 @@
-pandas
-matplotlib
-openpyxl
-pdfplumber
-plotly
+# The versions the results were produced with. Install with: pip install -r requirements.txt
+numpy==2.4.3
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.8.0
+statsmodels==0.15.0
+matplotlib==3.10.8
+plotly==6.7.0
+shapely==2.2.0
+pdfplumber==0.11.10
+openpyxl==3.1.5
+requests==2.33.0
