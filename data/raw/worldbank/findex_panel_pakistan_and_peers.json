@@ -1,0 +1,3096 @@
+{
+ "account.t.d": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 43.2839733431322
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 52.8060649194004
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 50.0469129996798
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 30.9908189209299
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 31.7436490922018
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 89.0248224502547
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 77.5291370626274
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 79.8753284971461
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 53.1415500480136
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 35.2318385316409
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 81.6921293527248
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 89.2707132323262
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 73.6464607816492
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 82.6913822678001
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 68.5261646815342
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 27.2960071761925
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 20.9806311316514
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 21.2932449054097
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 13.0361910901935
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 10.3062965935922
+  }
+ ],
+ "account.t.d.1": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 33.346000280938
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 43.4566925057512
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 35.8363454066493
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 26.4532869099198
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 26.0116972985799
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 89.2482328079147
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 77.552612718915
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 76.6396327822793
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 43.1326096683799
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 26.4905002133377
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 80.201889490679
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 89.2774734204631
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 73.4420706174106
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 83.1084370513634
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 67.2384213489121
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 11.9121696598431
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 13.4784970707722
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 7.02506387268419
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 4.84374685517549
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 2.95357740083598
+  }
+ ],
+ "account.t.d.2": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 53.5110284170371
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 62.8624571838322
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 64.5861549888833
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 35.3692533542347
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 37.2916464189303
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 88.8052472379392
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 77.5072324191018
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 83.0089957378931
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 62.7633660713873
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 43.7370735535776
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 83.3833352312595
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 89.2634183556022
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 73.8885926245093
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 82.2261167850048
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 69.9869884867952
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 42.2935435576169
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 28.1764144611815
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 34.6076588199886
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 20.9723564170282
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 17.2815270860682
+  }
+ ],
+ "account.t.d.3": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 38.7281503087572
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 47.7993148449764
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 40.9932137464436
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 20.8307106687882
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 20.318977301259
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 83.3298881784499
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 67.501931427549
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 71.4001548367143
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 43.2338984456575
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 27.3008600228386
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 75.0641243872534
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 86.4015210755849
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 76.6144989205749
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 85.1960186626415
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 68.7159055747569
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 24.3424901722908
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 18.1023410529807
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 14.8923269617535
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 13.1964370838821
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 7.95491067144722
+  }
+ ],
+ "account.t.d.4": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 44.9473909356167
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 54.5490534657205
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 53.5263717713504
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 35.4420064571501
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 36.7621347470499
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 91.1674455308
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 81.3048883600903
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 83.0843120310959
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 56.811978903214
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 38.0260608145423
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 83.4123614729863
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 90.0525742987248
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 72.9011316873123
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 81.9884566646781
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 68.4714793547106
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 28.5427198593614
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 22.4570307682912
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 24.5315749177796
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 12.9554893520979
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 11.4478902795022
+  }
+ ],
+ "account.t.d.5": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 31.1710966547941
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 46.5663544550526
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 39.8387522839252
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 24.9048898301401
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 21.0617201154815
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 87.0775161460382
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 75.9045265264345
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 75.3695415930049
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 43.3534072698003
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 30.5149222729445
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 75.6525964851497
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 76.9279071770383
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 62.4324616772491
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 73.9958745411425
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 62.8812918981146
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 18.9106980665209
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 15.3094835682753
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 15.9198671024733
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 10.0274917250607
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 3.74669350718118
+  }
+ ],
+ "account.t.d.6": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 50.2705197195129
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 56.626954818699
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 57.2312816536357
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 37.2067319871017
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 42.5051608201696
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 93.1356957731427
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 81.3043630861527
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 84.9415841843192
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 64.2348079195009
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 59.4694408763016
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 84.4889282883542
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 92.9809794997471
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 85.3507647018097
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 91.3193655471355
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 76.4187642716538
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 46.6859995768197
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 35.2950654749291
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 34.0311743154043
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 25.1896079430053
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 24.4551951217036
+  }
+ ],
+ "account.t.d.7": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 35.5467073317195
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 48.651171951709
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 40.0787327296842
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 23.0339877101303
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 19.0637565730993
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 86.3166812876253
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 78.252760418728
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 77.0829503240223
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 43.6106768976089
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 26.9714503176061
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 80.186232208266
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 87.0790314179909
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 70.5842200091925
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 78.6991790425862
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 59.1345855965433
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 13.6062537929128
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 17.6113668088983
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 14.2158895837959
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 9.75476712520752
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 4.80787352736625
+  }
+ ],
+ "account.t.d.8": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 48.1890552430875
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 55.5747329795619
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 56.6799304000332
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 36.2922094369265
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 40.180988136996
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 90.8311710525466
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 77.0477039623167
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 81.735424055538
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 59.4840292483675
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 40.7300173924267
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 82.6966067816372
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 90.7189876723785
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 75.6791779568018
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 85.3465588325621
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 74.7585639990558
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 36.4061624872429
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 23.2122996533354
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 25.9984489543731
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 15.2102947770848
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 13.9448900529408
+  }
+ ],
+ "account.t.d.9": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 44.4714354459462
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 89.8835556257129
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 82.8279191938199
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 21.0630903899479
+  }
+ ],
+ "account.t.d.10": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 41.7634363250057
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 87.1506503568205
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 79.5642507300999
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 32.9357547430449
+  }
+ ],
+ "account.t.d.11": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 34.6983767378269
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 46.7704521232089
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 39.7313490882672
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 25.5833109813163
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 25.1809115863628
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 85.547725037407
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 74.0863351820393
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 75.0449008224834
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 41.2107034559086
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 26.1833386161456
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 77.3416226342587
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 87.6464374145904
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 68.033519578018
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 75.9156383062775
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 65.2159927237398
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 13.9100745935941
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 15.6517970390489
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 13.4497669187988
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 5.03422774483378
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 3.87504183370112
+  }
+ ],
+ "account.t.d.12": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 58.4936777275361
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 61.7982815378269
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 63.7205893514868
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 39.5294567261943
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 41.2171742255511
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 91.3671330713554
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 81.8734690351865
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 84.6037422907217
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 64.8236711559339
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 44.2245170421219
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 86.6969959641581
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 91.1970907445766
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 82.2939243650501
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 92.325710830849
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 71.6750024732555
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 42.7339780048076
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 28.3210863455316
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 35.1851870433945
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 22.7688422563114
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 17.3569840867981
+  }
+ ],
+ "fiaccount.t.d": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 32.947893699904
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 37.6861865364982
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 40.9726485260264
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 29.1421028869467
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 31.7436490922018
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 88.6553603205458
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 77.3020510656412
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 79.8401862045321
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 52.7538086643632
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 35.2318385316409
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 81.2270145589498
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 88.9256158401546
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 73.5915247706446
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 82.6913822678001
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 68.5261646815342
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 18.2812619629943
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 16.2881985536622
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 18.0493842373431
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 8.70613842406289
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 10.3062965935922
+  }
+ ],
+ "mobileaccount.t.d": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 20.768372550151
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 29.0057917762865
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 21.2459588612049
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 2.6917143225706
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 23.1007553610962
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 10.4396875238449
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 1.9945430844747
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 2.35221005320678
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 2.99616477602989
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 3.12642182421884
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 2.42076009544319
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 0.076636847651658
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 18.3578643242878
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 8.53740631820492
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 6.88555794229276
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 5.79979936794747
+  }
+ ],
+ "dig.acc": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 22.8355063692859
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 31.0668870036075
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 34.3865834131273
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 19.848369637878
+  }
+ ],
+ "inactive.t.d": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 3.43572027070602
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 4.4045080164448
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 8.1002026399129
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 7.82864115306767
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 14.3204732855566
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 27.4397973727689
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 30.6242229313178
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 17.3946510293591
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 14.3501198822832
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 16.4766242448649
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 13.6675301627415
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 23.3280444503936
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 0.700583392612421
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 1.39501574248468
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 1.50406000085597
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 0.850364193232862
+  }
+ ],
+ "fin2.t.d": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 7.66821304095188
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 4.86125856225663
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 6.19842773903339
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 5.16903536388964
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 2.27545204944528
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 37.5621428197572
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 27.0680936166673
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 32.7219769516508
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 22.0680138032907
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 8.39950245906727
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 42.195087190973
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 52.6125625405199
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 32.2557963991943
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 24.8597709653207
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 9.98931208439577
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 10.5589774051284
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 7.74370015531287
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 8.30455999041722
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 2.94328168567689
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 2.87238474703834
+  }
+ ],
+ "fin10": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 1.72721199942625
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 0.621356738246615
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 0.199957841476797
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 0.344063518771764
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 0.948078684412273
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 4.64849181636346
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 4.62497780448985
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 3.00351362140404
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 4.1753518740368
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 1.76679700339633
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 8.14380326427386
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 10.0348526192954
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 5.33664978525242
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 3.75282742410317
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 3.53140306500354
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 1.63448090314382
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 0.22251749096979
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 0.972708455465127
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 0.125973798188993
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 0.709000449804781
+  }
+ ],
+ "g20.any": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 33.9475359910252
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 45.2641568679425
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 34.1108252262297
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 7.60632231294312
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 48.4579645683561
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 34.9317299044962
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 28.6926378173926
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 22.2408154552412
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 47.2615306665223
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 55.0611979973612
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 47.1597027944011
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 25.2414105337395
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 24.6417987562611
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 17.6233271997723
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 17.6907800397492
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 9.45429243941215
+  }
+ ],
+ "g20.made": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 28.1331036771692
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 40.5784748582631
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 30.1348203153661
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 5.93563402507501
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 29.327464332199
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 24.2778612898697
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 19.9718963321412
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 15.7233028874087
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 28.3115970910383
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 42.7417138710829
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 37.3479368086716
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 13.7928598457029
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 20.2301819220828
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 14.8712117921815
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 14.3171409689908
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 6.18612953278072
+  }
+ ],
+ "g20.received": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 14.8625475865541
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 26.2848809551249
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 15.6046392087076
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 2.72183154755862
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 36.1865112143465
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 19.4002433638065
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 16.4590974166632
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 11.4773886248789
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 34.7586606680718
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 29.7353423640574
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 21.5886773385188
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 17.6152734154753
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 17.3344873581591
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 8.1255198939419
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 8.50883971641628
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 6.11148090255445
+  }
+ ],
+ "merchant.pay": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 2.76196135009928
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 2.78161037544511
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 18.3006494075002
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 11.9045681158485
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 14.7824637184931
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 18.0856716736739
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 4.26709818154803
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 1.07401554651021
+  }
+ ],
+ "fin31b": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 11.9522294773954
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 10.8573465875667
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 2.37441617141226
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 0.72583081797876
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 9.47472657081765
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 5.24787015022449
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 1.33110926706482
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 0.178452396225456
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 3.87004246920972
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 3.2942697856427
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 1.41509310600755
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 0.074445893401304
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 7.65723041302236
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 3.0178883696931
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 3.47869516937865
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 0.285405210448549
+  }
+ ],
+ "fin32.acc": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 4.78711337773694
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 4.93493965382194
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 3.55188597924695
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 1.62272369613295
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 13.4819188458211
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 7.69826474306861
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 6.48793661225954
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 4.00791821123047
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 16.2696559905734
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 18.7825456608846
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 8.94100915179083
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 7.13909275477712
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 9.48151520748738
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 3.82536593406952
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 3.4221174234924
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 1.41887439164002
+  }
+ ],
+ "fing2p": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 11.2015986495424
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 12.0340407900342
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 7.72769470464635
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 26.5679751664079
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 20.1375754121437
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 13.8492767457971
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 26.6977665960488
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 25.2178850665833
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 22.0993025827302
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 8.71336814573049
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 7.64019070042772
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 4.01209059906242
+  }
+ ],
+ "fing2p.acc": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 5.93363277843062
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 8.71585800602655
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 3.11874779094836
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 21.2497070187228
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 11.3796578726588
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 8.14698804387178
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 20.8234732058648
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 13.8037694966566
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 13.0069676590789
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 4.11978552341509
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 2.05389409161716
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 2.77536353494922
+  }
+ ],
+ "fing2p.cash": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 4.55858471965595
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 2.59493090828468
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 2.98521228328875
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 1.74914470728003
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 2.22057184488384
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 2.82104021038191
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 2.73473064681015
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 8.75594434242805
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 3.74167619594132
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 1.69537279648598
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 2.97170736175336
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 0.533009574146386
+  }
+ ],
+ "fin17a": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 9.65846219842491
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 6.00856013975212
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 9.92326671952726
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 7.44617504200515
+  },
+  {
+   "country": "BGD",
+   "year": 2011,
+   "value": 16.6367944887885
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 23.8490285356975
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 12.7513028606318
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 19.6039582351258
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 14.3600887975734
+  },
+  {
+   "country": "IND",
+   "year": 2011,
+   "value": 11.6039790894829
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 23.2175290457968
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 33.9126932083623
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 28.7880431209618
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 30.8583443624541
+  },
+  {
+   "country": "LKA",
+   "year": 2011,
+   "value": 28.0905885702597
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 6.96381006034951
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 2.37327799005478
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 6.09622715486081
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 3.27777976869566
+  },
+  {
+   "country": "PAK",
+   "year": 2011,
+   "value": 1.44054946219506
+  }
+ ],
+ "fin17b": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 1.64551874883887
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 1.73114897504191
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 10.9233652744677
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 3.47738566671028
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 0.604472149273374
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 0.593750556702307
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 9.43183358247864
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 0.813031174597746
+  }
+ ],
+ "fin17c": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 8.39958101328322
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 8.68793458498501
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 11.7084329808827
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 5.22707737487872
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 13.0830452794965
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 8.32462371850658
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 8.44340172453367
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 8.78197790871864
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 13.3310010137915
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 11.6592635711232
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 12.4080935796034
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 10.4173370134531
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 16.7469860918611
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 5.91349507520913
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 21.1155026732851
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 11.4001539237536
+  }
+ ],
+ "fin22a": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 12.7238847362024
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 14.2198648897608
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 9.20577131668754
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 9.99994901939142
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 14.4943733924118
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 11.7806198315268
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 8.14600412294811
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 9.11633111638162
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 18.0954775739688
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 21.2826228142917
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 17.374817750522
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 19.7291772079396
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 5.67536398078791
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 3.50502996851773
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 2.63690321495873
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 1.57451023747865
+  }
+ ],
+ "fin22b": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 27.0537290660711
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 35.4888430651177
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 21.4264985744734
+  },
+  {
+   "country": "BGD",
+   "year": 2014,
+   "value": 25.1755658435066
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 33.5180753250666
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 31.0103630047084
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 32.7434653631265
+  },
+  {
+   "country": "IND",
+   "year": 2014,
+   "value": 32.3006477429423
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 24.4669590443234
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 22.5291517167694
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 15.9388349447159
+  },
+  {
+   "country": "LKA",
+   "year": 2014,
+   "value": 8.99546392878501
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 53.9679273814343
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 21.8633477228752
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 28.6414978343915
+  },
+  {
+   "country": "PAK",
+   "year": 2014,
+   "value": 33.9624309259001
+  }
+ ],
+ "fin22c": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 2.29284768039475
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 4.1882275887771
+  },
+  {
+   "country": "BGD",
+   "year": 2017,
+   "value": 2.62502956352251
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 5.02372506212871
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 2.8782007387056
+  },
+  {
+   "country": "IND",
+   "year": 2017,
+   "value": 4.33449324752631
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 5.91025792437783
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 3.51969575057809
+  },
+  {
+   "country": "LKA",
+   "year": 2017,
+   "value": 5.748651844261
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 5.17920543338651
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 1.89050384164621
+  },
+  {
+   "country": "PAK",
+   "year": 2017,
+   "value": 10.9556873739818
+  }
+ ],
+ "fh1.fh2": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 26.0050225267114
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 32.3336991903918
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 22.566117899992
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 17.9852406459947
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 22.8679255289641
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 24.6786250230916
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 25.6261733784778
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 13.2900399502741
+  }
+ ],
+ "fh2a": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 12.1298169390981
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 7.53723013208572
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 12.0507305999182
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 6.08839705065553
+  }
+ ],
+ "fin28.29": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 18.2056422395976
+  },
+  {
+   "country": "BGD",
+   "year": 2021,
+   "value": 30.3821592474199
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 12.2913973760916
+  },
+  {
+   "country": "IND",
+   "year": 2021,
+   "value": 7.0783414855225
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 12.6588563701369
+  },
+  {
+   "country": "LKA",
+   "year": 2021,
+   "value": 10.1255607022567
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 12.2563755780489
+  },
+  {
+   "country": "PAK",
+   "year": 2021,
+   "value": 6.38467709778357
+  }
+ ],
+ "con1": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 82.38770907816
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 66.4735530008512
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 76.628623782273
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 62.9352500876856
+  }
+ ],
+ "con1.1": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 73.6995439902545
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 54.2993422264873
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 72.318580240705
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 30.1301505150344
+  }
+ ],
+ "con1.2": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 91.3286009772543
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 78.4387767422829
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 81.5198974355185
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 94.9165859419034
+  }
+ ],
+ "con9a": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 38.2083100095552
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 41.9687442877314
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 43.9857191136872
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 32.4120796549551
+  }
+ ],
+ "con11.s": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 74.6109739245202
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 75.2899621792378
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 68.5321481084276
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 73.4350963969517
+  }
+ ],
+ "fin11a.s": [
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 31.8533946556678
+  }
+ ],
+ "fin11b.s": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 18.1372572576381
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 48.3023330373807
+  }
+ ],
+ "fin11d.s": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 81.8015521041396
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 60.4455958624211
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 63.5235203022358
+  }
+ ],
+ "fin11e.s": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 17.8775655224503
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 56.1634904420692
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 13.9868401357369
+  }
+ ],
+ "fin11f.s": [
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 18.8158515604738
+  }
+ ],
+ "fin11c": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 7.47669985674829
+  },
+  {
+   "country": "IND",
+   "year": 2024,
+   "value": 3.4088698502978
+  },
+  {
+   "country": "LKA",
+   "year": 2024,
+   "value": 3.89564395201149
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 21.4072555247303
+  }
+ ],
+ "fin14a": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 5.7760039394577
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 17.7223782588369
+  }
+ ],
+ "fin14b": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 8.86361459774846
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 35.1550794458586
+  }
+ ],
+ "fin14c": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 6.49040640383878
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 18.1403890333988
+  }
+ ],
+ "fin14d": [
+  {
+   "country": "BGD",
+   "year": 2024,
+   "value": 42.0504393085255
+  },
+  {
+   "country": "PAK",
+   "year": 2024,
+   "value": 47.2999196122977
+  }
+ ]
+}

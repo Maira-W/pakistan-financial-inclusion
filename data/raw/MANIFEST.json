@@ -1,0 +1,425 @@
+{
+ "files": {
+  "geo/pak_adm2_humanitarian_2022_simplified.geojson": {
+   "sha256": "2d64d4b1dc0c0c138bdaae9fea866d93a7b4a2a64554833b3723c6022d5efe26",
+   "bytes": 1521807,
+   "source": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbHumanitarian/PAK/ADM2/geoBoundaries-PAK-ADM2_simplified.geojson",
+   "licence": "CC BY 3.0 IGO (WFP via HDX, redistributed by geoBoundaries)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/LICENSE_converter_repo.txt": {
+   "sha256": "aa444bf503324ee1deb094b5c3d655a1e2ced68b09a238462952bebde2a5d9dc",
+   "bytes": 1068,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/LICENSE",
+   "licence": "Licence of the CSV conversion repository",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_01_balochistan_district.csv": {
+   "sha256": "506769609881ecd38e13be980fece6181c7af36d6998318ce9f8935d8991bb28",
+   "bytes": 8963,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_01_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_01_islamabad_district.csv": {
+   "sha256": "1040b821a93a960a2276b8dc8772a296f61090f785f74d15b104c184ad1bcd89",
+   "bytes": 453,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_01_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_01_kp_district.csv": {
+   "sha256": "894bcc34b4dceff3c78ca62dae5d7f10afe26072baedab71b0053af8e376f2f4",
+   "bytes": 9329,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_01_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_01_punjab_district.csv": {
+   "sha256": "917ba9a01922ccc0bfb693a5c729135bc7effced62addfc824176ac9a46e07e8",
+   "bytes": 10249,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_01_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_01_sindh_district.csv": {
+   "sha256": "26066b1decc036420c5da2b494a15332d3423b014a5ba9480ca402cb012c523e",
+   "bytes": 8780,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_01_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_05_balochistan_district.csv": {
+   "sha256": "f32d3646d98271b5c5ded8e810dddb48152f1a83f08841ab2823671d11fa6d21",
+   "bytes": 38019,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_05_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_05_islamabad_district.csv": {
+   "sha256": "a2b7df0f859ba5d9718f587841c733593f4474911a1f1cb4c898a80cb30bbd7d",
+   "bytes": 1537,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_05_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_05_kp_district.csv": {
+   "sha256": "03b38462c05026e9d87f0a84583ad16e5d60826b1e96e0ea7f427a0425dae4b0",
+   "bytes": 40466,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_05_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_05_punjab_district.csv": {
+   "sha256": "b097b8a8b9e96409464ae4478334abfa3d4eba6e05e96c20225bc64d8bc5a35d",
+   "bytes": 46661,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_05_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_05_sindh_district.csv": {
+   "sha256": "e81393b7187327bcf3fcf16c1b0be9a982ecc56d2ff9ac45f74b2cfbf75def6d",
+   "bytes": 37761,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_05_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_12_balochistan_district.csv": {
+   "sha256": "942388727dcf1f7e4e86cfcfb8dcea682bb086791ff34c2b7937e2e00ae01e2e",
+   "bytes": 50806,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_12_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_12_islamabad_district.csv": {
+   "sha256": "d0b118f68bf882235a1775f97c8ea4b814dc336432799ab4de880980aa3f2b07",
+   "bytes": 1926,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_12_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_12_kp_district.csv": {
+   "sha256": "905fab38b8b34bfeeeb6717fedd6e35c0b7f5b9598b612bd8b5633ffb53502ce",
+   "bytes": 54385,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_12_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_12_punjab_district.csv": {
+   "sha256": "e0cfc27eb37cdf84df3530f4c191c14eab1882eaf12a4de0b098e61c6c2fb0d1",
+   "bytes": 62321,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_12_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_12_sindh_district.csv": {
+   "sha256": "66f964611175c41a7e13a8c22baebe7f452b0cfbebb999cb3d7e312326c9d533",
+   "bytes": 50325,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_12_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_20_balochistan_district.csv": {
+   "sha256": "8e3e0197907965fcdea39488babd6bc824dbaf33c5aeb2227f1eba84f9d96a3b",
+   "bytes": 6788,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_20_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_20_islamabad_district.csv": {
+   "sha256": "4325eb0f62beb348d766d7c272ae9c213372bcc1d27191564120fe24ade9b280",
+   "bytes": 294,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_20_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_20_kp_district.csv": {
+   "sha256": "da33405a0b02ff4c9bd26d7e60b9617657bbd79ef6a3e42f309e41e3e717bb84",
+   "bytes": 7483,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_20_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_20_punjab_district.csv": {
+   "sha256": "d72e1ea0b1e0b3e41264608f4b7092e176fc0912eefe531315f328aee488fb12",
+   "bytes": 8027,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_20_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_20_sindh_district.csv": {
+   "sha256": "438efdff9c45649c4e9141d3cbe73205a43a33cb12c27705f0926d74fc6e4727",
+   "bytes": 6866,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_20_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_22_balochistan_district.csv": {
+   "sha256": "34307b4ae1028e478836dc367ea8b5cb56e84c495cd36bb89e1a5e7e0eb957d2",
+   "bytes": 8655,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_22_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_22_islamabad_district.csv": {
+   "sha256": "74c220b0cfea95b05d9d8bc036ac9c1b94d0f97eb26753008ac9aab6fd57d335",
+   "bytes": 461,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_22_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_22_kp_district.csv": {
+   "sha256": "e8291b9b0a48c9af9742debceb725df8a14bdb6ca9af6446063279aabea38150",
+   "bytes": 9204,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_22_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_22_punjab_district.csv": {
+   "sha256": "dddb2befb75176d49d01c8c2f68c2bc6a8ebd96f0e0bff4f1ba35a2b97a7fc1e",
+   "bytes": 10573,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_22_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_22_sindh_district.csv": {
+   "sha256": "a6d2153eb8efc6004f544ae4892211d71dca705e9f066ef0fcfca0deab22d3b8",
+   "bytes": 8685,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_22_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_23_balochistan_district.csv": {
+   "sha256": "0ed4ddced061c809da552edbf60c8b7700df94ad233c2c894ff81ed4f5fe8687",
+   "bytes": 8505,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_23_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_23_islamabad_district.csv": {
+   "sha256": "e7b78f35a6bc1187dd2ead9d33556e39708d582efb6babb3be2f673619160079",
+   "bytes": 510,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_23_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_23_kp_district.csv": {
+   "sha256": "80908a0dc6c2cc713e8428e7b5befc2f6d91947273c78e49fdd3a0643f49c0ee",
+   "bytes": 9037,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_23_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_23_punjab_district.csv": {
+   "sha256": "2e10765b6085ff5c307f43eda368263cade2414c9944d7265610ad9230b2b134",
+   "bytes": 10451,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_23_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_23_sindh_district.csv": {
+   "sha256": "d9bc84c57d8145b04ebc6ecdb2a420d34a485064e91b9faed85adc69b1090053",
+   "bytes": 8649,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_23_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_24_balochistan_district.csv": {
+   "sha256": "4134de1f05e38363cba1888a5ea9f62f57ecb1ff4c199eaa71dff1ad6c3fbca3",
+   "bytes": 7332,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_24_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_24_islamabad_district.csv": {
+   "sha256": "354fe9db205781af1c08663a76a8935d0b8dd82a4e8c8da7f067e1025cee6d75",
+   "bytes": 394,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_24_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_24_kp_district.csv": {
+   "sha256": "8cd533220d15628e2c2b4e51264af65a33e9bd6cbad05b56c12fbdfd5b903f8d",
+   "bytes": 7809,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_24_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_24_punjab_district.csv": {
+   "sha256": "ac8b68898eb090aecc8f74df0e8e5e0176a45354fb50b7fa1e4025eeaaac13e3",
+   "bytes": 8769,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_24_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_24_sindh_district.csv": {
+   "sha256": "fc3284c891889f8e4e8240a329eaee56de8cccad83ca48c5b303925b418e2d87",
+   "bytes": 7314,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_24_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_25_balochistan_district.csv": {
+   "sha256": "ce0a3c8ef272bb9692674b4a6bb0da06a4b25ec07347ebda594dbae6b6e78db0",
+   "bytes": 9840,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_25_balochistan_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_25_islamabad_district.csv": {
+   "sha256": "9862a9ec8ccf4e33943408e2976fc2bf4b3d3ffa5196194e33e0e75a2159328d",
+   "bytes": 591,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_25_islamabad_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_25_kp_district.csv": {
+   "sha256": "8f6544d174510f2bf33e5991347e0c9ed3f7353865972bd1a0271cfe6de7d0c2",
+   "bytes": 10543,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_25_kp_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_25_punjab_district.csv": {
+   "sha256": "0dc54a0491cee4bdf84b7d3dd66b725f070bc65f1917979207a212c833962adf",
+   "bytes": 12254,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_25_punjab_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/census2023_district_tables/table_25_sindh_district.csv": {
+   "sha256": "8128d52ac36a8710fd6835e6298204a9245eff4a3d595b1c96378ecc21317a1d",
+   "bytes": 9988,
+   "source": "https://raw.githubusercontent.com/fahad-mirza/pakistan_census_2023_tables/main/District%20Level%20Tables/table_25_sindh_district.csv",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source (CSV conversion by fahad-mirza/pakistan_census_2023_tables)",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "pbs/official_province_totals_2023.json": {
+   "sha256": "cdf6f15d8f092459e66ec903bec97db6754b26d1be8c820bd1f0c2893ce41dc2",
+   "bytes": 781,
+   "source": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/National-Census-Report-2023-2.pdf",
+   "licence": "Public statistics of the Pakistan Bureau of Statistics; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2024Q2.pdf": {
+   "sha256": "89e09a21d31ab70e0b7b21f91cec5719ff9a2f28ad09b108ad33b7e8e93f3ed8",
+   "bytes": 849058,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless_Banking_Statistics_for_Apr_-_Jun_2024.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2024Q3.pdf": {
+   "sha256": "4d01d7144b4b928ac2b03a371f455621e754725e240d8d00f90f4e425d732e98",
+   "bytes": 849217,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless_Banking_Statistics_for_Jul_-_Sep_2024.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2024Q4.pdf": {
+   "sha256": "b7d3560be34e12664475b0e94704e6956b6e4943f11da68f2ab32c8fdd3fec2a",
+   "bytes": 698992,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless-Banking-Statistics-Quarter-Oct-Dec_2024.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2025Q1.pdf": {
+   "sha256": "3ad771c7a5b88661a1abc8e1456a9bc3b96ae5b0a5e7f6f7d05e72e95c219e6c",
+   "bytes": 699100,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless-Banking-Statistics-Quarter-Jan-Mar_2025.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2025Q2.pdf": {
+   "sha256": "f9f967a5cdbc3f5f5048448ccfbd85a4116e81c36e7a506c23e2533f8ba334f6",
+   "bytes": 699313,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless_Banking_Statistics_for_Apr_-_Jun_2025.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2025Q3.pdf": {
+   "sha256": "8ff74f7a679044c6cb5006bdf129fa7d0c6a77533060aa6b9e4463ccee079659",
+   "bytes": 543352,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless_Banking_Statistics_for_Jul_to_Sep_2025.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2025Q4.pdf": {
+   "sha256": "937bde152adf4e89203633a3e307edbb8c8c57c9ee0eadc08fb53ae1b0f4bca4",
+   "bytes": 507365,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless_Banking_Statistics_for_Oct_to_Dec_2025.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2026Q1.pdf": {
+   "sha256": "88bb62931af1bb8f241353c7052b36e93f2703b7855a35d892d72f12d2bd4543",
+   "bytes": 482134,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless_Banking_Statistics_for_Jan_to_Mar_2026.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/branchless_banking/bb_2026Q2.pdf": {
+   "sha256": "9f04dafdb3444dd54461850873bebffddb546b24b062d4c1f57de103babe0b57",
+   "bytes": 292964,
+   "source": "https://www.sbp.org.pk/assets/document/publications/Branchless_Banking_Statistics_for_Apr_to_Jun_2026.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/scheduled_banks_and_mfb_branches_2024-12-31.xlsx": {
+   "sha256": "05943ddb5a1de1f026b40312a48288694953012cebb0f51b2272367820bb7e76",
+   "bytes": 1491820,
+   "source": "https://www.sbp.org.pk/assets/document/publications/List-of-Banks-and-Microfinance-Banks-Branches_%281%29.xlsx",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "sbp/scheduled_banks_statistics_appendices_2020-12.pdf": {
+   "sha256": "576757c21b35cc26aa9d34fa99dc76528dd253d62d119c5b53e2cfb3d4d8590b",
+   "bytes": 1337684,
+   "source": "https://www.sbp.org.pk/assets/document/IV__Appendices11_statistics_december_2020.pdf",
+   "licence": "Public statistics of the State Bank of Pakistan; cite the source",
+   "retrieved_utc": "2026-10-21T09:55Z"
+  },
+  "worldbank/countries.json": {
+   "sha256": "7b746d54e92cc0f1caee3f81c3af2f6b270769df882d7bee1dd6314762a759c2",
+   "bytes": 34525,
+   "source": "https://api.worldbank.org/v2/country",
+   "licence": "CC BY 4.0 (World Bank Open Data)",
+   "retrieved_utc": "2026-10-21T10:22Z"
+  },
+  "worldbank/findex_panel_pakistan_and_peers.json": {
+   "sha256": "cba671d64cf65b76cc4f185511ee259d1d3338ee750fd5a3d5a8603c4d64d1b6",
+   "bytes": 46408,
+   "source": "https://api.worldbank.org/v2/country/PAK;IND;BGD;LKA/indicator/<id>?source=28 (Global Findex)",
+   "licence": "CC BY 4.0 (World Bank Open Data)",
+   "retrieved_utc": "2026-10-21T10:20Z"
+  },
+  "worldbank/findex_world_2021_2024.json": {
+   "sha256": "76e78a97bc74ff51a6e9f2cfcfe364aca7486e50876428e18e4186638a678607",
+   "bytes": 212486,
+   "source": "https://api.worldbank.org/v2/country/all/indicator/<id>?source=28 (Global Findex)",
+   "licence": "CC BY 4.0 (World Bank Open Data)",
+   "retrieved_utc": "2026-10-21T10:22Z"
+  },
+  "worldbank/wdi_atms_per_100k_adults.csv": {
+   "sha256": "67311b89115a4fe74b09e8b26169463872f3cd67e23fcb29251c2e1ef9e5d2a4",
+   "bytes": 149912,
+   "source": "https://api.worldbank.org/v2/en/indicator/FB.ATM.TOTL.P5?downloadformat=csv",
+   "licence": "CC BY 4.0 (World Bank Open Data)",
+   "retrieved_utc": "2026-10-21T10:22Z"
+  },
+  "worldbank/wdi_bank_branches_per_100k_adults.csv": {
+   "sha256": "4c8856bd454fcdd6b4d2ba9c308c70667540909d19903021434bc571f76170b7",
+   "bytes": 150640,
+   "source": "https://api.worldbank.org/v2/en/indicator/FB.CBK.BRCH.P5?downloadformat=csv",
+   "licence": "CC BY 4.0 (World Bank Open Data)",
+   "retrieved_utc": "2026-10-21T10:22Z"
+  },
+  "worldbank/wdi_gdp_per_capita_ppp.csv": {
+   "sha256": "35ddabcb95a270a58b5db32eb547f0326c91f9652d1329e4b877abe1ec928411",
+   "bytes": 217260,
+   "source": "https://api.worldbank.org/v2/en/indicator/NY.GDP.PCAP.PP.KD?downloadformat=csv",
+   "licence": "CC BY 4.0 (World Bank Open Data)",
+   "retrieved_utc": "2026-10-21T10:22Z"
+  }
+ },
+ "generated_utc": "2026-10-21T10:22Z"
+}
